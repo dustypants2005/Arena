@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3f80c1a83863e7641b2d46ae15d24faa
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Respawn: {instanceID: 0}
+  - m_healthUI: {instanceID: 0}
+  - DeathEffect: {fileID: 183222, guid: f2ee009e61b1177489331d95174281b1, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
