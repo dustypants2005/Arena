@@ -10,6 +10,14 @@ namespace dustypants {
     public List<GameObject> Weapons = new List<GameObject>();
     public GameObject[] StartingWeapons;
     public int CurrentWeapon;
+    /// <summary>
+    /// A list of all the Weapons the player can use.
+    /// </summary>
+    public GameObject[] WeaponsCatalog;
+    /// <summary>
+    /// A list of all the projectile spawns the player could have assigned.
+    /// </summary>
+    public GameObject[] ProjectileSpawnCatalog;
 
     public void Init(){
       // TODO: set up save
