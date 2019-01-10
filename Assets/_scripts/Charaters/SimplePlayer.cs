@@ -230,7 +230,7 @@ namespace dustypants.Characters {
       var oldBlocking = blockingView;
       var blockers = new List<GameObject>();
       RaycastHit[] hits;  // TODO: need another one for the right side of the player
-      hits = Physics.RaycastAll(cam.transform.position, cam.transform.forward, Vector3.Distance(cam.transform.position, transform.position) * .9f);
+      hits = Physics.RaycastAll(cam.transform.position, cam.transform.forward, Vector3.Distance(cam.transform.position, transform.position) * .95f);
       foreach(var hit in hits) {
         if(hit.transform.tag == "Player") continue;
         var tm = hit.transform.GetComponent<TransparentMat>();

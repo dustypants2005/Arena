@@ -70,6 +70,9 @@ namespace dustypants.Managers {
     /// Current health of the Player.
     /// </summary>
     public float Health = 100;
+    /// <summary>
+    ///
+    /// </summary>
     public float MaxHealth = 100;
     public int Coins = 0;
     /// <summary>
@@ -82,6 +85,12 @@ namespace dustypants.Managers {
     /// <param name="event">A TriggerEvent</param>
     /// </summary>
     public Dictionary<string,TriggerEvent> UnlockedLevels;
+
+    //TODO: save weapons
+    /// <summary>
+    /// weaponType, projectileSpawnType
+    /// </summary>
+    public int[][] weapons;
 
     // Resets all members except levelname;
     public void Reset(){
