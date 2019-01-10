@@ -113,11 +113,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9126016013608752612, guid: cd3e887f4f280054fa247de473c8f325,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 173ea21f96d32c74b9b6fbcd3d4cba33, type: 2}
     - target: {fileID: 8245199717872508732, guid: cd3e887f4f280054fa247de473c8f325,
         type: 3}
       propertyPath: spawner
@@ -128,11 +123,27 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7304181469723183107, guid: cd3e887f4f280054fa247de473c8f325,
+        type: 3}
+      propertyPath: m_col
+      value: 
+      objectReference: {fileID: 4108858287022505822}
+    - target: {fileID: 9126016013608752612, guid: cd3e887f4f280054fa247de473c8f325,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 173ea21f96d32c74b9b6fbcd3d4cba33, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd3e887f4f280054fa247de473c8f325, type: 3}
 --- !u!4 &6025491613413738098 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8430752654900192882, guid: cd3e887f4f280054fa247de473c8f325,
+    type: 3}
+  m_PrefabInstance: {fileID: 2782895186762457088}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &4108858287022505822 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 2277498398992736094, guid: cd3e887f4f280054fa247de473c8f325,
     type: 3}
   m_PrefabInstance: {fileID: 2782895186762457088}
   m_PrefabAsset: {fileID: 0}
