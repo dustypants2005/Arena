@@ -190,14 +190,14 @@ namespace dustypants.Characters {
         isKnockback = true;
         knockbackTime = knockbackDuration + Time.deltaTime;
       }
-      if(isKnockback){
-        // TODO: need to find point of contact, push from point.
-        moveDirection +=  transform.InverseTransformDirection(knockback);
-        if(knockbackTime > Time.deltaTime ){
-          isKnockback = false;
-          knockback = Vector3.zero;
-        }
-      }
+      // if(isKnockback){
+      //   // TODO: need to find point of contact, push from point.
+      //   moveDirection +=  transform.InverseTransformDirection(knockback);
+      //   if(knockbackTime > Time.deltaTime ){
+      //     isKnockback = false;
+      //     knockback = Vector3.zero;
+      //   }
+      // }
 
       moveDirection.y = verticalVelocity;
       mouseLook.LookRotation(transform, camMount.transform);
