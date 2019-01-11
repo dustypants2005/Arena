@@ -27,9 +27,11 @@ namespace dustypants.Environment {
     }
 
     public void Close() {
-      anim.SetBool("isOpen", false);
-        OpenAudio.Stop();
-        CloseAudio.Play();
+     if(anim.GetBool("isOpen")){
+        anim.SetBool("isOpen", false);
+          OpenAudio.Stop();
+          CloseAudio.Play();
+      }
     }
   }
 }
