@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 1209562710412036}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 30, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 0.5, z: 5}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 4542066142148262}
   m_RootOrder: 1
@@ -87,7 +87,7 @@ Transform:
   m_GameObject: {fileID: 1486574419507296}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.25, z: 0}
-  m_LocalScale: {x: 5, y: 0.5, z: 5}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 4542066142148262}
   m_RootOrder: 0
@@ -147,7 +147,7 @@ MonoBehaviour:
   WaitTime: 2
   MoveSpeed: 2
   MoveOffset: 0
-  gizmoColor: {r: 0, g: 0.14280534, b: 0.7735849, a: 1}
+  gizmoColor: {r: 0, g: 0, b: 0, a: 1}
   SelectedCyle: 1
   m_active: 1
   m_isLooping: 1
@@ -344,6 +344,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5294543051891112064, guid: 525d175360a3fe34c8f1dec1c82c5668,
+        type: 3}
+      propertyPath: m_SelectedEditorRenderState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5286638588896669838, guid: 525d175360a3fe34c8f1dec1c82c5668,
         type: 3}
       propertyPath: m_Mesh
@@ -431,6 +436,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294543051891112064, guid: 525d175360a3fe34c8f1dec1c82c5668,
+        type: 3}
+      propertyPath: m_SelectedEditorRenderState
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5286638588896669838, guid: 525d175360a3fe34c8f1dec1c82c5668,
         type: 3}
@@ -520,6 +530,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5294543051891112064, guid: 525d175360a3fe34c8f1dec1c82c5668,
+        type: 3}
+      propertyPath: m_SelectedEditorRenderState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5286638588896669838, guid: 525d175360a3fe34c8f1dec1c82c5668,
         type: 3}
       propertyPath: m_Mesh
@@ -607,6 +622,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294543051891112064, guid: 525d175360a3fe34c8f1dec1c82c5668,
+        type: 3}
+      propertyPath: m_SelectedEditorRenderState
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5286638588896669838, guid: 525d175360a3fe34c8f1dec1c82c5668,
         type: 3}
@@ -696,6 +716,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5294543051891112064, guid: 525d175360a3fe34c8f1dec1c82c5668,
+        type: 3}
+      propertyPath: m_SelectedEditorRenderState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5286638588896669838, guid: 525d175360a3fe34c8f1dec1c82c5668,
         type: 3}
       propertyPath: m_Mesh
@@ -783,6 +808,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294543051891112064, guid: 525d175360a3fe34c8f1dec1c82c5668,
+        type: 3}
+      propertyPath: m_SelectedEditorRenderState
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5286638588896669838, guid: 525d175360a3fe34c8f1dec1c82c5668,
         type: 3}

@@ -162,7 +162,7 @@ MonoBehaviour:
     supportTransparentDepthPrepass: 1
     supportTransparentDepthPostpass: 1
     supportedLitShaderMode: 3
-    supportDecals: 1
+    supportDecals: 0
     supportMSAA: 0
     msaaSampleCount: 1
     supportMotionVectors: 1
@@ -204,4 +204,5 @@ MonoBehaviour:
   allowShaderVariantStripping: 1
   enableSRPBatcher: 0
   enableVariantStrippingLog: 0
-  diffusionProfileSettings: {fileID: 0}
+  diffusionProfileSettings: {fileID: 11400000, guid: 34b8db50bb936404eac9e1cc40c342ec,
+    type: 2}
