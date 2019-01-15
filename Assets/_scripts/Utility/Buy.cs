@@ -5,9 +5,19 @@ using TMPro;
 namespace dustypants.Utility {
   public class Buy : MonoBehaviour {
     public int Cost;
-    public TriggerEvent e;
-    // Show when you can trigger e
+
+    /// <summary>
+    /// Events fired for purchase.
+    /// </summary>
+    public TriggerEvent PurchaseEvents;
+    /// <summary>
+    /// Toggle to show purchase info.
+    /// i.e. cost and the button to purchase.
+    /// </summary>
     public TriggerEvent Show;
+    /// <summary>
+    /// Remove purchase info.
+    /// </summary>
     public TriggerEvent Hide;
 
     public TextMeshPro Text;
@@ -33,12 +43,12 @@ namespace dustypants.Utility {
 
     private void OnTriggerStay(Collider other) {
       if ( other.tag == "Player"){
-        if(Input.GetButtonUp("X") && e != null){ // Buy Action
+        if(Input.GetButtonUp("X") && PurchaseEvents != null){ // Buy Action
           var coins = CoinManager.instance.Coins;
           if( coins >= Cost ){
             CoinManager.instance.Subtract(Cost);
-            LevelManager.instance.Add(Text.text, e);
-            e.Invoke();
+            LevelManager.instance.Add(Text.text, PurchaseEvents);
+            PurchaseEvents.Invoke();
           }
         }
       }
