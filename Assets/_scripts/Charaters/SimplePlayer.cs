@@ -60,6 +60,7 @@ namespace dustypants.Characters {
 
 
     public Vector3 moveDirection = Vector3.zero;
+    public Vector3 lastMoveDirection = Vector3.zero;
     private Vector3 wallJumpDirection = Vector3.zero;
     [Header("Knockback")]
     public Vector3 knockback = Vector3.zero;
@@ -124,7 +125,8 @@ namespace dustypants.Characters {
       }
 
       if(!isWallJumping){
-        moveDirection = new Vector3(Input.GetAxis("L_XAxis"), 0, Input.GetAxis("L_YAxis"));
+        moveDirection -= lastMoveDirection;
+        moveDirection += new Vector3(Input.GetAxis("L_XAxis"), 0, Input.GetAxis("L_YAxis"));
         moveDirection = transform.TransformDirection(moveDirection);
         moveDirection *= speed;
       } else{
@@ -202,6 +204,7 @@ namespace dustypants.Characters {
       moveDirection.y = verticalVelocity;
       mouseLook.LookRotation(transform, camMount.transform);
       controller.Move(moveDirection * Time.deltaTime);
+      lastMoveDirection = moveDirection;
     }
 
     private void FixedUpdate() {
