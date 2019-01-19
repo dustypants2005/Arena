@@ -1,8 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace dustypants.Environment {
+namespace dustypants.Environment
+{
   public class defaultDoor : MonoBehaviour {
     public Animator anim;
     public AudioSource OpenAudio;

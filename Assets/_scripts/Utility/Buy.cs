@@ -44,7 +44,7 @@ namespace dustypants.Utility {
     private void OnTriggerStay(Collider other) {
       if ( other.tag == "Player"){
         if(Input.GetButtonUp("X") && PurchaseEvents != null){ // Buy Action
-          var coins = CoinManager.instance.Coins;
+          var coins = CoinManager.instance.CoinsCollected;
           if( coins >= Cost ){
             CoinManager.instance.Subtract(Cost);
             LevelManager.instance.Add(Text.text, PurchaseEvents);

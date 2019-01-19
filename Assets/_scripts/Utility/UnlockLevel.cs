@@ -8,7 +8,7 @@ namespace dustypants.Utility {
     public TriggerEvent Hide;
 
     private void OnEnable() {
-      var coins = CoinManager.instance.Coins;
+      var coins = CoinManager.instance.CoinsCollected;
       if(coins > Cost){
         Show.Invoke();
       } else {

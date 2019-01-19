@@ -56,7 +56,7 @@ namespace dustypants {
         switch(tag){
           case "Player":{
             SimplePlayer.instance.isDisabled = true;
-            CoinManager.instance.Coins = SaveManager.instance.data.Coins;
+            CoinManager.instance.CoinsCollected = SaveManager.instance.data.Coins;
             CoinManager.instance.UpdateUI();
             StartCoroutine(Reset(true));
             break;

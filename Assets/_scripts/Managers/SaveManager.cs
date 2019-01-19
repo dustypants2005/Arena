@@ -39,7 +39,7 @@ namespace dustypants.Managers {
     public void SavePlayer(Transform savePoint){
       var sp = SimplePlayer.instance;
       var newData = new PlayerInfo {
-        Coins = CoinManager.instance.Coins,
+        Coins = CoinManager.instance.CoinsCollected,
         Health = sp.GetComponent<Health>().CurrentHealth,
         MaxHealth = sp.GetComponent<Health>().MaxHealth,
         Spawn = new SpawnPoint(savePoint),
@@ -55,7 +55,7 @@ namespace dustypants.Managers {
         var bf = new BinaryFormatter();
         var file = File.Open(Application.persistentDataPath + filename, FileMode.Open);
         data = (PlayerInfo)bf.Deserialize(file);
-        CoinManager.instance.Coins = data.Coins;
+        CoinManager.instance.CoinsCollected = data.Coins;
         file.Close();
         return data;
       }
