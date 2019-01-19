@@ -6,6 +6,7 @@ Obj/
 UnityGenerated/
 Library/
 Assets/AssetStoreTools*
+bin/
 
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
@@ -20,6 +21,8 @@ ExportedObj/
 *.user
 *.unityproj
 *.booproj
+*.vs
+*.vscode
 
 # ============ #
 # OS generated #
@@ -32,3 +35,6 @@ ExportedObj/
 Icon?
 ehthumbs.db
 Thumbs.db
+
+Assets/_scenes/Levels/Level.1.1/
+Assets/_scenes/Menus/MenuLevel/
