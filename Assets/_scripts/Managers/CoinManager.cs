@@ -106,14 +106,6 @@ namespace dustypants.Managers {
         var file = File.Open(Application.persistentDataPath + saveString, FileMode.Open);
         var c = (Dictionary<string, Dictionary<float, bool>>)bf.Deserialize(file);
         file.Close();
-        Debug.Log("Loading ...");
-        foreach(var level in c.Keys)
-        {
-          foreach(var id in c[level].Keys)
-          {
-            Debug.Log("level: " + level + " id: " + id + " state: " + c[level][id]);
-          }
-        }
         return c;
       }
       Debug.Log("load file does NOT exist");

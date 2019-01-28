@@ -5,6 +5,7 @@ using TMPro;
 using System.Collections.Generic;
 using dustypants.Environment;
 using dustypants.Utility;
+using dustypants.Managers;
 
 namespace dustypants.Characters {
   [DisallowMultipleComponent]
@@ -16,6 +17,7 @@ namespace dustypants.Characters {
     public static SimplePlayer instance { get { return s_Instance; }}
     public Inventory inventory;
     public Weapon CurrentWeapon;
+    public PlayerInfo Info;
     [HideInInspector]
     public bool isDisabled = false;
 
@@ -86,6 +88,7 @@ namespace dustypants.Characters {
       layermask = 1 << 8;
       layermask = ~layermask;
       ResetDash();
+      UpdateInfo();
     }
 
     void Update() {
@@ -160,7 +163,7 @@ namespace dustypants.Characters {
         moveDirection += wallJumpDirection; // add wall jump to move direction
       }
       // Air Jump
-      if (canAirJump && isAirJump && !isJumping){
+      if (Info.CanDoubleJump && canAirJump && isAirJump && !isJumping){
         if (Input.GetButtonDown("A")){
           wallJumpDirection = Vector3.zero;
           verticalVelocity = jumpSpeed;
@@ -170,7 +173,7 @@ namespace dustypants.Characters {
         }
       }
       // Dash
-      if(Input.GetButtonDown("B")){
+      if(Info.CanDash && Input.GetButtonDown("B")){
         if(Time.time > nextTimeToDash && !isDashing){
           nextTimeToDash = Time.time + dashCooldown;
           if(moveDirection.x != 0 || moveDirection.z != 0 ){
@@ -211,7 +214,7 @@ namespace dustypants.Characters {
       CamToPlayerView();
     }
     private void OnControllerColliderHit(ControllerColliderHit hit) {
-      if(!controller.isGrounded){
+      if(Info.CanWallJump && !controller.isGrounded){
         if (hit.normal.y < .1f) { // TODO: bug; when ceiling hits head, we trigger wall jump for w/e reason, need to exclude ceililng from wall jump
           isAirJump = true;
           verticalVelocity -= gravity / 3 * Time.deltaTime;
@@ -283,6 +286,10 @@ namespace dustypants.Characters {
 
     public void UpdateCoins(int coins){
       CoinText.text = coins.ToString();
+    }
+
+    public void UpdateInfo() {
+      Info = SaveManager.instance.data;
     }
   }
 }

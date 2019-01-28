@@ -98,6 +98,15 @@ namespace dustypants.Managers {
       Coins = 0;
       Spawn = null;
     }
+
+    /* ----------------
+     * player abilities
+     * ----------------
+     */
+
+    public bool CanDoubleJump;
+    public bool CanWallJump;
+    public bool CanDash;
   }
 
   [Serializable]
