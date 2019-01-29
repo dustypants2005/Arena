@@ -22,5 +22,9 @@ namespace dustypants.Characters.Pickups {
         Destroy(gameObject);
       }
     }
+
+    void OnLevelWasLoaded(int level) {
+      Destroy(this.gameObject);
+    }
   }
 }

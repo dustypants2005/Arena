@@ -88,6 +88,9 @@ namespace dustypants.Characters {
       layermask = 1 << 8;
       layermask = ~layermask;
       ResetDash();
+    }
+
+    void Start() {
       UpdateInfo();
     }
 
@@ -289,7 +292,12 @@ namespace dustypants.Characters {
     }
 
     public void UpdateInfo() {
-      Info = SaveManager.instance.data;
+      var i = SaveManager.instance.data;
+      if(i != null) {
+        Info = i;
+      } else {
+        Info = new PlayerInfo();
+      }
     }
   }
 }

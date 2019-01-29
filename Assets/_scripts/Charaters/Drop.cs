@@ -1,12 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace dustypants {
+namespace dustypants
+{
   public class Drop : MonoBehaviour {
     public GameObject[] Items;
 
-    private void OnDestroy() {
+    public void Spawn() {
       foreach(var item in Items){
         Instantiate(item, transform.position, transform.rotation);
       }

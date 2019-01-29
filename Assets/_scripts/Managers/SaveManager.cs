@@ -104,9 +104,9 @@ namespace dustypants.Managers {
      * ----------------
      */
 
-    public bool CanDoubleJump;
-    public bool CanWallJump;
-    public bool CanDash;
+    public bool CanDoubleJump = false;
+    public bool CanWallJump = false;
+    public bool CanDash = false;
   }
 
   [Serializable]

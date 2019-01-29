@@ -62,7 +62,11 @@ namespace dustypants {
             break;
           }
           default:
-            if (Respawn != null){
+            var d = GetComponent<Drop>();
+            if (d != null) {
+              d.Spawn();
+            }
+            if (Respawn != null) {
               StartCoroutine(Reset(false));
             } else {
               Destroy(gameObject);

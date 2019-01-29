@@ -2,7 +2,8 @@
 
 namespace dustypants.Environment
 {
-  public class defaultDoor : MonoBehaviour {
+  public class DefaultDoor : MonoBehaviour {
+    public bool IsEnabled = true;
     public Animator anim;
     public AudioSource OpenAudio;
     public AudioSource CloseAudio;
@@ -14,6 +15,7 @@ namespace dustypants.Environment
     }
 
     void OnTriggerEnter(Collider other) {
+      if(!IsEnabled) return;
       if(other.CompareTag("Player")){
         anim.SetBool("isOpen", true);
         CloseAudio.Stop();
@@ -22,11 +24,20 @@ namespace dustypants.Environment
     }
 
     void OnTriggerExit(Collider other) {
+      if(!IsEnabled) return;
       if(other.CompareTag("Player")){
         anim.SetBool("isOpen", false);
         OpenAudio.Stop();
         CloseAudio.Play();
       }
+    }
+
+    public void Enable() {
+      IsEnabled = true;
+    }
+
+    public void Disable() {
+      IsEnabled = false;
     }
   }
 }
