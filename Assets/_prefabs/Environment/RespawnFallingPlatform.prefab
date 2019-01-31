@@ -127,7 +127,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_col
       value: 
-      objectReference: {fileID: 4108858287022505822}
+      objectReference: {fileID: 483931032452124179}
     - target: {fileID: 9126016013608752612, guid: cd3e887f4f280054fa247de473c8f325,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -141,9 +141,9 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2782895186762457088}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &4108858287022505822 stripped
+--- !u!65 &483931032452124179 stripped
 BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 2277498398992736094, guid: cd3e887f4f280054fa247de473c8f325,
+  m_CorrespondingSourceObject: {fileID: 2317542741904862739, guid: cd3e887f4f280054fa247de473c8f325,
     type: 3}
   m_PrefabInstance: {fileID: 2782895186762457088}
   m_PrefabAsset: {fileID: 0}

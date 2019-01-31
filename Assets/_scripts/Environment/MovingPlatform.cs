@@ -17,6 +17,7 @@ namespace dustypants.Environment {
     [SerializeField] private bool m_active = true;
     [SerializeField] private bool m_isLooping = true;
     private int m_currentTransform;
+    //TODO: this needs to be moving by animation instead of translation. Translation has player teleporting through.
 
     void Start () {
       m_TransformList = new Transform[Waypoints.childCount];

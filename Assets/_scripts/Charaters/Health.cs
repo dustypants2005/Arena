@@ -17,6 +17,7 @@ namespace dustypants {
     [SerializeField] private float m_transitionSpeed = .01f;
     [SerializeField] private Image m_healthUI;
     [SerializeField] private GameObject DeathEffect;
+    [SerializeField] private float DeathEffectScale = 2;
     [SerializeField] private GameObject HitEffect;
     public float CurrentHealth { get; private set;}
     private bool m_isInvulnerable = false;
@@ -52,6 +53,7 @@ namespace dustypants {
       if(CurrentHealth <= 0 && !isReseting){
         isReseting = true;
         var de =  Instantiate(DeathEffect, transform.position, transform.rotation);
+        de.transform.localScale = Vector3.one * DeathEffectScale;
         Destroy(de, 2f); // clean up, remove after use.
         switch(tag){
           case "Player":{

@@ -22,6 +22,7 @@ namespace dustypants.Characters {
     public bool isDisabled = false;
 
     public TextMeshProUGUI CoinText;
+    public TextMeshProUGUI CoinsCollectedText;
     [SerializeField] private float speed = 12F;
     [SerializeField] private float gravity = 30F;
     [SerializeField] private float xNormalLookSpeed = 5;
@@ -289,6 +290,15 @@ namespace dustypants.Characters {
 
     public void UpdateCoins(int coins){
       CoinText.text = coins.ToString();
+      if(CoinGroupManager.instance != null && CoinsCollectedText != null) {
+        var coinsCollected = CoinManager.instance.CoinSaves[SaveManager.instance.GetCurrentLevelName()];
+        var max = coinsCollected.Count;
+        var total = 0;
+        foreach( var v in coinsCollected.Values) {
+          if(!v) total++;
+        }
+        CoinsCollectedText.text = total + "/" + max;
+      }
     }
 
     public void UpdateInfo() {
@@ -298,6 +308,10 @@ namespace dustypants.Characters {
       } else {
         Info = new PlayerInfo();
       }
+    }
+
+    private void OnLevelWasLoaded(int level) {
+      UpdateCoins(CoinManager.instance.CoinsCollected);
     }
   }
 }

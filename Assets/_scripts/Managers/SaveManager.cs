@@ -62,6 +62,10 @@ namespace dustypants.Managers {
       Debug.Log("load file does NOT exist");
       return null;
     }
+
+    public string GetCurrentLevelName() {
+      return SceneManager.GetActiveScene().name;
+    }
   }
 
   [Serializable]

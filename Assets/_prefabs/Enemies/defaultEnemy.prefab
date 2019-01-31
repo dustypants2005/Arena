@@ -203,7 +203,7 @@ MonoBehaviour:
   RespawnTime: 2
   m_transitionSpeed: 1
   m_healthUI: {fileID: 0}
-  DeathEffect: {fileID: 183222, guid: f2ee009e61b1177489331d95174281b1, type: 3}
+  DeathEffect: {fileID: 119968, guid: e73000b12fb76244cbffd6abbf8bb6e4, type: 3}
   HitEffect: {fileID: 0}
 --- !u!136 &136949522973730108
 CapsuleCollider:

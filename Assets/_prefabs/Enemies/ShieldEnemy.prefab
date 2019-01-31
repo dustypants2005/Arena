@@ -467,7 +467,8 @@ MonoBehaviour:
   RespawnTime: 2
   m_transitionSpeed: 1
   m_healthUI: {fileID: 0}
-  DeathEffect: {fileID: 183222, guid: f2ee009e61b1177489331d95174281b1, type: 3}
+  DeathEffect: {fileID: 119968, guid: e73000b12fb76244cbffd6abbf8bb6e4, type: 3}
+  DeathEffectScale: 3
   HitEffect: {fileID: 0}
 --- !u!114 &114190953469305816
 MonoBehaviour:
@@ -487,6 +488,8 @@ MonoBehaviour:
   StartingWeapons:
   - {fileID: 1016819862954628, guid: 04b9af1b7b4c376449400154cc5c28f8, type: 3}
   CurrentWeapon: 0
+  WeaponsCatalog: []
+  ProjectileSpawnCatalog: []
 --- !u!114 &114515220364464898
 MonoBehaviour:
   m_ObjectHideFlags: 0

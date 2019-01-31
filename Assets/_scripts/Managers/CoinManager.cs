@@ -7,6 +7,9 @@ using System.Collections.Generic;
 namespace dustypants.Managers {
   public class CoinManager : MonoBehaviour {
     public static CoinManager instance;
+    /// <summary>
+    /// Total amount of coins the Player has collected
+    /// </summary>
     public int CoinsCollected = 0;
     /// <summary>
     /// { level name : { ID : Active State ( true show, false hide) } }
@@ -36,12 +39,16 @@ namespace dustypants.Managers {
     /// <param name="amount"></param>
     public void Add(int amount){
       CoinsCollected += amount;
+      SaveManager.instance.data.Coins = CoinsCollected;
+      SaveManager.instance.Save();
       UpdateUI();
     }
 
     public void Subtract(int amount) {
       CoinsCollected -= amount;
       if(CoinsCollected < 0) CoinsCollected = 0;
+      SaveManager.instance.data.Coins = CoinsCollected;
+      SaveManager.instance.Save();
       UpdateUI();
     }
 

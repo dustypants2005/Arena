@@ -4,7 +4,22 @@ using UnityEngine.SceneManagement;
 
 namespace dustypants.Managers {
   public class CoinGroupManager : MonoBehaviour {
+    public static CoinGroupManager instance;
+
+    void Awake() {
+      if(instance == null) {
+        instance = this;
+      } else {
+        if(instance != this) {
+          Destroy(gameObject);
+        }
+      }
+    }
     void OnEnable() {
+      if(CoinManager.instance.CoinSaves == null) {
+        Debug.LogError("No Coin Save");
+        return;
+      }
       if(!CoinManager.instance.CoinSaves.ContainsKey(SceneManager.GetActiveScene().name)) {
         Debug.Log("CoinGroupManger: No coinsave");
         foreach(Transform child in transform) {
