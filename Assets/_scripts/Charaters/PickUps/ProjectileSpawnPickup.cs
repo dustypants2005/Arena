@@ -6,6 +6,11 @@ using dustypants;
 namespace dustypants.Characters.Pickups {
   public class ProjectileSpawnPickup : MonoBehaviour {
     public GameObject projectileSpawn;
+    public float RotateSpeed = 30f;
+
+    void Update() {
+      transform.Rotate(Vector3.up * RotateSpeed * Time.deltaTime, Space.World);
+    }
 
     private void OnTriggerEnter(Collider other) {
       if(other.CompareTag("Player")){

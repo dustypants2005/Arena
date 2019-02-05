@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 488715155210895025}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 313, y: 54.615753, z: -21.706665}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 931654195302589445}
@@ -63,6 +63,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileSpawn: {fileID: 1094016879048140, guid: bb7fd98a1a03ad645815ee254fc144d1,
     type: 3}
+  RotateSpeed: 90
 --- !u!1001 &931654195302633377
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -70,6 +71,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3999504004295667860}
     m_Modifications:
+    - target: {fileID: 154084, guid: 8eb66a0729ae99641bbd527a08cf9d9b, type: 3}
+      propertyPath: m_Name
+      value: PowerOrbBlue
+      objectReference: {fileID: 0}
     - target: {fileID: 486308, guid: 8eb66a0729ae99641bbd527a08cf9d9b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -114,15 +119,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 154084, guid: 8eb66a0729ae99641bbd527a08cf9d9b, type: 3}
-      propertyPath: m_Name
-      value: PowerOrbBlue
-      objectReference: {fileID: 0}
     - target: {fileID: 19876738, guid: 8eb66a0729ae99641bbd527a08cf9d9b, type: 3}
       propertyPath: InitialModule.startRotationX.minMaxState
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 19876738, guid: 8eb66a0729ae99641bbd527a08cf9d9b, type: 3}
+      propertyPath: InitialModule.startRotationY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19894494, guid: 8eb66a0729ae99641bbd527a08cf9d9b, type: 3}
+      propertyPath: InitialModule.startRotationX.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19894494, guid: 8eb66a0729ae99641bbd527a08cf9d9b, type: 3}
       propertyPath: InitialModule.startRotationY.minMaxState
       value: 3
       objectReference: {fileID: 0}
@@ -141,6 +150,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3999504004295667860}
     m_Modifications:
+    - target: {fileID: 154084, guid: 8eb66a0729ae99641bbd527a08cf9d9b, type: 3}
+      propertyPath: m_Name
+      value: PowerOrbBlue (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 486308, guid: 8eb66a0729ae99641bbd527a08cf9d9b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.5
@@ -193,23 +206,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.0000005
       objectReference: {fileID: 0}
-    - target: {fileID: 154084, guid: 8eb66a0729ae99641bbd527a08cf9d9b, type: 3}
-      propertyPath: m_Name
-      value: PowerOrbBlue (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 19876738, guid: 8eb66a0729ae99641bbd527a08cf9d9b, type: 3}
       propertyPath: InitialModule.startRotationX.minMaxState
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 19876738, guid: 8eb66a0729ae99641bbd527a08cf9d9b, type: 3}
-      propertyPath: InitialModule.startRotationY.minMaxState
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 19894494, guid: 8eb66a0729ae99641bbd527a08cf9d9b, type: 3}
-      propertyPath: InitialModule.startRotationX.minMaxState
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 19894494, guid: 8eb66a0729ae99641bbd527a08cf9d9b, type: 3}
       propertyPath: InitialModule.startRotationY.minMaxState
       value: 3
       objectReference: {fileID: 0}
@@ -219,6 +220,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 19816268, guid: 8eb66a0729ae99641bbd527a08cf9d9b, type: 3}
       propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19894494, guid: 8eb66a0729ae99641bbd527a08cf9d9b, type: 3}
+      propertyPath: InitialModule.startRotationX.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19894494, guid: 8eb66a0729ae99641bbd527a08cf9d9b, type: 3}
+      propertyPath: InitialModule.startRotationY.minMaxState
       value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -236,6 +245,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3999504004295667860}
     m_Modifications:
+    - target: {fileID: 154084, guid: 8eb66a0729ae99641bbd527a08cf9d9b, type: 3}
+      propertyPath: m_Name
+      value: PowerOrbBlue (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 486308, guid: 8eb66a0729ae99641bbd527a08cf9d9b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.5
@@ -288,15 +301,27 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.0000005
       objectReference: {fileID: 0}
-    - target: {fileID: 154084, guid: 8eb66a0729ae99641bbd527a08cf9d9b, type: 3}
-      propertyPath: m_Name
-      value: PowerOrbBlue (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 19876738, guid: 8eb66a0729ae99641bbd527a08cf9d9b, type: 3}
       propertyPath: InitialModule.startRotationX.minMaxState
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 19876738, guid: 8eb66a0729ae99641bbd527a08cf9d9b, type: 3}
+      propertyPath: InitialModule.startRotationY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19816268, guid: 8eb66a0729ae99641bbd527a08cf9d9b, type: 3}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19816268, guid: 8eb66a0729ae99641bbd527a08cf9d9b, type: 3}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19894494, guid: 8eb66a0729ae99641bbd527a08cf9d9b, type: 3}
+      propertyPath: InitialModule.startRotationX.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19894494, guid: 8eb66a0729ae99641bbd527a08cf9d9b, type: 3}
       propertyPath: InitialModule.startRotationY.minMaxState
       value: 3
       objectReference: {fileID: 0}

@@ -12,7 +12,7 @@ namespace dustypants {
       var player = SimplePlayer.instance;
       var playerInfo = SaveManager.instance.data;
       if( player != null ){ // we have player
-        if(playerInfo.Spawn == null || playerInfo.LevelName != SceneManager.GetActiveScene().name){
+        if((playerInfo.Spawn == null || playerInfo.Spawn.Position.Length != 2 ) || playerInfo.LevelName != SceneManager.GetActiveScene().name){
           // no spawn, use this as a spawn
           player.transform.position = transform.position;
           player.mouseLook.Rotate(transform.rotation);

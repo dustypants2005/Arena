@@ -99,6 +99,7 @@ namespace dustypants.Managers {
     // Resets all members except levelname;
     public void Reset(){
       Health = 100;
+      MaxHealth = 100;
       Coins = 0;
       Spawn = null;
     }

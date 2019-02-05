@@ -35,14 +35,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1053944085316630}
-  m_LocalRotation: {x: -0, y: 0.70710677, z: -0, w: 0.7071069}
-  m_LocalPosition: {x: 63.000008, y: 0.5, z: 6.000004}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4693137751808302}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!33 &33815129083562694
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -204,6 +204,7 @@ MonoBehaviour:
   m_transitionSpeed: 1
   m_healthUI: {fileID: 0}
   DeathEffect: {fileID: 119968, guid: e73000b12fb76244cbffd6abbf8bb6e4, type: 3}
+  DeathEffectScale: 2
   HitEffect: {fileID: 0}
 --- !u!136 &136949522973730108
 CapsuleCollider:

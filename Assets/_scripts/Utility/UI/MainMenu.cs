@@ -13,6 +13,7 @@ namespace dustypants.UI {
     public void CreateNewGame(){
       SaveManager.instance.data.Reset();
       CoinManager.instance.Reset();
+      SaveManager.instance.Save();
       SceneManager.LoadScene("MenuLevel");
     }
 

@@ -136,6 +136,7 @@ MonoBehaviour:
   m_transitionSpeed: 1
   m_healthUI: {fileID: 0}
   DeathEffect: {fileID: 183222, guid: f2ee009e61b1177489331d95174281b1, type: 3}
+  DeathEffectScale: 2
   HitEffect: {fileID: 0}
 --- !u!114 &114682350477296364
 MonoBehaviour:

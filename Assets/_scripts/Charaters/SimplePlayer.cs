@@ -70,6 +70,7 @@ namespace dustypants.Characters {
     public bool isKnockback = false;
     public float knockbackDuration = 1f;
     public float knockbackTime = 1f;
+    public float AddedverticalVelocity = 0f;
     private float verticalVelocity = 0f;
     private bool isJumping = false;
     private int layermask;
@@ -93,6 +94,8 @@ namespace dustypants.Characters {
 
     void Start() {
       UpdateInfo();
+      // FOR TESTING PURPOSES ONLY TODO: remove load from player awake
+      Info = SaveManager.instance.Load();
     }
 
     void Update() {
@@ -149,7 +152,8 @@ namespace dustypants.Characters {
         mouseLook.YSensitivity = yNormalLookSpeed;
       }
 
-      if (controller.isGrounded){
+      if (controller.isGrounded) {
+        AddedverticalVelocity = 0;
         wallJumpDirection = Vector3.zero;
         isAirJump = true;
         verticalVelocity = -1;
@@ -195,10 +199,10 @@ namespace dustypants.Characters {
       if(dashDirection != Vector3.zero){
         moveDirection += dashDirection;
       }
-      if(knockback != null){
-        isKnockback = true;
-        knockbackTime = knockbackDuration + Time.deltaTime;
-      }
+      //if(knockback != null){
+      //  isKnockback = true;
+      //  knockbackTime = knockbackDuration + Time.deltaTime;
+      //}
       // if(isKnockback){
       //   // TODO: need to find point of contact, push from point.
       //   moveDirection +=  transform.InverseTransformDirection(knockback);
@@ -209,6 +213,7 @@ namespace dustypants.Characters {
       // }
 
       moveDirection.y = verticalVelocity;
+      moveDirection.y += AddedverticalVelocity;
       mouseLook.LookRotation(transform, camMount.transform);
       controller.Move(moveDirection * Time.deltaTime);
       lastMoveDirection = moveDirection;
@@ -297,7 +302,7 @@ namespace dustypants.Characters {
         foreach( var v in coinsCollected.Values) {
           if(!v) total++;
         }
-        CoinsCollectedText.text = total + "/" + max;
+        CoinsCollectedText.text = total + " / " + max;
       }
     }
 

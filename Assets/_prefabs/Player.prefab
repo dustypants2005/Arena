@@ -548,7 +548,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1431647591666252}
   m_LocalRotation: {x: 0, y: -0.60876137, z: 0, w: 0.7933534}
-  m_LocalPosition: {x: 169, y: 19, z: 20}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4131388921420976}
@@ -663,6 +663,7 @@ MonoBehaviour:
     CanDash: 0
   isDisabled: 0
   CoinText: {fileID: 114738686065530376}
+  CoinsCollectedText: {fileID: 6954089009695797580}
   speed: 12
   gravity: 30
   xNormalLookSpeed: 3
@@ -703,6 +704,7 @@ MonoBehaviour:
   isKnockback: 0
   knockbackDuration: 1
   knockbackTime: 1
+  AddedverticalVelocity: 0
 --- !u!114 &114488827644813440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -743,6 +745,7 @@ MonoBehaviour:
   m_transitionSpeed: 30
   m_healthUI: {fileID: 114639432884520046}
   DeathEffect: {fileID: 183222, guid: f2ee009e61b1177489331d95174281b1, type: 3}
+  DeathEffectScale: 2
   HitEffect: {fileID: 121962, guid: 8b859f6ed5d97694fb9e41bab73b55ff, type: 3}
 --- !u!114 &114468999695123380
 MonoBehaviour:
@@ -1013,7 +1016,7 @@ GameObject:
   - component: {fileID: 222681418190292200}
   - component: {fileID: 114738686065530376}
   m_Layer: 5
-  m_Name: CoinAmount
+  m_Name: CoinAmountText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1098,7 +1101,7 @@ MonoBehaviour:
   m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -1366,7 +1369,7 @@ GameObject:
   - component: {fileID: 6073131402982471937}
   - component: {fileID: 6954089009695797580}
   m_Layer: 5
-  m_Name: CoinAmount
+  m_Name: CoinsCollectedText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1451,7 +1454,7 @@ MonoBehaviour:
   m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0

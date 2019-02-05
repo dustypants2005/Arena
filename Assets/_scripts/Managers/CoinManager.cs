@@ -84,6 +84,7 @@ namespace dustypants.Managers {
         CoinSaves.Add(levelName, c);
       }
       Save();
+      SimplePlayer.instance.UpdateCoins(CoinsCollected);
     }
 
     /// <summary>

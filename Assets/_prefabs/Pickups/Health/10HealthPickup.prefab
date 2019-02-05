@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 114188784161508040}
   - component: {fileID: 135173269627169192}
   - component: {fileID: 73383726984122333}
+  - component: {fileID: 3454167969304343574}
   m_Layer: 0
   m_Name: 10HealthPickup
   m_TagString: Untagged
@@ -158,6 +159,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 3
+--- !u!135 &3454167969304343574
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819693908386398}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &3462055844375610927
 PrefabInstance:
   m_ObjectHideFlags: 0
