@@ -4,10 +4,14 @@ using UnityEngine;
 using dustypants.Managers;
 using dustypants.Characters;
 using UnityEngine.SceneManagement;
+using dustypants.Utility;
 
 namespace dustypants {
   public class PlayerStart : MonoBehaviour {
     public GameObject PlayerObject;
+    public TriggerEvent Show;
+    public TriggerEvent Hide;
+
     void Start () {
       var player = SimplePlayer.instance;
       var playerInfo = SaveManager.instance.data;
@@ -25,6 +29,18 @@ namespace dustypants {
         Instantiate(PlayerObject, transform.position, transform.rotation);
       }
       CoinManager.instance.UpdateUI();
+    }
+
+    void OnTriggerEnter(Collider other) {
+      if(other.CompareTag("Player")) {
+        Show.Invoke();
+      }
+    }
+
+    void OnTriggerExit(Collider other) {
+      if(other.CompareTag("Player")) {
+        Hide.Invoke();
+      }
     }
   }
 }

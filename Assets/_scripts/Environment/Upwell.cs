@@ -9,11 +9,6 @@ namespace dustypants.Environment
       if(other.CompareTag("Player")) {
         var p = SimplePlayer.instance;
         p.AddedverticalVelocity += speed;
-      } else {
-        var rb = other.GetComponent<Rigidbody>();
-        if(rb != null) {
-          rb.MovePosition(other.transform.InverseTransformDirection(transform.up) * speed);
-        }
       }
     }
   }

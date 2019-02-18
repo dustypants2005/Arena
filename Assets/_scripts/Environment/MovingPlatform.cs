@@ -13,10 +13,11 @@ namespace dustypants.Environment {
     public Color gizmoColor;
     [Tooltip("Circular: waypoints first to last then back to start. Linear: start to finish on repeat. Random: random waypoint chosen.")]
     public Cycles SelectedCyle = Cycles.Circular;
-    public enum Cycles { Linear, Circular, Random}
+    public enum Cycles { Linear, Circular, Trigger, Random}
     [SerializeField] private bool m_active = true;
     [SerializeField] private bool m_isLooping = true;
     private int m_currentTransform;
+    private bool isPlayerAttached = false;
     //TODO: this needs to be moving by animation instead of translation. Translation has player teleporting through.
 
     void Start () {
@@ -45,7 +46,7 @@ namespace dustypants.Environment {
         m_currentTransform = 0;
       }
       if(m_isLooping){
-        if(Vector3.Distance(transform.position, m_TransformList[m_currentTransform].position) <= 0.1f){
+        if((transform.position - m_TransformList[m_currentTransform].position).magnitude <= 0.1f){
           switch(SelectedCyle){
             case Cycles.Circular: {
               SetLoop(false);
@@ -59,12 +60,21 @@ namespace dustypants.Environment {
               StartCoroutine(Idle());
               break;
             }
+            case Cycles.Trigger: {
+              if(isPlayerAttached) {
+                m_currentTransform = 1;
+              } else {
+                m_currentTransform = 0;
+              }
+              break;
+            }
             default:
               Debug.LogError("Should have a Cycle selected!");
               break;
           }
         }
-        transform.position = Vector3.Lerp( transform.position, m_TransformList[m_currentTransform].position, MoveSpeed / 100);
+        var dist = (transform.position - m_TransformList[m_currentTransform].position).magnitude;
+        transform.position = Vector3.Lerp( transform.position, m_TransformList[m_currentTransform].position, (MoveSpeed / dist) / 10);
       }
     }
 
@@ -86,6 +96,18 @@ namespace dustypants.Environment {
 
     public void Deactivate(){
       m_active = false;
+    }
+
+    private void OnTriggerEnter(Collider other) {
+      if(other.CompareTag("Player")) {
+        isPlayerAttached = true;
+      }
+    }
+
+    private void OnTriggerExit(Collider other) {
+      if(other.CompareTag("Player")) {
+        isPlayerAttached = false;
+      }
     }
   }
 }

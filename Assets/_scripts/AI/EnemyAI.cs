@@ -118,7 +118,7 @@ namespace dustypants.AI {
         // Debug.Log("RepelForce: "+ repelForce);
 
         // TODO:  we need to repel the enemies from one another so they don't stack on top of one another
-        if(Vector3.Distance(transform.position, target.transform.position) > agent.stoppingDistance) {
+        if((transform.position - target.transform.position).sqrMagnitude > agent.stoppingDistance * agent.stoppingDistance) {
           agent.SetDestination(target.transform.position);
         } else {// we are close enough to attack. Need to aim toward the player.
           var pos = target.transform.position - transform.position;
@@ -127,7 +127,7 @@ namespace dustypants.AI {
           transform.rotation = Quaternion.Slerp(transform.rotation, rot, (Time.deltaTime * rotationSpeed) / rotationSpeedDamp);
 
           var mountPos = target.transform.position - Mount.position;
-          var mountRot = Quaternion.LookRotation(mountPos); // Mount Rotation TODO: bug; not facing player
+          var mountRot = Quaternion.LookRotation(mountPos); // Mount Rotation
           Mount.rotation = Quaternion.Slerp(Mount.rotation, mountRot, (Time.deltaTime * rotationSpeed) / rotationSpeedDamp);
 
           Weapon.Attack();

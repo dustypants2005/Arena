@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4353544799137178}
   - component: {fileID: 198117882158921488}
   - component: {fileID: 199725848670550400}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: MagicDust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4665,7 +4665,7 @@ GameObject:
   - component: {fileID: 4392845722020094}
   - component: {fileID: 198162894003155444}
   - component: {fileID: 199198650911763788}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ItemSparkleGreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9329,7 +9329,7 @@ GameObject:
   - component: {fileID: 4594961159436138}
   - component: {fileID: 33541890918380626}
   - component: {fileID: 23432990194737308}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9408,7 +9408,7 @@ GameObject:
   - component: {fileID: 135173269627169192}
   - component: {fileID: 296789195761558670}
   - component: {fileID: 7426498882711658013}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: 50HealthPickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9451,7 +9451,8 @@ MonoBehaviour:
   HP: 50
   pickupEfx: {fileID: 946013872889497278, guid: f8bf090af91c2574ca1bccaa40c1774b,
     type: 3}
-  pickefxSize: 1
+  pickfxSize: 5
+  InitJump: 500
 --- !u!135 &135173269627169192
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -9505,7 +9506,7 @@ GameObject:
   - component: {fileID: 6581005565781667386}
   - component: {fileID: 4415135217519509989}
   - component: {fileID: 8921786732516185533}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Sphere (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9582,7 +9583,7 @@ GameObject:
   - component: {fileID: 533139476713573787}
   - component: {fileID: 6529277317360673172}
   - component: {fileID: 5918179152527653791}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Sphere (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9659,7 +9660,7 @@ GameObject:
   - component: {fileID: 9052278024142443618}
   - component: {fileID: 350623533862188433}
   - component: {fileID: 7878192498054105434}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Sphere (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9736,7 +9737,7 @@ GameObject:
   - component: {fileID: 3411291228048645513}
   - component: {fileID: 3716414483838248086}
   - component: {fileID: 5671005569507801934}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Sphere (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

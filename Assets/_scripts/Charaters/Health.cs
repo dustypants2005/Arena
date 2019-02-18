@@ -19,7 +19,8 @@ namespace dustypants {
     [SerializeField] private GameObject DeathEffect;
     [SerializeField] private float DeathEffectScale = 2;
     [SerializeField] private GameObject HitEffect;
-    public float CurrentHealth { get; private set;}
+    [SerializeField] private float _currentHealth;
+    public float CurrentHealth { get { return _currentHealth; } private set { _currentHealth = value; } }
     private bool m_isInvulnerable = false;
     private float startTime;
 

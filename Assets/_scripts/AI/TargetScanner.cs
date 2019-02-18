@@ -14,7 +14,12 @@ namespace dustypants.AI {
   public float maxHeightDifference = 1.0f;
   public LayerMask viewBlockerLayerMask;
 
-
+  /// <summary>
+  /// Detect GO with Tag "Player"
+  /// </summary>
+  /// <param name="detector"></param>
+  /// <param name="useHeightDifference"></param>
+  /// <returns></returns>
   public SimplePlayer Detect(Transform detector, bool useHeightDifference = true) {
    //if either the player is not spwned or they are spawning, we do not target them
     if (SimplePlayer.instance == null)

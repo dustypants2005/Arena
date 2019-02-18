@@ -157,9 +157,9 @@ MonoBehaviour:
   WeaponMount: {fileID: 1164726056231364}
   Scanner:
     heightOffset: 0
-    detectionRadius: 50
-    detectionAngle: 270
-    maxHeightDifference: 50
+    detectionRadius: 20
+    detectionAngle: 90
+    maxHeightDifference: 1
     viewBlockerLayerMask:
       serializedVersion: 2
       m_Bits: 1024

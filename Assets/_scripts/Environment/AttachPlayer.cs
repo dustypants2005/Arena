@@ -12,7 +12,9 @@ namespace dustypants.Environment {
 
     private void OnTriggerExit(Collider other) {
       if(other.tag == "Player" ){
-        other.gameObject.transform.parent = null;
+        if(other.gameObject.transform.parent == transform) {
+          other.gameObject.transform.parent = null;
+        }
       }
     }
   }

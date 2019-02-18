@@ -1,16 +1,23 @@
 ﻿using UnityEngine;
 
 namespace dustypants.Characters.Pickups {
+  [RequireComponent(typeof(Rigidbody))]
   public class HealthPickup : MonoBehaviour {
     public int HP = 10;
     public GameObject pickupEfx;
     public float pickfxSize = 5;
+    public float InitJump = 100f;
 
-    private void Awake() {
+    void Awake() {
       if(pickupEfx == null) Debug.LogError("No efx");
     }
 
-    private void OnTriggerEnter(Collider other) { 
+    void Start() {
+      var rb = GetComponent<Rigidbody>();
+      rb.AddForce((Vector3.up * InitJump));
+    }
+
+    void OnTriggerEnter(Collider other) { 
       if(other.CompareTag("Player")){
         var health = other.GetComponent<Health>();
         health.AdjustHealth(HP);
@@ -21,10 +28,6 @@ namespace dustypants.Characters.Pickups {
         Destroy(efx, 1f);
         Destroy(gameObject);
       }
-    }
-
-    void OnLevelWasLoaded(int level) {
-      Destroy(this.gameObject);
     }
   }
 }

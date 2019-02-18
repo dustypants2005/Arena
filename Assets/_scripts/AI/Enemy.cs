@@ -51,7 +51,7 @@ namespace dustypants.AI {
       }
     }
 
-    public virtual void InitWeapon(){ // TODO: this is messing up. when there is more than one enemy they put their weapons in one inventory instead of their own. Probably b/c of this base class
+    public virtual void InitWeapon(){
       inventory = GetComponent<Inventory>();
       inventory.WeaponMount = WeaponMount;
       inventory.Init();

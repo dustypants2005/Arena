@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4594961159436138}
   - component: {fileID: 33541890918380626}
   - component: {fileID: 23432990194737308}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 135173269627169192}
   - component: {fileID: 73383726984122333}
   - component: {fileID: 3454167969304343574}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: 10HealthPickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,7 +129,8 @@ MonoBehaviour:
   HP: 10
   pickupEfx: {fileID: 946013872889497278, guid: 63c7f695bb788c447a7c9396f92af1b2,
     type: 3}
-  pickefxSize: 1
+  pickfxSize: 5
+  InitJump: 500
 --- !u!135 &135173269627169192
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -183,6 +184,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ItemSparkleGreen
       objectReference: {fileID: 0}
+    - target: {fileID: 191548, guid: 0bb1d6b9d39bcbf4785d00557d53e9e3, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 434584, guid: 0bb1d6b9d39bcbf4785d00557d53e9e3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -226,6 +231,10 @@ PrefabInstance:
     - target: {fileID: 434584, guid: 0bb1d6b9d39bcbf4785d00557d53e9e3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 125810, guid: 0bb1d6b9d39bcbf4785d00557d53e9e3, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 19846258, guid: 0bb1d6b9d39bcbf4785d00557d53e9e3, type: 3}
       propertyPath: InitialModule.startRotationX.minMaxState
