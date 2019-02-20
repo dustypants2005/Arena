@@ -58,7 +58,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 4312916062221807627}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: fd22d78c8e706e14b818690ebd3618bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -284,11 +283,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4312916062221807629}
     m_Modifications:
-    - target: {fileID: 3632176336587357351, guid: d972c4a46a8eda542ac5a7d421bb6fba,
-        type: 3}
-      propertyPath: m_Name
-      value: Doorway
-      objectReference: {fileID: 0}
     - target: {fileID: 3632176336587357373, guid: d972c4a46a8eda542ac5a7d421bb6fba,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -344,6 +338,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3632176336587357351, guid: d972c4a46a8eda542ac5a7d421bb6fba,
+        type: 3}
+      propertyPath: m_Name
+      value: Doorway
+      objectReference: {fileID: 0}
     - target: {fileID: 3632176336587357372, guid: d972c4a46a8eda542ac5a7d421bb6fba,
         type: 3}
       propertyPath: m_Mesh
@@ -354,16 +353,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 3632176336587357371, guid: d972c4a46a8eda542ac5a7d421bb6fba,
-        type: 3}
-      propertyPath: m_SelectedEditorRenderState
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 9101825528699922390, guid: d972c4a46a8eda542ac5a7d421bb6fba,
         type: 3}
       propertyPath: transparentMat
       value: 
       objectReference: {fileID: 2100000, guid: 51e39cc3e40ea8d459a1e71719ed1e83, type: 2}
+    - target: {fileID: 3632176336587357371, guid: d972c4a46a8eda542ac5a7d421bb6fba,
+        type: 3}
+      propertyPath: m_SelectedEditorRenderState
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d972c4a46a8eda542ac5a7d421bb6fba, type: 3}
 --- !u!4 &2980537121699679048 stripped

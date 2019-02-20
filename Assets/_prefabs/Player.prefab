@@ -55,7 +55,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1132071443781846}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -342,7 +341,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1248747876510752}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -408,10 +406,9 @@ Camera:
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 2
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
+  m_GateFitMode: 2
   m_FocalLength: 20.78461
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -456,7 +453,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1349721866514330}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: 23c1ce4fb46143f46bc5cb5224c934f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -642,7 +638,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1431647591666252}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: 9f18de799e72b974c80fc706e9be8e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -714,7 +709,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1431647591666252}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: aece44a725abec8418d30a85fcfcec99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -734,7 +728,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1431647591666252}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: 3f80c1a83863e7641b2d46ae15d24faa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -747,6 +740,7 @@ MonoBehaviour:
   DeathEffect: {fileID: 183222, guid: f2ee009e61b1177489331d95174281b1, type: 3}
   DeathEffectScale: 2
   HitEffect: {fileID: 121962, guid: 8b859f6ed5d97694fb9e41bab73b55ff, type: 3}
+  _currentHealth: 0
 --- !u!114 &114468999695123380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -756,7 +750,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1431647591666252}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: fd34eeac3bcecd143bb970395d0df412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -832,7 +825,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1492514521555738}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -855,7 +847,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1492514521555738}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -983,7 +974,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1804177053365058}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -1058,7 +1048,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1930879815884908}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -1250,7 +1239,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6202902060104622177}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -1411,7 +1399,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 8834586063681407101}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

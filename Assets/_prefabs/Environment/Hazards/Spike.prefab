@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1547165106785444}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 416.53317, y: 46, z: 124.424576}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5276582144562912218}
@@ -55,7 +55,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1547165106785444}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: b6df7251ff66eb74c93724da693b4d7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -120,6 +119,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4978348026118722, guid: daf5c13fa53fb5a49b0b386d296c0892, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 33330112576612630, guid: daf5c13fa53fb5a49b0b386d296c0892,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 23220158256800024, guid: daf5c13fa53fb5a49b0b386d296c0892,
+        type: 3}
+      propertyPath: m_SelectedEditorRenderState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 64056671704939040, guid: daf5c13fa53fb5a49b0b386d296c0892,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 64056671704939040, guid: daf5c13fa53fb5a49b0b386d296c0892,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1108330592419808213, guid: daf5c13fa53fb5a49b0b386d296c0892,
@@ -225,12 +244,12 @@ PrefabInstance:
     - target: {fileID: 1108330592419808213, guid: daf5c13fa53fb5a49b0b386d296c0892,
         type: 3}
       propertyPath: m_Textures0.Array.data[26].y
-      value: 1.835326
+      value: 1.8353258
       objectReference: {fileID: 0}
     - target: {fileID: 1108330592419808213, guid: daf5c13fa53fb5a49b0b386d296c0892,
         type: 3}
       propertyPath: m_Textures0.Array.data[30].y
-      value: 0.000000008527703
+      value: -0.000000019278247
       objectReference: {fileID: 0}
     - target: {fileID: 1108330592419808213, guid: daf5c13fa53fb5a49b0b386d296c0892,
         type: 3}
@@ -732,25 +751,15 @@ PrefabInstance:
       propertyPath: m_Tangents.Array.data[35].w
       value: -1
       objectReference: {fileID: 0}
-    - target: {fileID: 33330112576612630, guid: daf5c13fa53fb5a49b0b386d296c0892,
+    - target: {fileID: 1108330592419808213, guid: daf5c13fa53fb5a49b0b386d296c0892,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
+      propertyPath: m_Textures0.Array.data[24].y
+      value: -0.34412363
       objectReference: {fileID: 0}
-    - target: {fileID: 23220158256800024, guid: daf5c13fa53fb5a49b0b386d296c0892,
+    - target: {fileID: 1108330592419808213, guid: daf5c13fa53fb5a49b0b386d296c0892,
         type: 3}
-      propertyPath: m_SelectedEditorRenderState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 64056671704939040, guid: daf5c13fa53fb5a49b0b386d296c0892,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 64056671704939040, guid: daf5c13fa53fb5a49b0b386d296c0892,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
+      propertyPath: m_Textures0.Array.data[25].y
+      value: -0.34412363
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: daf5c13fa53fb5a49b0b386d296c0892, type: 3}

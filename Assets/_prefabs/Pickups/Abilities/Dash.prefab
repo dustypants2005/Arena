@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8408029190455742201}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.20000076, y: 2, z: 0.5}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6698918075825559419}
@@ -55,7 +55,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 8408029190455742201}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: e9bdd38ef274a0d40875a08e37aff44d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -69,11 +68,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3972829991020849024}
     m_Modifications:
-    - target: {fileID: 2661709781863329578, guid: fd56e53be0520f14f94c0f7a48fa1a26,
-        type: 3}
-      propertyPath: m_Name
-      value: ScifiRings
-      objectReference: {fileID: 0}
     - target: {fileID: 2661709781863076712, guid: fd56e53be0520f14f94c0f7a48fa1a26,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -128,6 +122,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2661709781863329578, guid: fd56e53be0520f14f94c0f7a48fa1a26,
+        type: 3}
+      propertyPath: m_Name
+      value: ScifiRings
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd56e53be0520f14f94c0f7a48fa1a26, type: 3}

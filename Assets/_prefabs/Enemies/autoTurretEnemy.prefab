@@ -214,7 +214,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1685536249243536}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: 3f80c1a83863e7641b2d46ae15d24faa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -227,6 +226,7 @@ MonoBehaviour:
   DeathEffect: {fileID: 183222, guid: f2ee009e61b1177489331d95174281b1, type: 3}
   DeathEffectScale: 2
   HitEffect: {fileID: 0}
+  _currentHealth: 0
 --- !u!114 &114571551374140226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,7 +236,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1685536249243536}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: aece44a725abec8418d30a85fcfcec99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -256,7 +255,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1685536249243536}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: d25df62816e6b954bb083cbe2547b72d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -289,7 +287,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1685536249243536}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: fd34eeac3bcecd143bb970395d0df412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

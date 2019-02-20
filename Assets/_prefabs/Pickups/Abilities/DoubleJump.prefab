@@ -55,7 +55,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 2789598938860079876}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: c96433d2edf8a9e40a33469a88e02b41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -69,11 +68,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7294605062136259197}
     m_Modifications:
-    - target: {fileID: 2661709781863329578, guid: fd56e53be0520f14f94c0f7a48fa1a26,
-        type: 3}
-      propertyPath: m_Name
-      value: ScifiRings
-      objectReference: {fileID: 0}
     - target: {fileID: 2661709781863076712, guid: fd56e53be0520f14f94c0f7a48fa1a26,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -128,6 +122,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2661709781863329578, guid: fd56e53be0520f14f94c0f7a48fa1a26,
+        type: 3}
+      propertyPath: m_Name
+      value: ScifiRings
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd56e53be0520f14f94c0f7a48fa1a26, type: 3}

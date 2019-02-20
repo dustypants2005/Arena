@@ -1226,7 +1226,6 @@ ParticleSystem:
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
   UVModule:
-    serializedVersion: 2
     enabled: 1
     mode: 0
     timeMode: 0
@@ -1344,7 +1343,7 @@ ParticleSystem:
     rowIndex: 0
     cycles: 1
     uvChannelMask: -1
-    rowMode: 1
+    randomRow: 1
     sprites:
     - sprite: {fileID: 0}
     flipU: 0
@@ -4506,7 +4505,7 @@ ParticleSystem:
 --- !u!199 &2661709781845608270
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4574,7 +4573,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 2661709781863328100}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: 7faa64a828219b44cb0eb5bfbfa83524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -5908,7 +5906,6 @@ ParticleSystem:
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
   UVModule:
-    serializedVersion: 2
     enabled: 1
     mode: 0
     timeMode: 0
@@ -6008,7 +6005,7 @@ ParticleSystem:
     rowIndex: 0
     cycles: 1
     uvChannelMask: -1
-    rowMode: 1
+    randomRow: 1
     sprites:
     - sprite: {fileID: 0}
     flipU: 0
@@ -9170,7 +9167,7 @@ ParticleSystem:
 --- !u!199 &2661709781845667706
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -10455,7 +10452,6 @@ ParticleSystem:
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
   UVModule:
-    serializedVersion: 2
     enabled: 1
     mode: 0
     timeMode: 0
@@ -10573,7 +10569,7 @@ ParticleSystem:
     rowIndex: 0
     cycles: 1
     uvChannelMask: -1
-    rowMode: 1
+    randomRow: 1
     sprites:
     - sprite: {fileID: 0}
     flipU: 0
@@ -13735,7 +13731,7 @@ ParticleSystem:
 --- !u!199 &2661709781845547208
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -13803,7 +13799,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 2661709781863361586}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: 7faa64a828219b44cb0eb5bfbfa83524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -15035,7 +15030,6 @@ ParticleSystem:
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
   UVModule:
-    serializedVersion: 2
     enabled: 1
     mode: 0
     timeMode: 0
@@ -15153,7 +15147,7 @@ ParticleSystem:
     rowIndex: 0
     cycles: 1
     uvChannelMask: -1
-    rowMode: 1
+    randomRow: 1
     sprites:
     - sprite: {fileID: 0}
     flipU: 0
@@ -18315,7 +18309,7 @@ ParticleSystem:
 --- !u!199 &2661709781845606512
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -18383,7 +18377,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 2661709781863362968}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: 7faa64a828219b44cb0eb5bfbfa83524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -19713,7 +19706,6 @@ ParticleSystem:
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
   UVModule:
-    serializedVersion: 2
     enabled: 0
     mode: 0
     timeMode: 0
@@ -19831,7 +19823,7 @@ ParticleSystem:
     rowIndex: 0
     cycles: 1
     uvChannelMask: -1
-    rowMode: 1
+    randomRow: 1
     sprites:
     - sprite: {fileID: 0}
     flipU: 0
@@ -22993,7 +22985,7 @@ ParticleSystem:
 --- !u!199 &2661709781844681262
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}

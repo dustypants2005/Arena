@@ -100,7 +100,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 3925745634231336661}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: bd6bbc3eae342b84f91e166872a7158a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -125,10 +124,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6983403243350248628}
     m_Modifications:
-    - target: {fileID: 1547165106785444, guid: 525d175360a3fe34c8f1dec1c82c5668, type: 3}
-      propertyPath: m_Name
-      value: Spike (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 4117350448661676, guid: 525d175360a3fe34c8f1dec1c82c5668, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -173,6 +168,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 1547165106785444, guid: 525d175360a3fe34c8f1dec1c82c5668, type: 3}
+      propertyPath: m_Name
+      value: Spike (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 2558153802605148116, guid: 525d175360a3fe34c8f1dec1c82c5668,
         type: 3}
       propertyPath: knockback
@@ -187,6 +186,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064883321614146125, guid: 525d175360a3fe34c8f1dec1c82c5668,
+        type: 3}
+      propertyPath: m_Textures0.Array.data[24].y
+      value: -0.34412363
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064883321614146125, guid: 525d175360a3fe34c8f1dec1c82c5668,
+        type: 3}
+      propertyPath: m_Textures0.Array.data[25].y
+      value: -0.34412363
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064883321614146125, guid: 525d175360a3fe34c8f1dec1c82c5668,
+        type: 3}
+      propertyPath: m_Textures0.Array.data[26].y
+      value: 1.8353258
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064883321614146125, guid: 525d175360a3fe34c8f1dec1c82c5668,
+        type: 3}
+      propertyPath: m_Textures0.Array.data[30].y
+      value: -0.000000019278247
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 525d175360a3fe34c8f1dec1c82c5668, type: 3}
@@ -203,10 +222,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6983403243350248628}
     m_Modifications:
-    - target: {fileID: 1547165106785444, guid: 525d175360a3fe34c8f1dec1c82c5668, type: 3}
-      propertyPath: m_Name
-      value: Spike (7)
-      objectReference: {fileID: 0}
     - target: {fileID: 4117350448661676, guid: 525d175360a3fe34c8f1dec1c82c5668, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2
@@ -251,6 +266,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 1547165106785444, guid: 525d175360a3fe34c8f1dec1c82c5668, type: 3}
+      propertyPath: m_Name
+      value: Spike (7)
+      objectReference: {fileID: 0}
     - target: {fileID: 2558153802605148116, guid: 525d175360a3fe34c8f1dec1c82c5668,
         type: 3}
       propertyPath: knockback
@@ -265,6 +284,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064883321614146125, guid: 525d175360a3fe34c8f1dec1c82c5668,
+        type: 3}
+      propertyPath: m_Textures0.Array.data[24].y
+      value: -0.34412363
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064883321614146125, guid: 525d175360a3fe34c8f1dec1c82c5668,
+        type: 3}
+      propertyPath: m_Textures0.Array.data[25].y
+      value: -0.34412363
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064883321614146125, guid: 525d175360a3fe34c8f1dec1c82c5668,
+        type: 3}
+      propertyPath: m_Textures0.Array.data[26].y
+      value: 1.8353258
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064883321614146125, guid: 525d175360a3fe34c8f1dec1c82c5668,
+        type: 3}
+      propertyPath: m_Textures0.Array.data[30].y
+      value: -0.000000019278247
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 525d175360a3fe34c8f1dec1c82c5668, type: 3}
@@ -281,10 +320,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6983403243350248628}
     m_Modifications:
-    - target: {fileID: 1547165106785444, guid: 525d175360a3fe34c8f1dec1c82c5668, type: 3}
-      propertyPath: m_Name
-      value: Spike (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 4117350448661676, guid: 525d175360a3fe34c8f1dec1c82c5668, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2
@@ -329,6 +364,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 1547165106785444, guid: 525d175360a3fe34c8f1dec1c82c5668, type: 3}
+      propertyPath: m_Name
+      value: Spike (4)
+      objectReference: {fileID: 0}
     - target: {fileID: 2558153802605148116, guid: 525d175360a3fe34c8f1dec1c82c5668,
         type: 3}
       propertyPath: knockback
@@ -343,6 +382,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064883321614146125, guid: 525d175360a3fe34c8f1dec1c82c5668,
+        type: 3}
+      propertyPath: m_Textures0.Array.data[24].y
+      value: -0.34412363
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064883321614146125, guid: 525d175360a3fe34c8f1dec1c82c5668,
+        type: 3}
+      propertyPath: m_Textures0.Array.data[25].y
+      value: -0.34412363
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064883321614146125, guid: 525d175360a3fe34c8f1dec1c82c5668,
+        type: 3}
+      propertyPath: m_Textures0.Array.data[26].y
+      value: 1.8353258
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064883321614146125, guid: 525d175360a3fe34c8f1dec1c82c5668,
+        type: 3}
+      propertyPath: m_Textures0.Array.data[30].y
+      value: -0.000000019278247
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 525d175360a3fe34c8f1dec1c82c5668, type: 3}
@@ -359,10 +418,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6983403243350248628}
     m_Modifications:
-    - target: {fileID: 1547165106785444, guid: 525d175360a3fe34c8f1dec1c82c5668, type: 3}
-      propertyPath: m_Name
-      value: Spike (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 4117350448661676, guid: 525d175360a3fe34c8f1dec1c82c5668, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -407,6 +462,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 1547165106785444, guid: 525d175360a3fe34c8f1dec1c82c5668, type: 3}
+      propertyPath: m_Name
+      value: Spike (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 2558153802605148116, guid: 525d175360a3fe34c8f1dec1c82c5668,
         type: 3}
       propertyPath: knockback
@@ -421,6 +480,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064883321614146125, guid: 525d175360a3fe34c8f1dec1c82c5668,
+        type: 3}
+      propertyPath: m_Textures0.Array.data[24].y
+      value: -0.34412363
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064883321614146125, guid: 525d175360a3fe34c8f1dec1c82c5668,
+        type: 3}
+      propertyPath: m_Textures0.Array.data[25].y
+      value: -0.34412363
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064883321614146125, guid: 525d175360a3fe34c8f1dec1c82c5668,
+        type: 3}
+      propertyPath: m_Textures0.Array.data[26].y
+      value: 1.8353258
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064883321614146125, guid: 525d175360a3fe34c8f1dec1c82c5668,
+        type: 3}
+      propertyPath: m_Textures0.Array.data[30].y
+      value: -0.000000019278247
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 525d175360a3fe34c8f1dec1c82c5668, type: 3}
@@ -437,10 +516,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6983403243350248628}
     m_Modifications:
-    - target: {fileID: 1547165106785444, guid: 525d175360a3fe34c8f1dec1c82c5668, type: 3}
-      propertyPath: m_Name
-      value: Spike (8)
-      objectReference: {fileID: 0}
     - target: {fileID: 4117350448661676, guid: 525d175360a3fe34c8f1dec1c82c5668, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -485,6 +560,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 1547165106785444, guid: 525d175360a3fe34c8f1dec1c82c5668, type: 3}
+      propertyPath: m_Name
+      value: Spike (8)
+      objectReference: {fileID: 0}
     - target: {fileID: 2558153802605148116, guid: 525d175360a3fe34c8f1dec1c82c5668,
         type: 3}
       propertyPath: knockback
@@ -499,6 +578,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064883321614146125, guid: 525d175360a3fe34c8f1dec1c82c5668,
+        type: 3}
+      propertyPath: m_Textures0.Array.data[24].y
+      value: -0.34412363
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064883321614146125, guid: 525d175360a3fe34c8f1dec1c82c5668,
+        type: 3}
+      propertyPath: m_Textures0.Array.data[25].y
+      value: -0.34412363
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064883321614146125, guid: 525d175360a3fe34c8f1dec1c82c5668,
+        type: 3}
+      propertyPath: m_Textures0.Array.data[26].y
+      value: 1.8353258
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064883321614146125, guid: 525d175360a3fe34c8f1dec1c82c5668,
+        type: 3}
+      propertyPath: m_Textures0.Array.data[30].y
+      value: -0.000000019278247
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 525d175360a3fe34c8f1dec1c82c5668, type: 3}
@@ -515,10 +614,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6983403243350248628}
     m_Modifications:
-    - target: {fileID: 1547165106785444, guid: 525d175360a3fe34c8f1dec1c82c5668, type: 3}
-      propertyPath: m_Name
-      value: Spike (5)
-      objectReference: {fileID: 0}
     - target: {fileID: 4117350448661676, guid: 525d175360a3fe34c8f1dec1c82c5668, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2
@@ -563,6 +658,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 1547165106785444, guid: 525d175360a3fe34c8f1dec1c82c5668, type: 3}
+      propertyPath: m_Name
+      value: Spike (5)
+      objectReference: {fileID: 0}
     - target: {fileID: 2558153802605148116, guid: 525d175360a3fe34c8f1dec1c82c5668,
         type: 3}
       propertyPath: knockback
@@ -577,6 +676,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064883321614146125, guid: 525d175360a3fe34c8f1dec1c82c5668,
+        type: 3}
+      propertyPath: m_Textures0.Array.data[24].y
+      value: -0.34412363
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064883321614146125, guid: 525d175360a3fe34c8f1dec1c82c5668,
+        type: 3}
+      propertyPath: m_Textures0.Array.data[25].y
+      value: -0.34412363
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064883321614146125, guid: 525d175360a3fe34c8f1dec1c82c5668,
+        type: 3}
+      propertyPath: m_Textures0.Array.data[26].y
+      value: 1.8353258
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064883321614146125, guid: 525d175360a3fe34c8f1dec1c82c5668,
+        type: 3}
+      propertyPath: m_Textures0.Array.data[30].y
+      value: -0.000000019278247
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 525d175360a3fe34c8f1dec1c82c5668, type: 3}
@@ -593,10 +712,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6983403243350248628}
     m_Modifications:
-    - target: {fileID: 1547165106785444, guid: 525d175360a3fe34c8f1dec1c82c5668, type: 3}
-      propertyPath: m_Name
-      value: Spike (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 4117350448661676, guid: 525d175360a3fe34c8f1dec1c82c5668, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2
@@ -641,6 +756,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 1547165106785444, guid: 525d175360a3fe34c8f1dec1c82c5668, type: 3}
+      propertyPath: m_Name
+      value: Spike (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 2558153802605148116, guid: 525d175360a3fe34c8f1dec1c82c5668,
         type: 3}
       propertyPath: knockback
@@ -655,6 +774,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064883321614146125, guid: 525d175360a3fe34c8f1dec1c82c5668,
+        type: 3}
+      propertyPath: m_Textures0.Array.data[24].y
+      value: -0.34412363
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064883321614146125, guid: 525d175360a3fe34c8f1dec1c82c5668,
+        type: 3}
+      propertyPath: m_Textures0.Array.data[25].y
+      value: -0.34412363
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064883321614146125, guid: 525d175360a3fe34c8f1dec1c82c5668,
+        type: 3}
+      propertyPath: m_Textures0.Array.data[26].y
+      value: 1.8353258
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064883321614146125, guid: 525d175360a3fe34c8f1dec1c82c5668,
+        type: 3}
+      propertyPath: m_Textures0.Array.data[30].y
+      value: -0.000000019278247
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 525d175360a3fe34c8f1dec1c82c5668, type: 3}
@@ -671,10 +810,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6983403243350248628}
     m_Modifications:
-    - target: {fileID: 1547165106785444, guid: 525d175360a3fe34c8f1dec1c82c5668, type: 3}
-      propertyPath: m_Name
-      value: Spike (6)
-      objectReference: {fileID: 0}
     - target: {fileID: 4117350448661676, guid: 525d175360a3fe34c8f1dec1c82c5668, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -719,6 +854,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 1547165106785444, guid: 525d175360a3fe34c8f1dec1c82c5668, type: 3}
+      propertyPath: m_Name
+      value: Spike (6)
+      objectReference: {fileID: 0}
     - target: {fileID: 2558153802605148116, guid: 525d175360a3fe34c8f1dec1c82c5668,
         type: 3}
       propertyPath: knockback
@@ -733,6 +872,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064883321614146125, guid: 525d175360a3fe34c8f1dec1c82c5668,
+        type: 3}
+      propertyPath: m_Textures0.Array.data[24].y
+      value: -0.34412363
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064883321614146125, guid: 525d175360a3fe34c8f1dec1c82c5668,
+        type: 3}
+      propertyPath: m_Textures0.Array.data[25].y
+      value: -0.34412363
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064883321614146125, guid: 525d175360a3fe34c8f1dec1c82c5668,
+        type: 3}
+      propertyPath: m_Textures0.Array.data[26].y
+      value: 1.8353258
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064883321614146125, guid: 525d175360a3fe34c8f1dec1c82c5668,
+        type: 3}
+      propertyPath: m_Textures0.Array.data[30].y
+      value: -0.000000019278247
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 525d175360a3fe34c8f1dec1c82c5668, type: 3}

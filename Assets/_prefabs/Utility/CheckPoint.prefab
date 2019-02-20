@@ -1279,7 +1279,6 @@ ParticleSystem:
         m_NumColorKeys: 2
         m_NumAlphaKeys: 3
   UVModule:
-    serializedVersion: 2
     enabled: 0
     mode: 0
     timeMode: 0
@@ -1397,7 +1396,7 @@ ParticleSystem:
     rowIndex: 0
     cycles: 1
     uvChannelMask: -1
-    rowMode: 1
+    randomRow: 1
     sprites:
     - sprite: {fileID: 0}
     flipU: 0
@@ -4559,7 +4558,7 @@ ParticleSystem:
 --- !u!199 &199418864274501744
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5915,7 +5914,6 @@ ParticleSystem:
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
   UVModule:
-    serializedVersion: 2
     enabled: 0
     mode: 0
     timeMode: 0
@@ -6033,7 +6031,7 @@ ParticleSystem:
     rowIndex: 0
     cycles: 1
     uvChannelMask: -1
-    rowMode: 1
+    randomRow: 1
     sprites:
     - sprite: {fileID: 0}
     flipU: 0
@@ -9195,7 +9193,7 @@ ParticleSystem:
 --- !u!199 &199928671434474054
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -10553,7 +10551,6 @@ ParticleSystem:
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
   UVModule:
-    serializedVersion: 2
     enabled: 0
     mode: 0
     timeMode: 0
@@ -10671,7 +10668,7 @@ ParticleSystem:
     rowIndex: 0
     cycles: 1
     uvChannelMask: -1
-    rowMode: 1
+    randomRow: 1
     sprites:
     - sprite: {fileID: 0}
     flipU: 0
@@ -13833,7 +13830,7 @@ ParticleSystem:
 --- !u!199 &199052917885884350
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -15182,7 +15179,6 @@ ParticleSystem:
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
   UVModule:
-    serializedVersion: 2
     enabled: 0
     mode: 0
     timeMode: 0
@@ -15300,7 +15296,7 @@ ParticleSystem:
     rowIndex: 0
     cycles: 1
     uvChannelMask: -1
-    rowMode: 1
+    randomRow: 1
     sprites:
     - sprite: {fileID: 0}
     flipU: 0
@@ -18462,7 +18458,7 @@ ParticleSystem:
 --- !u!199 &199295127898961414
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -18564,7 +18560,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1776544088889258}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: cdec1afe2e56ba8448b96b64aa1b88df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -19932,7 +19927,6 @@ ParticleSystem:
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
   UVModule:
-    serializedVersion: 2
     enabled: 0
     mode: 0
     timeMode: 0
@@ -20050,7 +20044,7 @@ ParticleSystem:
     rowIndex: 0
     cycles: 1
     uvChannelMask: -1
-    rowMode: 1
+    randomRow: 1
     sprites:
     - sprite: {fileID: 0}
     flipU: 0
@@ -23212,7 +23206,7 @@ ParticleSystem:
 --- !u!199 &199298872182947436
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -24550,7 +24544,6 @@ ParticleSystem:
         m_NumColorKeys: 2
         m_NumAlphaKeys: 3
   UVModule:
-    serializedVersion: 2
     enabled: 0
     mode: 0
     timeMode: 0
@@ -24668,7 +24661,7 @@ ParticleSystem:
     rowIndex: 0
     cycles: 1
     uvChannelMask: -1
-    rowMode: 1
+    randomRow: 1
     sprites:
     - sprite: {fileID: 0}
     flipU: 0
@@ -27830,7 +27823,7 @@ ParticleSystem:
 --- !u!199 &199701431790856176
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}

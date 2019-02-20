@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace dustypants.Environment {
+  [DisallowMultipleComponent]
   public class TransparentMat : MonoBehaviour {
     public Material transparentMat;
     private Material defaultMat;

@@ -1333,7 +1333,6 @@ ParticleSystem:
         m_NumColorKeys: 2
         m_NumAlphaKeys: 3
   UVModule:
-    serializedVersion: 2
     enabled: 0
     mode: 0
     timeMode: 0
@@ -1451,7 +1450,7 @@ ParticleSystem:
     rowIndex: 0
     cycles: 1
     uvChannelMask: -1
-    rowMode: 1
+    randomRow: 1
     sprites:
     - sprite: {fileID: 0}
     flipU: 0
@@ -4613,7 +4612,7 @@ ParticleSystem:
 --- !u!199 &1849458857170686448
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4714,7 +4713,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 7445723475772751968}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: 1dfe416e8f2ec9d42b07d6b696abac78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

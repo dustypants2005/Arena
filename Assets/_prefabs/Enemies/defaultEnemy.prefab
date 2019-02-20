@@ -149,7 +149,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1053944085316630}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: c3581c3ec49c5a248b35aad9474283dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -193,7 +192,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1053944085316630}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: 3f80c1a83863e7641b2d46ae15d24faa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -206,6 +204,7 @@ MonoBehaviour:
   DeathEffect: {fileID: 119968, guid: e73000b12fb76244cbffd6abbf8bb6e4, type: 3}
   DeathEffectScale: 2
   HitEffect: {fileID: 0}
+  _currentHealth: 0
 --- !u!136 &136949522973730108
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -229,7 +228,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1053944085316630}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: b6df7251ff66eb74c93724da693b4d7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -246,7 +244,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1053944085316630}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: aece44a725abec8418d30a85fcfcec99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -266,7 +263,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1053944085316630}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: fd34eeac3bcecd143bb970395d0df412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -280,7 +276,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1053944085316630}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: ab8d1ddcbee7a4a4a832ba7f2d772c58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
