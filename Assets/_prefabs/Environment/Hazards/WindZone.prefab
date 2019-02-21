@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5695683237344082862}
   - component: {fileID: 6341852546307365458}
   - component: {fileID: 2204908803245098580}
-  - component: {fileID: 3207568222825291628}
+  - component: {fileID: 1825603260087945054}
   m_Layer: 0
   m_Name: WindZone
   m_TagString: Untagged
@@ -60,7 +60,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5, y: 5, z: 15}
   m_Center: {x: 0, y: 2.5, z: 5}
---- !u!114 &3207568222825291628
+--- !u!114 &1825603260087945054
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

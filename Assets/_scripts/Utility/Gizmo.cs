@@ -13,28 +13,23 @@ public class Gizmo : MonoBehaviour
   public enum gismoType { cube, sphere, wireCube, wireSphere }
 
   private void OnDrawGizmos() {
+    Gizmos.matrix = transform.localToWorldMatrix;
+    Gizmos.color = gismoColor;
     switch(type) {
       case gismoType.wireCube: {
-        Gizmos.color = gismoColor;
-        Gizmos.DrawWireCube(Position + transform.position, Scale);
+        Gizmos.DrawWireCube(Position, Scale);
         break;
       }
-      case gismoType.wireSphere:
-      {
-        Gizmos.color = gismoColor;
-        Gizmos.DrawWireSphere(Position + transform.position, Scale.x);
+      case gismoType.wireSphere: {
+        Gizmos.DrawWireSphere(Position, Scale.x);
         break;
       }
-      case gismoType.cube:
-      {
-        Gizmos.color = gismoColor;
-        Gizmos.DrawCube(Position + transform.position, Scale);
+      case gismoType.cube: {
+        Gizmos.DrawCube(Position, Scale);
         break;
       }
-      case gismoType.sphere:
-      {
-        Gizmos.color = gismoColor;
-        Gizmos.DrawSphere(Position + transform.position, Scale.x);
+      case gismoType.sphere: {
+        Gizmos.DrawSphere(Position, Scale.x);
         break;
       }
       default:

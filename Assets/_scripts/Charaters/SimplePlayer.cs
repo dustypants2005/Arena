@@ -314,9 +314,5 @@ namespace dustypants.Characters {
         Info = new PlayerInfo();
       }
     }
-
-    private void OnLevelWasLoaded(int level) {
-      UpdateCoins(CoinManager.instance.CoinsCollected);
-    }
   }
 }
