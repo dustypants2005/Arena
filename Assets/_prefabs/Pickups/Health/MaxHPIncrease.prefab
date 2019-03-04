@@ -9462,7 +9462,7 @@ MonoBehaviour:
   HP: 10
   pickupEfx: {fileID: 946013872889497278, guid: 5eb10f05fb485fe4783bd7541ddf5ac4,
     type: 3}
-  pickefxSize: 1
+  pickefxSize: 5
   InitJump: 500
 --- !u!54 &5774474201971864447
 Rigidbody:

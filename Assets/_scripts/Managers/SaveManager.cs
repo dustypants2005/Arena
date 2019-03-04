@@ -38,15 +38,13 @@ namespace dustypants.Managers {
 
     public void SavePlayer(Transform savePoint){
       var sp = SimplePlayer.instance;
-      var newData = new PlayerInfo {
-        Coins = CoinManager.instance.CoinsCollected,
-        Health = sp.GetComponent<Health>().CurrentHealth,
-        MaxHealth = sp.GetComponent<Health>().MaxHealth,
-        Spawn = new SpawnPoint(savePoint),
-        LevelName = SceneManager.GetActiveScene().name
-      };
-      newData.Spawn.LevelName = newData.LevelName;
-      data = newData;
+      var health = sp.GetComponent<Health>();
+      data.Coins = CoinManager.instance.CoinsCollected;
+      data.Health = health.CurrentHealth;
+      data.MaxHealth = health.MaxHealth;
+      data.Spawn = new SpawnPoint(savePoint);
+      data.LevelName = SceneManager.GetActiveScene().name;
+      
       Save();
     }
 

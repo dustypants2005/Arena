@@ -409,7 +409,7 @@ Camera:
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
   m_GateFitMode: 2
-  m_FocalLength: 20.78461
+  m_FocalLength: 12
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -418,7 +418,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60.000004
+  field of view: 90
   orthographic: 0
   orthographic size: 5
   m_Depth: 1
@@ -591,7 +591,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b9f82ccfda779f147a04a74dec4b0248, type: 2}
+  - {fileID: 2100000, guid: 31ad9112d8aaf2348bd749d4aa1c73a2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -674,6 +674,8 @@ MonoBehaviour:
   wallCloud: {fileID: 115174, guid: 3c2fb72925d7f3c4a8c2b92cc3a81390, type: 3}
   wallCloudLifeTime: 2
   camMount: {fileID: 4131388921420976}
+  fov: 90
+  zoomedFov: 30
   blockingView: []
   mouseLook:
     XSensitivity: 5

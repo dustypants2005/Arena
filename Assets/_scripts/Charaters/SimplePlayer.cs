@@ -53,6 +53,8 @@ namespace dustypants.Characters {
     [Header("camera")]
     [SerializeField] private Transform camMount;
     private Camera cam;
+    [SerializeField] private float fov = 90;
+    [SerializeField] private float zoomedFov = 30;
     [SerializeField] private List<GameObject> blockingView;
 
     [Header("Other")]
@@ -96,6 +98,7 @@ namespace dustypants.Characters {
       UpdateInfo();
       // FOR TESTING PURPOSES ONLY TODO: remove load from player awake
       Info = SaveManager.instance.Load();
+      cam.fieldOfView = fov;
     }
 
     void Update() {
@@ -112,10 +115,12 @@ namespace dustypants.Characters {
       }
 
       if (Input.GetButton("TriggersL") || Input.GetAxisRaw("TriggersL") > .1f){
-        cam.focalLength = 50;
+        //cam.focalLength = 50;
+        cam.fieldOfView = zoomedFov;
         isZoomed = true;
       } else {
-        cam.focalLength = 30;
+        //cam.focalLength = 30;
+        cam.fieldOfView = fov;
         isZoomed = false;
       }
       if (Input.GetButton("TriggersR") || Input.GetAxisRaw("TriggersR") > .1f){

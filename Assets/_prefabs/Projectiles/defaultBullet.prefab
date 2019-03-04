@@ -47,9 +47,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoreTag: Enemy
   Type: 0
-  impactParticle: {fileID: 195742, guid: c83fb3ef04bb383408bb2064b89690b2, type: 3}
-  projectileParticle: {fileID: 193226, guid: ed28e53c93fc7d2449d7c68bb8409223, type: 3}
-  muzzleParticle: {fileID: 152484, guid: 23fc589b73077394db72d954703e8d1c, type: 3}
+  impactParticle: {fileID: 195742, guid: 04e5bfa83aa30164f84de430957890fe, type: 3}
+  projectileParticle: {fileID: 193226, guid: e60a6d32d9222ea4d8c12ce550e62898, type: 3}
+  muzzleParticle: {fileID: 152484, guid: ef108722d0df65c408db8022224a96a0, type: 3}
   trailParticles: []
   TagToDamage: Player
   Volume: 0.01
