@@ -17,9 +17,8 @@ namespace dustypants.AI {
     }
 
     public override void Patrol() {
-      rb.velocity = Vector3.up * rb.velocity.y;
+      rb.velocity = Vector3.up * rb.velocity.y; // reset velocity except Y axis. Must fall.
       rb.AddForce(transform.forward * speed); // forward
-      
     }
 
     private void OnCollisionEnter(Collision collision) {

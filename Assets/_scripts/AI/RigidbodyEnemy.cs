@@ -23,6 +23,7 @@ namespace dustypants.AI {
     private bool isIdle = false;
     private List<Transform> Waypoints = new List<Transform>();
     [SerializeField] private int selectedWaypoint = 0;
+    [SerializeField] private bool canAttack = false;
 
 
     void Awake() {
@@ -89,7 +90,8 @@ namespace dustypants.AI {
       var distance = heading.magnitude;
       var direction = heading / distance;
       rb.AddForce(direction * chaseSpeed);
-      if(heading.sqrMagnitude < ChaseRadius * ChaseRadius) { // in attack range
+      if(heading.sqrMagnitude < ChaseRadius * ChaseRadius 
+        && canAttack) { // in attack range
         CurrentState = AIstates.Attack;
       }
     }

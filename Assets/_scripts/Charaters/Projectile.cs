@@ -61,9 +61,11 @@ namespace dustypants {
           Destroy(hit.gameObject);
         }
 
-        var enemy = hit.gameObject.GetComponent<Damagable>();
-        if(enemy != null && enemy.CompareTag(TagToDamage)){
-          enemy.AdjustHealth(-Damage);
+        var enemies = hit.gameObject.GetComponents<Damagable>();
+        foreach(var enemy in enemies) {
+          if(enemy != null && enemy.CompareTag(TagToDamage)) {
+            enemy.AdjustHealth(-Damage);
+          }
         }
 
         FireDoorCheck(hit.gameObject.GetComponentInParent<IFireDoor>());
@@ -111,9 +113,11 @@ namespace dustypants {
           Destroy(other.gameObject);
         }
 
-        var enemy = other.gameObject.GetComponent<Damagable>();
-        if(enemy != null && enemy.CompareTag(TagToDamage)){
-          enemy.AdjustHealth(-Damage);
+        var enemies = other.gameObject.GetComponents<Damagable>();
+        foreach(var enemy in enemies) {
+          if(enemy != null && enemy.CompareTag(TagToDamage)) {
+            enemy.AdjustHealth(-Damage);
+          }
         }
 
         FireDoorCheck(other.gameObject.GetComponentInParent<IFireDoor>());
