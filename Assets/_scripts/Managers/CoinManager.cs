@@ -1,8 +1,8 @@
-﻿using UnityEngine;
-using dustypants.Characters;
+﻿using dustypants.Characters.Player;
+using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
-using System.Collections.Generic;
+using UnityEngine;
 
 namespace dustypants.Managers {
   public class CoinManager : MonoBehaviour {
@@ -19,11 +19,11 @@ namespace dustypants.Managers {
     private const string saveString = "/coininfo.dat";
 
     private void Awake() {
-      if(instance == null) {
+      if (instance == null) {
         DontDestroyOnLoad(gameObject);
         instance = this;
       } else {
-        if(instance != this) {
+        if (instance != this) {
           Destroy(gameObject);
         }
       }
@@ -37,7 +37,7 @@ namespace dustypants.Managers {
     /// Add the value to the CoinsCollected
     /// </summary>
     /// <param name="amount"></param>
-    public void Add(int amount){
+    public void Add(int amount) {
       CoinsCollected += amount;
       SaveManager.instance.data.Coins = CoinsCollected;
       SaveManager.instance.Save();
@@ -46,7 +46,7 @@ namespace dustypants.Managers {
 
     public void Subtract(int amount) {
       CoinsCollected -= amount;
-      if(CoinsCollected < 0) CoinsCollected = 0;
+      if (CoinsCollected < 0) CoinsCollected = 0;
       SaveManager.instance.data.Coins = CoinsCollected;
       SaveManager.instance.Save();
       UpdateUI();
@@ -60,7 +60,7 @@ namespace dustypants.Managers {
     }
 
     public void UpdateUI() {
-      if(SimplePlayer.instance != null){
+      if (SimplePlayer.instance != null) {
         SimplePlayer.instance.UpdateCoins(CoinsCollected);
       }
     }
@@ -72,8 +72,8 @@ namespace dustypants.Managers {
     /// <param name="id"></param>
     /// <param name="state"></param>
     public void AddOrUpdate(string levelName, float id, bool state) {
-      if(CoinSaves.ContainsKey(levelName)){
-        if(CoinSaves[levelName].ContainsKey(id)) {
+      if (CoinSaves.ContainsKey(levelName)) {
+        if (CoinSaves[levelName].ContainsKey(id)) {
           CoinSaves[levelName][id] = state;
         } else {
           CoinSaves[levelName].Add(id, state);
@@ -109,7 +109,7 @@ namespace dustypants.Managers {
     /// </summary>
     /// <returns> { levelname : { id : state} }</returns>
     public Dictionary<string, Dictionary<float, bool>> Load() {
-      if(File.Exists(Application.persistentDataPath + saveString)) {
+      if (File.Exists(Application.persistentDataPath + saveString)) {
         var bf = new BinaryFormatter();
         var file = File.Open(Application.persistentDataPath + saveString, FileMode.Open);
         var c = (Dictionary<string, Dictionary<float, bool>>)bf.Deserialize(file);

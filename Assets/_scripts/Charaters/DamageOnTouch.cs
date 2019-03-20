@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using dustypants.Characters;
+using dustypants.Characters.Player;
 
 namespace dustypants {
   [RequireComponent(typeof(Collider))]

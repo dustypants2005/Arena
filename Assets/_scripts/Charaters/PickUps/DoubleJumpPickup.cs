@@ -1,4 +1,5 @@
-﻿using dustypants.Managers;
+﻿using dustypants.Characters.Player;
+using dustypants.Managers;
 using UnityEngine;
 
 namespace dustypants.Characters.Pickups {

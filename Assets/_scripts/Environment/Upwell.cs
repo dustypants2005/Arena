@@ -1,4 +1,4 @@
-﻿using dustypants.Characters;
+﻿using dustypants.Characters.Player;
 using UnityEngine;
 
 namespace dustypants.Environment

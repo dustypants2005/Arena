@@ -27,7 +27,6 @@ namespace dustypants.AI {
     }
 
     void Update() {
-      
       foreach(var e in HealthEvents) {
         if(e.hasTriggered) continue;
         e.EventCheck(anim);
@@ -38,8 +37,8 @@ namespace dustypants.AI {
       if(other.CompareTag("Player") && !hasStarted) {
         hasStarted = true;
         StartEvent.Invoke();
-        anim.Play("Intro");
-      }
+        anim.SetBool("IsActive", true);
+        }
     }
 
     void OnDestroy() {
@@ -51,11 +50,13 @@ namespace dustypants.AI {
   public class BossEvent {
     public string EventName = "Event Name";
     public bool hasTriggered = false;
-    public string Animation = "AnimationName";
+    public int Stage = 0;
     [SerializeField] private float TriggerPercentage = .5f;
     [SerializeField] private TriggerEvent Event;
     private Health HpRef;
-    
+
+    private const string stageString = "Stage";
+
     /// <summary>
     /// should we run the event?
     /// </summary>
@@ -75,7 +76,7 @@ namespace dustypants.AI {
     public void EventCheck(Animator anim) {
       if(TriggerCheck()) {
         Event.Invoke();
-        anim.Play(Animation);
+        anim.SetInteger( stageString, Stage);
       }
     }
 

@@ -1,12 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using System.Runtime.Serialization.Formatters.Binary;
-using System.IO;
-using System;
-using UnityEngine.SceneManagement;
-using dustypants.Characters;
+﻿using dustypants.Characters.Player;
 using dustypants.Utility;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace dustypants.Managers {
   public class SaveManager : MonoBehaviour {
@@ -15,20 +14,20 @@ namespace dustypants.Managers {
     public PlayerInfo data;
 
     void Awake() {
-      if(instance == null){
+      if (instance == null) {
         DontDestroyOnLoad(gameObject);
         instance = this;
       } else {
-        if(instance != this){
+        if (instance != this) {
           Destroy(gameObject);
         }
       }
-      if(data == null){
+      if (data == null) {
         data = new PlayerInfo();
       }
     }
 
-    public void Save( string filename = "/playerinfo.dat"){
+    public void Save(string filename = "/playerinfo.dat") {
       var bf = new BinaryFormatter();
       var file = File.Create(Application.persistentDataPath + filename);
 
@@ -36,7 +35,7 @@ namespace dustypants.Managers {
       file.Close();
     }
 
-    public void SavePlayer(Transform savePoint){
+    public void SavePlayer(Transform savePoint) {
       var sp = SimplePlayer.instance;
       var health = sp.GetComponent<Health>();
       data.Coins = CoinManager.instance.CoinsCollected;
@@ -44,12 +43,12 @@ namespace dustypants.Managers {
       data.MaxHealth = health.MaxHealth;
       data.Spawn = new SpawnPoint(savePoint);
       data.LevelName = SceneManager.GetActiveScene().name;
-      
+
       Save();
     }
 
-    public PlayerInfo Load( string filename = "/playerinfo.dat"){
-      if(File.Exists(Application.persistentDataPath + filename)){
+    public PlayerInfo Load(string filename = "/playerinfo.dat") {
+      if (File.Exists(Application.persistentDataPath + filename)) {
         var bf = new BinaryFormatter();
         var file = File.Open(Application.persistentDataPath + filename, FileMode.Open);
         data = (PlayerInfo)bf.Deserialize(file);
@@ -86,7 +85,7 @@ namespace dustypants.Managers {
     /// <param name="name">level name</param>
     /// <param name="event">A TriggerEvent</param>
     /// </summary>
-    public Dictionary<string,TriggerEvent> UnlockedLevels;
+    public Dictionary<string, TriggerEvent> UnlockedLevels;
 
     //TODO: save weapons
     /// <summary>
@@ -95,7 +94,7 @@ namespace dustypants.Managers {
     public int[][] weapons;
 
     // Resets all members except levelname;
-    public void Reset(){
+    public void Reset() {
       Health = 100;
       MaxHealth = 100;
       Coins = 0;
@@ -114,7 +113,7 @@ namespace dustypants.Managers {
 
   [Serializable]
   public class SpawnPoint {
-    public SpawnPoint( Transform spawn){
+    public SpawnPoint(Transform spawn) {
       Position = new float[3];
       Position[0] = spawn.position.x;
       Position[1] = spawn.position.y;
@@ -132,7 +131,7 @@ namespace dustypants.Managers {
     public float[] Rotation;
     public float[] Scale;
     public string LevelName = "";
-    public static SpawnPoint ToSpawnPoint(Transform t){
+    public static SpawnPoint ToSpawnPoint(Transform t) {
       return new SpawnPoint(t);
     }
   }

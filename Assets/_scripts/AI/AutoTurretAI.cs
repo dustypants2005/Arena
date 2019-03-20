@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using dustypants;
-using dustypants.Characters;
+using dustypants.Characters.Player;
 
 namespace dustypants.AI {
   public class AutoTurretAI : Enemy {

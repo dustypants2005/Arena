@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using dustypants.Characters.Player;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

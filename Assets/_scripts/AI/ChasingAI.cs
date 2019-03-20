@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-using dustypants.Characters;
+using dustypants.Characters.Player;
 
 namespace dustypants.AI {
   [RequireComponent(typeof(Rigidbody))]

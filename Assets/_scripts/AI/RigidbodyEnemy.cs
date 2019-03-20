@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using dustypants.Characters;
+using dustypants.Characters.Player;
 using UnityEngine;
 
 namespace dustypants.AI {

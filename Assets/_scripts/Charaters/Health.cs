@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using dustypants.AI;
-using dustypants.Characters;
+using dustypants.Characters.Player;
 using dustypants.Managers;
 
 namespace dustypants {

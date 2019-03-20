@@ -388,7 +388,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1349721866514330}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2, y: 3, z: -15.000008}
+  m_LocalPosition: {x: 0, y: 3, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4131388921420976}
@@ -661,8 +661,8 @@ MonoBehaviour:
   CoinsCollectedText: {fileID: 6954089009695797580}
   speed: 12
   gravity: 30
-  xNormalLookSpeed: 3
-  yNormalLookSpeed: 1.25
+  xNormalLookSpeed: 5
+  yNormalLookSpeed: 3
   SlowLookSpeed: 0.25
   dash: 20
   dashCooldown: 0.25
@@ -866,6 +866,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4131388921420976}
+  - component: {fileID: 2681255316067049295}
   m_Layer: 8
   m_Name: cameraMount
   m_TagString: Untagged
@@ -891,6 +892,21 @@ Transform:
   m_Father: {fileID: 4837277743846140}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2681255316067049295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661689619855258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8352fa764fdc2f40af7b9a6768f7eb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camDistance: 15
+  transparentDistance: 3
+  adjustmentSpeed: 1
 --- !u!1 &1743204749935164
 GameObject:
   m_ObjectHideFlags: 0
