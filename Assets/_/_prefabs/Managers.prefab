@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1178810518552762
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4131976060392688}
+  - component: {fileID: 114374984292640036}
+  - component: {fileID: 114232458367696610}
+  - component: {fileID: 5641255411442454057}
+  m_Layer: 0
+  m_Name: Managers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4131976060392688
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178810518552762}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 285.01398, y: 19.9172, z: -30.766987}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114374984292640036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178810518552762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05c37f3553ba82343879b22cf709055c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data:
+    Health: 0
+    MaxHealth: 100
+    Coins: 0
+    Spawn:
+      Position: []
+      Rotation: []
+      Scale: []
+      LevelName: 
+    LevelName: 
+    CanDoubleJump: 0
+    CanWallJump: 0
+    CanDash: 0
+--- !u!114 &114232458367696610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178810518552762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 093716c7d673bcb4d875f36069b6e871, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CoinsCollected: 0
+--- !u!114 &5641255411442454057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178810518552762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3352e02b95e18c243924e07846d5c33f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WeaponLibrary:
+  - {fileID: 1016819862954628, guid: 788677dbc6db8574fafaf0bfb7d96b59, type: 3}
+  - {fileID: 1532276343169538, guid: e19acb0a770407143afd71b9c95c2b25, type: 3}
+  - {fileID: 1016819862954628, guid: dd20bf0f0a4092e4f9088cc98d059781, type: 3}
+  ProjectileSpawnLibrary:
+  - {fileID: 1745688015537386, guid: 541e7f89085770547a5b8bae3fdf0815, type: 3}
+  - {fileID: 1057175282505598, guid: 8f81e4007c2ee55448ff73d60b19fbe3, type: 3}
+  - {fileID: 1094016879048140, guid: bb7fd98a1a03ad645815ee254fc144d1, type: 3}
