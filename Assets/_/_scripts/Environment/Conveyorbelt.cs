@@ -11,7 +11,8 @@ namespace dustypants.Environment {
       } else {
         var rb = other.GetComponent<Rigidbody>();
         if (rb != null) {
-          rb.MovePosition(other.transform.InverseTransformDirection(transform.forward) * speed);
+          //rb.MovePosition(other.transform.InverseTransformDirection(transform.forward) * speed);
+          rb.MovePosition(other.transform.position + other.transform.InverseTransformDirection(transform.forward) * speed);
         }
       }
     }

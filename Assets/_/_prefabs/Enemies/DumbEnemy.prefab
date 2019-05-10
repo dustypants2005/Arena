@@ -584,7 +584,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9071312929818554622}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 34, y: 4, z: -77}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 6430425550840923542}
@@ -624,8 +624,6 @@ MonoBehaviour:
   Weapons: []
   StartingWeapons: []
   CurrentWeapon: 0
-  WeaponsCatalog: []
-  ProjectileSpawnCatalog: []
 --- !u!114 &8719017243724076989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -727,6 +725,7 @@ MonoBehaviour:
       m_Bits: 0
   CurrentState: 0
   speed: 500
+  RayDistance: 1.5
 --- !u!114 &1456561549954330919
 MonoBehaviour:
   m_ObjectHideFlags: 0

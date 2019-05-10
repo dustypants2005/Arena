@@ -382,8 +382,6 @@ MonoBehaviour:
   StartingWeapons:
   - {fileID: 1016819862954628, guid: 3b515d309707dc84ca5ec86f2f2b9f45, type: 3}
   CurrentWeapon: 0
-  WeaponsCatalog: []
-  ProjectileSpawnCatalog: []
 --- !u!114 &114176079260620828
 MonoBehaviour:
   m_ObjectHideFlags: 0

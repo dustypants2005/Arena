@@ -72,7 +72,7 @@ namespace dustypants.AI {
     public override void Chase(){
       isReseting = true; // set to true, isReseting only affects turret after loosing target
       var pos = target.transform.position - transform.position;
-      // pos.y = 0; // zero out if you want to keep turret horizontal.
+      pos.y = 0; // zero out if you want to keep turret horizontal.
       var rot = Quaternion.LookRotation(pos);
       transform.rotation = Quaternion.Slerp(transform.rotation, rot, (Time.deltaTime * rotationSpeed) / rotationSpeedDamp);
       Weapon.Attack();

@@ -114,7 +114,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &114037736159728410
 MonoBehaviour:
@@ -155,8 +155,6 @@ MonoBehaviour:
   StartingWeapons:
   - {fileID: 1016819862954628, guid: 3b515d309707dc84ca5ec86f2f2b9f45, type: 3}
   CurrentWeapon: 0
-  WeaponsCatalog: []
-  ProjectileSpawnCatalog: []
 --- !u!114 &114091247301009112
 MonoBehaviour:
   m_ObjectHideFlags: 0

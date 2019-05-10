@@ -21,7 +21,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4339045252212774, guid: f2a54cec03af7b74bb2ca6ff9b2f46e0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -36
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4339045252212774, guid: f2a54cec03af7b74bb2ca6ff9b2f46e0, type: 3}
       propertyPath: m_LocalRotation.x
@@ -72,6 +72,11 @@ PrefabInstance:
       propertyPath: WeaponMount
       value: 
       objectReference: {fileID: 9116675442198764211}
+    - target: {fileID: 54748258278136784, guid: f2a54cec03af7b74bb2ca6ff9b2f46e0,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
     - target: {fileID: 114682350477296364, guid: f2a54cec03af7b74bb2ca6ff9b2f46e0,
         type: 3}
       propertyPath: WeaponMount
@@ -93,11 +98,6 @@ PrefabInstance:
       propertyPath: health
       value: 
       objectReference: {fileID: 9157041560598659985}
-    - target: {fileID: 54748258278136784, guid: f2a54cec03af7b74bb2ca6ff9b2f46e0,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 126
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2a54cec03af7b74bb2ca6ff9b2f46e0, type: 3}
 --- !u!114 &9157041560598659985 stripped

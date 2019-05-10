@@ -9,8 +9,12 @@ namespace dustypants.Characters {
     public float speed = 1;
     void Update () {
       var rb = transform.GetComponent<Rigidbody>();
-      var rotation = Quaternion.LookRotation(SimplePlayer.instance.gameObject.transform.position - transform.position);
-      rb.MoveRotation(Quaternion.RotateTowards(transform.rotation, rotation, damping));
+      var player = SimplePlayer.instance.gameObject.transform.position;
+      var local = transform.position;
+      var lr = (player - local);
+      lr.y = 0f;
+      var rotation = Quaternion.LookRotation(lr);
+      rb.MoveRotation(Quaternion.RotateTowards(transform.rotation, rotation, damping)); // TODO: should only rotate on y
       rb.velocity = transform.forward * speed;
     }
   }

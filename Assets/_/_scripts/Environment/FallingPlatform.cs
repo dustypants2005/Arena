@@ -12,14 +12,15 @@ namespace dustypants.Environment {
     public float respawnTime = 1;
     private Rigidbody rb;
     public TriggerEvent TriggerEvent;
-    
+
     private void Start() {
       rb = GetComponent<Rigidbody>();
     }
-    
+
     private void OnTriggerEnter(Collider other) {
       if(other.CompareTag("Player")){
         if(other.transform.position.y < transform.position.y) return;
+        rb.constraints = RigidbodyConstraints.None;
         TriggerEvent.Invoke();
         StartCoroutine(Drop());
       }

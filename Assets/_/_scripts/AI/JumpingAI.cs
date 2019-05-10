@@ -10,6 +10,7 @@ namespace dustypants.AI {
     [SerializeField] private float speed = 1f;
     [SerializeField] private float jumpHeight = 1f;
     [SerializeField] private float jumpTimer = 5f;
+    [SerializeField] private float RayDistance = 1.5f;
     private float timer;
 
     private void Awake() {
@@ -25,23 +26,21 @@ namespace dustypants.AI {
       Switches();
     }
 
+    private void FixedUpdate() {
+      RaycastHit hit;
+      if (Physics.Raycast(transform.position, transform.forward, out hit, RayDistance)) {
+        if (!hit.transform.gameObject.CompareTag("Player")) {
+          TurnAround();
+        }
+      }
+    }
+
     public override void Patrol() {
       // jump on interval
       if(timer < Time.time && GroundCheck()) {
         rb.AddForce(Vector3.up * jumpHeight); // jump
         rb.AddForce(transform.forward * speed); // forward
         timer = Time.time + jumpTimer; // reset timer
-      }
-    }
-
-    private void OnCollisionEnter(Collision collision) {
-      if(collision.gameObject.CompareTag("Player")) return;
-
-      foreach(var contact in collision.contacts) {
-        if(contact.normal.y < .1f) {
-          transform.eulerAngles += Vector3.up * 180;
-          rb.velocity = -rb.velocity;
-        }
       }
     }
 
@@ -53,6 +52,11 @@ namespace dustypants.AI {
         return true;
       }
       return false;
+    }
+
+    void TurnAround() {
+      transform.eulerAngles += Vector3.up * 180;
+      rb.velocity = -rb.velocity;
     }
   }
 }

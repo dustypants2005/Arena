@@ -164,8 +164,6 @@ MonoBehaviour:
   Weapons: []
   StartingWeapons: []
   CurrentWeapon: 0
-  WeaponsCatalog: []
-  ProjectileSpawnCatalog: []
 --- !u!114 &5178862396182194817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,7 +177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isImmortal: 0
-  MaxHealth: 40
+  MaxHealth: 10
   Respawn: {fileID: 0}
   RespawnTime: 2
   m_transitionSpeed: 0.01
@@ -213,7 +211,8 @@ MonoBehaviour:
   CurrentState: 0
   speed: 150
   jumpHeight: 500
-  jumpTimer: 1
+  jumpTimer: 0
+  RayDistance: 1.5
 --- !u!135 &5305586906535722106
 SphereCollider:
   m_ObjectHideFlags: 0

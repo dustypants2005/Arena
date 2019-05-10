@@ -219,7 +219,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 2
+  m_CollisionDetection: 3
 --- !u!114 &4964817377123344394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,13 +232,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aece44a725abec8418d30a85fcfcec99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeaponMount: {fileID: 0}
+  WeaponMount: {fileID: 6218448590402974550}
   Weapons: []
   StartingWeapons:
   - {fileID: 1016819862954628, guid: 04b9af1b7b4c376449400154cc5c28f8, type: 3}
   CurrentWeapon: 0
-  WeaponsCatalog: []
-  ProjectileSpawnCatalog: []
 --- !u!114 &2736646403748309559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -293,6 +291,7 @@ MonoBehaviour:
   stoppingDistance: 1
   rotationSpeed: 1
   selectedWaypoint: 0
+  canAttack: 1
 --- !u!114 &2228943649057805772
 MonoBehaviour:
   m_ObjectHideFlags: 0

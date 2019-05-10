@@ -381,8 +381,6 @@ MonoBehaviour:
   StartingWeapons:
   - {fileID: 1016819862954628, guid: 4218f8e49b46acf43961f9d319ea8f3a, type: 3}
   CurrentWeapon: 0
-  WeaponsCatalog: []
-  ProjectileSpawnCatalog: []
 --- !u!114 &114027722489372558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -707,8 +705,6 @@ MonoBehaviour:
   StartingWeapons:
   - {fileID: 1016819862954628, guid: 4218f8e49b46acf43961f9d319ea8f3a, type: 3}
   CurrentWeapon: 0
-  WeaponsCatalog: []
-  ProjectileSpawnCatalog: []
 --- !u!114 &114071143124566786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -786,7 +782,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1633335354409210}
   m_LocalRotation: {x: -0.0002321456, y: -0.015353646, z: 0.008285202, w: 0.9998478}
-  m_LocalPosition: {x: 246.00003, y: 57.25, z: -89.249985}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.0000005, y: 1, z: 1.0000005}
   m_Children:
   - {fileID: 4324580821673560}
@@ -836,8 +832,6 @@ MonoBehaviour:
   StartingWeapons:
   - {fileID: 1016819862954628, guid: 4ddfb76d66050804e8f053da0a187eb0, type: 3}
   CurrentWeapon: 0
-  WeaponsCatalog: []
-  ProjectileSpawnCatalog: []
 --- !u!114 &114684005741620132
 MonoBehaviour:
   m_ObjectHideFlags: 0

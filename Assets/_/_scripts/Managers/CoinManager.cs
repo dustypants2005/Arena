@@ -84,7 +84,11 @@ namespace dustypants.Managers {
         CoinSaves.Add(levelName, c);
       }
       Save();
-      SimplePlayer.instance.UpdateCoins(CoinsCollected);
+      if (SimplePlayer.instance != null) {
+        SimplePlayer.instance.UpdateCoins(CoinsCollected);
+      } else {
+        Debug.LogError("No Player instance when trying to update coins.");
+      }
     }
 
     /// <summary>

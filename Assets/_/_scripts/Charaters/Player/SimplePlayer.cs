@@ -234,9 +234,6 @@ namespace dustypants.Characters.Player {
       lastMoveDirection = moveDirection;
     }
 
-    private void FixedUpdate() {
-      CamToPlayerView();
-    }
     private void OnControllerColliderHit(ControllerColliderHit hit) {
       if (Info.CanWallJump && !controller.isGrounded) {
         if (hit.normal.y < .1f) { // TODO: bug; when ceiling hits head, we trigger wall jump for w/e reason, need to exclude ceililng from wall jump
@@ -253,37 +250,6 @@ namespace dustypants.Characters.Player {
             Instantiate(jumpCloud, transform.position, transform.rotation);
           }
         }
-      }
-    }
-
-    void CamToPlayerView() {
-      var oldBlocking = blockingView;
-      var blockers = new List<GameObject>();
-      RaycastHit[] hits;  // TODO: need another one for the right side of the player
-      hits = Physics.RaycastAll(cam.transform.position, cam.transform.forward, Vector3.Distance(cam.transform.position, transform.position) * .95f);
-      foreach (var hit in hits) {
-        if (hit.transform.tag == "Player") continue;
-        var tm = hit.transform.GetComponent<TransparentMat>();
-        if (tm == null) {
-          // var rend = hit.transform.GetComponent<Renderer>();
-          // if(rend != null){
-          //   tm = hit.transform.gameObject.AddComponent<TransparentMat>();
-          // } else
-          continue;
-        }
-        tm.ApplyTransparentMat();
-        blockers.Add(tm.gameObject);
-
-        if (oldBlocking.Contains(tm.gameObject)) {
-          oldBlocking.Remove(tm.gameObject);
-        }
-      }
-      blockingView = blockers;
-      // remove what objects are not blocking
-      foreach (var go in oldBlocking) {
-        var tm = go.GetComponent<TransparentMat>();
-        if (tm == null) continue;
-        tm.ApplyDefaultMat();
       }
     }
 

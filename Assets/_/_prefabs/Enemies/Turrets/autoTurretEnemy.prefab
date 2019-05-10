@@ -122,7 +122,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1685536249243536}
-  m_LocalRotation: {x: -0, y: 0.793355, z: -0, w: -0.60875934}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.5000005, y: 2.5, z: 2.5000005}
   m_Children:
@@ -130,7 +130,7 @@ Transform:
   - {fileID: 4738975490648058}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 255, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33289967072842850
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -244,8 +244,6 @@ MonoBehaviour:
   StartingWeapons:
   - {fileID: 1532276343169538, guid: b97c46e1ff6147b45b7f7b6c2d66e6a1, type: 3}
   CurrentWeapon: 0
-  WeaponsCatalog: []
-  ProjectileSpawnCatalog: []
 --- !u!114 &114212462609116078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,7 +262,7 @@ MonoBehaviour:
     heightOffset: 0
     detectionRadius: 100
     detectionAngle: 270
-    maxHeightDifference: 100
+    maxHeightDifference: 5
     viewBlockerLayerMask:
       serializedVersion: 2
       m_Bits: 1024

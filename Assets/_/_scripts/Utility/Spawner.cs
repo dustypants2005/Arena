@@ -6,6 +6,7 @@ using UnityEngine;
 namespace dustypants.Utility {
   public class Spawner : MonoBehaviour {
     public GameObject GO;
+    [SerializeField] private bool freezeAll = true;
     private bool isSpawning = false;
     public void Spawn(float t){
       if(!isSpawning)
@@ -19,6 +20,11 @@ namespace dustypants.Utility {
           var fp = Instantiate(GO, transform).GetComponent<FallingPlatform>();
           fp.spawner = this;
           isSpawning = false;
+          var rb = fp.GetComponent<Rigidbody>();
+          if(rb != null) {
+            if(freezeAll)
+              rb.constraints = RigidbodyConstraints.FreezeAll;
+          }
         }
     }
   }

@@ -324,22 +324,27 @@ PrefabInstance:
     - target: {fileID: 8269353728463655256, guid: eea61c6c24d37294a9e5d6b4f88916f1,
         type: 3}
       propertyPath: m_Textures0.Array.data[24].y
-      value: -0.34412363
+      value: -0.34412366
       objectReference: {fileID: 0}
     - target: {fileID: 8269353728463655256, guid: eea61c6c24d37294a9e5d6b4f88916f1,
         type: 3}
       propertyPath: m_Textures0.Array.data[25].y
-      value: -0.34412363
+      value: -0.34412366
       objectReference: {fileID: 0}
     - target: {fileID: 8269353728463655256, guid: eea61c6c24d37294a9e5d6b4f88916f1,
         type: 3}
       propertyPath: m_Textures0.Array.data[26].y
-      value: 1.8353258
+      value: 1.835326
       objectReference: {fileID: 0}
     - target: {fileID: 8269353728463655256, guid: eea61c6c24d37294a9e5d6b4f88916f1,
         type: 3}
       propertyPath: m_Textures0.Array.data[30].y
-      value: -0.000000019278247
+      value: 0.000000008527703
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269353728463655256, guid: eea61c6c24d37294a9e5d6b4f88916f1,
+        type: 3}
+      propertyPath: m_MeshFormatVersion
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7636818424051799467, guid: eea61c6c24d37294a9e5d6b4f88916f1,
         type: 3}
@@ -354,22 +359,27 @@ PrefabInstance:
     - target: {fileID: 7416461735543340904, guid: eea61c6c24d37294a9e5d6b4f88916f1,
         type: 3}
       propertyPath: m_Textures0.Array.data[24].y
-      value: -0.34412363
+      value: -0.34412366
       objectReference: {fileID: 0}
     - target: {fileID: 7416461735543340904, guid: eea61c6c24d37294a9e5d6b4f88916f1,
         type: 3}
       propertyPath: m_Textures0.Array.data[25].y
-      value: -0.34412363
+      value: -0.34412366
       objectReference: {fileID: 0}
     - target: {fileID: 7416461735543340904, guid: eea61c6c24d37294a9e5d6b4f88916f1,
         type: 3}
       propertyPath: m_Textures0.Array.data[26].y
-      value: 1.8353258
+      value: 1.835326
       objectReference: {fileID: 0}
     - target: {fileID: 7416461735543340904, guid: eea61c6c24d37294a9e5d6b4f88916f1,
         type: 3}
       propertyPath: m_Textures0.Array.data[30].y
-      value: -0.000000019278247
+      value: 0.000000008527703
+      objectReference: {fileID: 0}
+    - target: {fileID: 7416461735543340904, guid: eea61c6c24d37294a9e5d6b4f88916f1,
+        type: 3}
+      propertyPath: m_MeshFormatVersion
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6760364583207486072, guid: eea61c6c24d37294a9e5d6b4f88916f1,
         type: 3}
@@ -384,22 +394,27 @@ PrefabInstance:
     - target: {fileID: 5964558692973324475, guid: eea61c6c24d37294a9e5d6b4f88916f1,
         type: 3}
       propertyPath: m_Textures0.Array.data[24].y
-      value: -0.34412363
+      value: -0.34412366
       objectReference: {fileID: 0}
     - target: {fileID: 5964558692973324475, guid: eea61c6c24d37294a9e5d6b4f88916f1,
         type: 3}
       propertyPath: m_Textures0.Array.data[25].y
-      value: -0.34412363
+      value: -0.34412366
       objectReference: {fileID: 0}
     - target: {fileID: 5964558692973324475, guid: eea61c6c24d37294a9e5d6b4f88916f1,
         type: 3}
       propertyPath: m_Textures0.Array.data[26].y
-      value: 1.8353258
+      value: 1.835326
       objectReference: {fileID: 0}
     - target: {fileID: 5964558692973324475, guid: eea61c6c24d37294a9e5d6b4f88916f1,
         type: 3}
       propertyPath: m_Textures0.Array.data[30].y
-      value: -0.000000019278247
+      value: 0.000000008527703
+      objectReference: {fileID: 0}
+    - target: {fileID: 5964558692973324475, guid: eea61c6c24d37294a9e5d6b4f88916f1,
+        type: 3}
+      propertyPath: m_MeshFormatVersion
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4080412502256479142, guid: eea61c6c24d37294a9e5d6b4f88916f1,
         type: 3}
@@ -414,22 +429,27 @@ PrefabInstance:
     - target: {fileID: 4014806028999524709, guid: eea61c6c24d37294a9e5d6b4f88916f1,
         type: 3}
       propertyPath: m_Textures0.Array.data[24].y
-      value: -0.34412363
+      value: -0.34412366
       objectReference: {fileID: 0}
     - target: {fileID: 4014806028999524709, guid: eea61c6c24d37294a9e5d6b4f88916f1,
         type: 3}
       propertyPath: m_Textures0.Array.data[25].y
-      value: -0.34412363
+      value: -0.34412366
       objectReference: {fileID: 0}
     - target: {fileID: 4014806028999524709, guid: eea61c6c24d37294a9e5d6b4f88916f1,
         type: 3}
       propertyPath: m_Textures0.Array.data[26].y
-      value: 1.8353258
+      value: 1.835326
       objectReference: {fileID: 0}
     - target: {fileID: 4014806028999524709, guid: eea61c6c24d37294a9e5d6b4f88916f1,
         type: 3}
       propertyPath: m_Textures0.Array.data[30].y
-      value: -0.000000019278247
+      value: 0.000000008527703
+      objectReference: {fileID: 0}
+    - target: {fileID: 4014806028999524709, guid: eea61c6c24d37294a9e5d6b4f88916f1,
+        type: 3}
+      propertyPath: m_MeshFormatVersion
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 688704271683029474, guid: eea61c6c24d37294a9e5d6b4f88916f1,
         type: 3}
@@ -444,22 +464,27 @@ PrefabInstance:
     - target: {fileID: 1135087241468872701, guid: eea61c6c24d37294a9e5d6b4f88916f1,
         type: 3}
       propertyPath: m_Textures0.Array.data[24].y
-      value: -0.34412363
+      value: -0.34412366
       objectReference: {fileID: 0}
     - target: {fileID: 1135087241468872701, guid: eea61c6c24d37294a9e5d6b4f88916f1,
         type: 3}
       propertyPath: m_Textures0.Array.data[25].y
-      value: -0.34412363
+      value: -0.34412366
       objectReference: {fileID: 0}
     - target: {fileID: 1135087241468872701, guid: eea61c6c24d37294a9e5d6b4f88916f1,
         type: 3}
       propertyPath: m_Textures0.Array.data[26].y
-      value: 1.8353258
+      value: 1.835326
       objectReference: {fileID: 0}
     - target: {fileID: 1135087241468872701, guid: eea61c6c24d37294a9e5d6b4f88916f1,
         type: 3}
       propertyPath: m_Textures0.Array.data[30].y
-      value: -0.000000019278247
+      value: 0.000000008527703
+      objectReference: {fileID: 0}
+    - target: {fileID: 1135087241468872701, guid: eea61c6c24d37294a9e5d6b4f88916f1,
+        type: 3}
+      propertyPath: m_MeshFormatVersion
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 60621125549747518, guid: eea61c6c24d37294a9e5d6b4f88916f1,
         type: 3}
@@ -474,22 +499,27 @@ PrefabInstance:
     - target: {fileID: 475474597075247905, guid: eea61c6c24d37294a9e5d6b4f88916f1,
         type: 3}
       propertyPath: m_Textures0.Array.data[24].y
-      value: -0.34412363
+      value: -0.34412366
       objectReference: {fileID: 0}
     - target: {fileID: 475474597075247905, guid: eea61c6c24d37294a9e5d6b4f88916f1,
         type: 3}
       propertyPath: m_Textures0.Array.data[25].y
-      value: -0.34412363
+      value: -0.34412366
       objectReference: {fileID: 0}
     - target: {fileID: 475474597075247905, guid: eea61c6c24d37294a9e5d6b4f88916f1,
         type: 3}
       propertyPath: m_Textures0.Array.data[26].y
-      value: 1.8353258
+      value: 1.835326
       objectReference: {fileID: 0}
     - target: {fileID: 475474597075247905, guid: eea61c6c24d37294a9e5d6b4f88916f1,
         type: 3}
       propertyPath: m_Textures0.Array.data[30].y
-      value: -0.000000019278247
+      value: 0.000000008527703
+      objectReference: {fileID: 0}
+    - target: {fileID: 475474597075247905, guid: eea61c6c24d37294a9e5d6b4f88916f1,
+        type: 3}
+      propertyPath: m_MeshFormatVersion
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eea61c6c24d37294a9e5d6b4f88916f1, type: 3}
