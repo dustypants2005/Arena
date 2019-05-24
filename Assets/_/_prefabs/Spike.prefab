@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4117350448661676}
   - component: {fileID: 65387850320675704}
-  - component: {fileID: 2558153802605148116}
+  - component: {fileID: 3854714385450294905}
   m_Layer: 0
   m_Name: Spike
   m_TagString: Untagged
@@ -46,7 +46,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: -1, y: 1, z: 0}
---- !u!114 &2558153802605148116
+--- !u!114 &3854714385450294905
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -55,14 +55,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1547165106785444}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_GeneratorAsset: {fileID: 0}
-  m_Script: {fileID: 11500000, guid: b6df7251ff66eb74c93724da693b4d7e, type: 3}
+  m_Script: {fileID: 11500000, guid: d01061690b1c1244c9dcf6e29edb9b73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTempInvulnerable: 1
-  invulnerableTime: 1
-  damage: 10
-  knockback: 10
 --- !u!1001 &5272448831122643352
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -130,7 +125,7 @@ PrefabInstance:
     - target: {fileID: 23220158256800024, guid: daf5c13fa53fb5a49b0b386d296c0892,
         type: 3}
       propertyPath: m_SelectedEditorRenderState
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 64056671704939040, guid: daf5c13fa53fb5a49b0b386d296c0892,
         type: 3}
