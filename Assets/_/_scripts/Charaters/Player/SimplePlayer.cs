@@ -80,6 +80,8 @@ namespace dustypants.Characters.Player {
     private bool isZoomed = false;
     private bool hasFired = false;
 
+    private Animator anim;
+
     [SerializeField] private Vector2 moveInput = Vector2.zero;
 
     private WeaponsManager wm;
@@ -88,6 +90,7 @@ namespace dustypants.Characters.Player {
       s_Instance = this;
       controller = GetComponent<CharacterController>();
       cam = camMount.GetComponentInChildren<Camera>();
+      anim = GetComponentInChildren<Animator>();
       wm = WeaponsManager.instance;
       mouseLook.Init(transform, camMount.transform);
       layermask = 1 << 8;
@@ -105,6 +108,9 @@ namespace dustypants.Characters.Player {
 
     void Update() {
       if (isDisabled) return;
+
+      anim.SetFloat("Horizontal", Input.GetAxis("L_XAxis"));
+      anim.SetFloat("Vertical", Input.GetAxis("L_YAxis"));
 
       if (Input.GetButtonUp("RB")) {
         CurrentWeapon = wm.NextWeapon().GetComponent<Weapon>();

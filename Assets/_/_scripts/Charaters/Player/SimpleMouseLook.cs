@@ -27,14 +27,16 @@ namespace dustypants.Characters.Player {
     }
 
 
-    public void LookRotation(Transform character, Transform camera) {
-      var x = Input.GetAxis("R_XAxis") > deadzone || Input.GetAxis("R_XAxis") < -deadzone ?
-        Input.GetAxis("R_XAxis") : 0;
-      var y = Input.GetAxis("R_YAxis") > deadzone || Input.GetAxis("R_YAxis") < -deadzone ?
-        Input.GetAxis("R_YAxis") : 0;
+    public void LookRotation(Transform character, Transform camera, float? x = null, float? y = null) {
+      if(!x.HasValue || !y.HasValue){
+        x = Input.GetAxis("R_XAxis") > deadzone || Input.GetAxis("R_XAxis") < -deadzone ?
+          Input.GetAxis("R_XAxis") : 0;
+        y = Input.GetAxis("R_YAxis") > deadzone || Input.GetAxis("R_YAxis") < -deadzone ?
+          Input.GetAxis("R_YAxis") : 0;
+      }
 
-      float yRot = x < 0 ? -(Mathf.Abs(Mathf.Pow(x, RotPower) * XSensitivity)) : Mathf.Abs(Mathf.Pow(x, RotPower) * XSensitivity);
-      float xRot = y < 0 ? -(Mathf.Abs(Mathf.Pow(y, RotPower) * YSensitivity)) : Mathf.Abs(Mathf.Pow(y, RotPower) * YSensitivity);
+      float yRot = x < 0 ? -(Mathf.Abs(Mathf.Pow(x.Value, RotPower) * XSensitivity)) : Mathf.Abs(Mathf.Pow(x.Value, RotPower) * XSensitivity);
+      float xRot = y < 0 ? -(Mathf.Abs(Mathf.Pow(y.Value, RotPower) * YSensitivity)) : Mathf.Abs(Mathf.Pow(y.Value, RotPower) * YSensitivity);
 
       if (!isVerticalActive) {
         xRot = 0;
