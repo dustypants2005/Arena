@@ -1,8 +1,6 @@
-﻿using dustypants.Characters.Player;
-using dustypants.Managers;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace dustypants.Characters.Pickups {
+
   public class WallJumpPickup : MonoBehaviour {
     public GameObject pickupEfx;
     public float pickfxSize = 5;
@@ -29,4 +27,3 @@ namespace dustypants.Characters.Pickups {
       }
     }
   }
-}

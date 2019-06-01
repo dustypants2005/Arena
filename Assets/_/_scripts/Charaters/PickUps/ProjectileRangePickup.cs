@@ -1,7 +1,6 @@
-﻿using dustypants.Characters.Player;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace dustypants.Characters.Pickups {
+
   public class ProjectileRangePickup : MonoBehaviour {
     public float amount;
 
@@ -15,4 +14,3 @@ namespace dustypants.Characters.Pickups {
       }
     }
   }
-}

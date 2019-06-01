@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace dustypants.Environment {
   public class FireDoor : MonoBehaviour, IFireDoor {
     public Animator anim;
     public AudioSource OpenAudio;
@@ -34,4 +33,3 @@ namespace dustypants.Environment {
       }
     }
   }
-}

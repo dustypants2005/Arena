@@ -1,9 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using dustypants.Environment;
 
-namespace dustypants {
   public enum ElementalType {
     None,
     Fire,
@@ -160,4 +158,3 @@ namespace dustypants {
       }
     }
   }
-}

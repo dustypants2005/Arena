@@ -1,10 +1,6 @@
-﻿using dustypants.Characters.Player;
-using dustypants.Managers;
-using dustypants.Utility;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace dustypants {
   public class PlayerStart : MonoBehaviour {
     public GameObject PlayerObject;
     public TriggerEvent Show;
@@ -46,4 +42,3 @@ namespace dustypants {
       }
     }
   }
-}

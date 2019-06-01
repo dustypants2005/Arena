@@ -3,7 +3,5 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace dustypants.Utility {
-  [System.Serializable]
-  public class ToggleEvent : UnityEvent<bool>{}
-}
+[System.Serializable]
+public class ToggleEvent : UnityEvent<bool> { }

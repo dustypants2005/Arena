@@ -1,8 +1,7 @@
-﻿using dustypants.Characters;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace dustypants {
+
   [DisallowMultipleComponent]
   public class Weapon : MonoBehaviour {
     public bool isSingleShot = true;
@@ -123,4 +122,3 @@ namespace dustypants {
     }
 
   }
-}

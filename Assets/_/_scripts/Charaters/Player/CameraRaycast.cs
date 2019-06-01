@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 
-namespace dustypants.Characters.Player {
   /// <summary>
   /// Place on Camera Mount
   /// </summary>
@@ -26,10 +25,9 @@ namespace dustypants.Characters.Player {
     void FixedUpdate() {
       var target = GetClosestCameraPosition();
       camera.gameObject.transform.localPosition = target;
-      //Debug.Log("ExeCount: " + exeCount);
     }
 
-    Vector3 GetClosestCameraPosition() { 
+    Vector3 GetClosestCameraPosition() {
       var currentCamPos = GetCameraPosition(camera.transform.position);
       var camtran = camera.transform;
       camtran.localPosition = defaultCameraPosition;
@@ -38,7 +36,7 @@ namespace dustypants.Characters.Player {
     }
 
     Vector3 GetCameraPosition(Vector3 camposition) {
-      var direction = GetDirection(camposition);
+      var direction = transform.position.Direction(camposition);
       var campos = camera.transform.localPosition;
       Debug.DrawLine(transform.position, camposition);
       var hits = Physics.RaycastAll(transform.position, direction, camDistance);
@@ -51,18 +49,6 @@ namespace dustypants.Characters.Player {
       }
     }
 
-    float GetDistance(Vector3 a) {
-      // TODO: this is not working correctly. using local position for "a" and world position for transform.
-      // should transform "a" to world space.
-      return (a - transform.position).magnitude;
-    }
-
-    Vector3 GetDirection(Vector3 pos) {
-      var heading = pos - transform.position;
-      var distance = heading.magnitude;
-      return heading / distance;
-    }
-
     Vector3 ClosestHit(RaycastHit[] hits, Vector3 campos) {
       Vector3 closestHit = Vector3.zero;
       float closestDistance = Mathf.Infinity;
@@ -71,7 +57,8 @@ namespace dustypants.Characters.Player {
         if (hit.collider.CompareTag(PlayerTag)) continue;
         var h = transform.position - hit.point;
         var pos = new Vector3(campos.x, campos.y, -h.magnitude);
-        var d = GetDistance(pos);
+        var d = transform.position.Distance(pos);
+
         if (closestDistance > d) {
           closestHit = pos;
           closestDistance = d;
@@ -83,4 +70,3 @@ namespace dustypants.Characters.Player {
       return closestHit;
     }
   }
-}

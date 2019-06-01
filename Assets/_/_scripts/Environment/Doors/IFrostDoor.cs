@@ -1,5 +1,3 @@
 using UnityEngine;
 
-namespace dustypants.Environment {
-  public interface IFrostDoor : IDoor {}
-}
+public interface IFrostDoor : IDoor {}

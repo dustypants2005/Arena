@@ -1,7 +1,5 @@
-﻿using dustypants.Managers;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace dustypants.Characters.Pickups {
   public class ProjectileSpawnPickup : MonoBehaviour {
     public GameObject projectileSpawn;
     public float RotateSpeed = 30f;
@@ -20,4 +18,3 @@ namespace dustypants.Characters.Pickups {
       }
     }
   }
-}

@@ -2,11 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using dustypants.Characters.Player;
 
-namespace dustypants.AI {
- [Serializable]
- public class TargetScanner {
+[Serializable]
+public class TargetScanner {
   public float heightOffset = 0.0f;
   public float detectionRadius = 10;
   [Range(0.0f, 360.0f)]
@@ -77,5 +75,4 @@ namespace dustypants.AI {
   }
 
 #endif
- }
 }

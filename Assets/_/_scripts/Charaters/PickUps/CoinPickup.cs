@@ -1,9 +1,6 @@
 ﻿using UnityEngine;
-using dustypants.Managers;
 using UnityEngine.SceneManagement;
 
-namespace dustypants.Characters.Pickups
-{
   [RequireComponent(typeof(Collider))]
   public class CoinPickup : MonoBehaviour {
     public int Amount = 1;
@@ -31,4 +28,3 @@ namespace dustypants.Characters.Pickups
       }
     }
   }
-}

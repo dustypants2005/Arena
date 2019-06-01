@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 
-namespace dustypants.Characters.Pickups {
   [RequireComponent(typeof(Rigidbody))]
   public class MaxHealthPickup : MonoBehaviour {
     public int HP = 10;
@@ -24,5 +23,3 @@ namespace dustypants.Characters.Pickups {
       }
     }
   }
-
-}

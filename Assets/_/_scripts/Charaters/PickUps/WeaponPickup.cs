@@ -1,7 +1,5 @@
-﻿using dustypants.Managers;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace dustypants.Characters.Pickups {
   public class WeaponPickup : MonoBehaviour {
     //public GameObject Pickup;
     public int Weapon = 0;
@@ -16,4 +14,3 @@ namespace dustypants.Characters.Pickups {
       }
     }
   }
-}

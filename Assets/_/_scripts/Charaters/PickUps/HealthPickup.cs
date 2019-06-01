@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 
-namespace dustypants.Characters.Pickups {
   [RequireComponent(typeof(Rigidbody))]
   public class HealthPickup : MonoBehaviour {
     public int HP = 10;
@@ -17,7 +16,7 @@ namespace dustypants.Characters.Pickups {
       rb.AddForce((Vector3.up * InitJump));
     }
 
-    void OnTriggerEnter(Collider other) { 
+    void OnTriggerEnter(Collider other) {
       if(other.CompareTag("Player")){
         var health = other.GetComponent<Health>();
         health.AdjustHealth(HP);
@@ -30,4 +29,3 @@ namespace dustypants.Characters.Pickups {
       }
     }
   }
-}

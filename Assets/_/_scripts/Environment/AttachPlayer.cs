@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace dustypants.Environment {
   public class AttachPlayer : MonoBehaviour {
     private void OnTriggerEnter(Collider other) {
       if(other.tag == "Player" ){
@@ -18,4 +17,3 @@ namespace dustypants.Environment {
       }
     }
   }
-}
