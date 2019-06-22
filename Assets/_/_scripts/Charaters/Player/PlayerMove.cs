@@ -26,6 +26,9 @@ public class PlayerMove : Move {
     } else {
       gravity.UpdateVeloctiy(A && controller.velocity.y >= 0);
     }
+    if (controller.velocity.y < 0) {
+      gravity.UpdateVeloctiy(false);
+    }
   }
 
 }
