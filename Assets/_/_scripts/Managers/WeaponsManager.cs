@@ -30,6 +30,11 @@ public class WeaponsManager : MonoBehaviour {
         Destroy(gameObject);
       }
     }
+    /*
+      TODO: change from Resources to AssetDatabase.LoadAssetAtPath.
+      Reason: Resources needs a Resources folder to find path.
+      We can eleminate the folder by using Assetdatabase
+    */
     WeaponLibrary = Resources.LoadAll(PlayerWeaponsPath, typeof(GameObject)).Cast<GameObject>().ToList();
   }
 
