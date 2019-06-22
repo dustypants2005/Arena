@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 114534957174208780}
   - component: {fileID: 54229512222096968}
   - component: {fileID: 135535568681853216}
-  m_Layer: 2
+  m_Layer: 8
   m_Name: PlayerDefaultBullet
   m_TagString: Destructible
   m_Icon: {fileID: 0}
@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoreTag: Player
   Type: 0
+  DestroyType: 0
   impactParticle: {fileID: 195742, guid: c5bd5061966247147a0e3ca028629f3b, type: 3}
   projectileParticle: {fileID: 193226, guid: 2c93c3a8185dfad4a903d711bee12e3f, type: 3}
   muzzleParticle: {fileID: 152484, guid: cb65be87706cbee44b0ca47ce66533eb, type: 3}
@@ -79,7 +80,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1442389999443558}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.15

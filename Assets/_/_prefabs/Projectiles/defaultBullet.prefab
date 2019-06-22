@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 114534957174208780}
   - component: {fileID: 54229512222096968}
   - component: {fileID: 135535568681853216}
-  m_Layer: 2
+  m_Layer: 9
   m_Name: defaultBullet
   m_TagString: Destructible
   m_Icon: {fileID: 0}
@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoreTag: Enemy
   Type: 0
+  DestroyType: 0
   impactParticle: {fileID: 132352, guid: eddbb5d1df705704a90aead3087e72bd, type: 3}
   projectileParticle: {fileID: 144206, guid: d8036925c92f7b44e86ae08ea7d0ff9b, type: 3}
   muzzleParticle: {fileID: 105160, guid: 5c15960daf7a33b4aa775b84463907f1, type: 3}

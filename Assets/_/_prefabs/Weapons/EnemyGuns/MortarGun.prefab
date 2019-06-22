@@ -44,14 +44,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cf866dd843dbfc44bb0af55f4ed23f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSingleShot: 1
   ProjectileCount: 100
   isHoming: 0
   homingDamping: 0
   Damage: 10
   Range: 100
-  FireRate: 2
+  FireRate: 0.4
   ImpactForce: 30
-  ProjectileSpeed: 200
+  ProjectileSpeed: 750
   ProjectilLifespan: 5
   Projectile: {fileID: 114042488909478722, guid: f4d179591646d9c43b83047afea24a05,
     type: 3}

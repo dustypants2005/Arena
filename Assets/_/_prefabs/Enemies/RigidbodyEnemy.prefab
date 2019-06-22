@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 3720367583087450682}
   - component: {fileID: 1941875086344501131}
   - component: {fileID: 4792094124612456092}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -181,9 +181,9 @@ GameObject:
   - component: {fileID: 2736646403748309559}
   - component: {fileID: 6863501796760811820}
   - component: {fileID: 2228943649057805772}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RigidbodyEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

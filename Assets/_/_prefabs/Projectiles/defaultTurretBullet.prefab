@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 114534957174208780}
   - component: {fileID: 54229512222096968}
   - component: {fileID: 135535568681853216}
-  m_Layer: 2
+  m_Layer: 9
   m_Name: defaultTurretBullet
   m_TagString: Destructible
   m_Icon: {fileID: 0}
@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoreTag: Enemy
   Type: 0
+  DestroyType: 0
   impactParticle: {fileID: 195742, guid: c83fb3ef04bb383408bb2064b89690b2, type: 3}
   projectileParticle: {fileID: 144206, guid: eecfd95aa06159440b824635d22e0f24, type: 3}
   muzzleParticle: {fileID: 152484, guid: 23fc589b73077394db72d954703e8d1c, type: 3}

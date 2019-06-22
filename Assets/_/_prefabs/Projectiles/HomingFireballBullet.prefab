@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 114042488909478722}
   - component: {fileID: 135331526833169102}
   - component: {fileID: 54971733733209652}
-  m_Layer: 2
+  m_Layer: 9
   m_Name: HomingFireballBullet
   m_TagString: Destructible
   m_Icon: {fileID: 0}
@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoreTag: Enemy
   Type: 0
+  DestroyType: 0
   impactParticle: {fileID: 130848, guid: d16221e794fe16e4e8994a7f8c770561, type: 3}
   projectileParticle: {fileID: 147436, guid: 3b671081e44be1c4aa4355e8ba6e8a5e, type: 3}
   muzzleParticle: {fileID: 193574, guid: 5c2bdcf6f0badc34f9f192b0995e4a79, type: 3}
