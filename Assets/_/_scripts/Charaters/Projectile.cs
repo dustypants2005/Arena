@@ -53,7 +53,6 @@ public class Projectile : MonoBehaviour {
   void Update() {
     // Guarantee the object is destroyed
     if (timestamp + LifeSpan <= Time.time) {
-      Debug.Log("Destroy in Projectile");
       Destroy(gameObject);
     }
   }
