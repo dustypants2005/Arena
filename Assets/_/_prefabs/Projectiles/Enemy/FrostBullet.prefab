@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1357379914901126
+--- !u!1 &1442389999443558
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,24 +8,24 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4803116257541072}
-  - component: {fileID: 114042488909478722}
-  - component: {fileID: 135331526833169102}
-  - component: {fileID: 54971733733209652}
-  m_Layer: 9
-  m_Name: FireballBullet
+  - component: {fileID: 4170817710442986}
+  - component: {fileID: 114534957174208780}
+  - component: {fileID: 54229512222096968}
+  - component: {fileID: 135535568681853216}
+  m_Layer: 15
+  m_Name: FrostBullet
   m_TagString: Destructible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4803116257541072
+--- !u!4 &4170817710442986
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1357379914901126}
+  m_GameObject: {fileID: 1442389999443558}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -33,49 +33,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114042488909478722
+--- !u!114 &114534957174208780
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1357379914901126}
+  m_GameObject: {fileID: 1442389999443558}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a49e691db775021488f20b1a0ede250c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IgnoreTag: Enemy
   Type: 0
   DestroyType: 0
-  impactParticle: {fileID: 130848, guid: d16221e794fe16e4e8994a7f8c770561, type: 3}
-  projectileParticle: {fileID: 147436, guid: 3b671081e44be1c4aa4355e8ba6e8a5e, type: 3}
-  muzzleParticle: {fileID: 193574, guid: 5c2bdcf6f0badc34f9f192b0995e4a79, type: 3}
+  impactParticle: {fileID: 153912, guid: 932046b7eaf3b554f8d74c81e2f00558, type: 3}
+  projectileParticle: {fileID: 160792, guid: 7e9a3591984cda1499dc675622a57b0b, type: 3}
+  muzzleParticle: {fileID: 157556, guid: f217d1d708cdaf14e8cfa730ff75126e, type: 3}
   trailParticles: []
-  TagToDamage: Player
   Volume: 0.01
+  LifeSpan: 5
   LowerVolume: 1
   impactNormal: {x: 0, y: 0, z: 0}
---- !u!135 &135331526833169102
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1357379914901126}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &54971733733209652
+--- !u!54 &54229512222096968
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1357379914901126}
+  m_GameObject: {fileID: 1442389999443558}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -85,3 +71,16 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!135 &135535568681853216
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442389999443558}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.15
+  m_Center: {x: 0, y: 0, z: 0}

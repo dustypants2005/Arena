@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5133856519456446191
+--- !u!1 &1357379914901126
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,67 +8,79 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 543943508836746085}
-  - component: {fileID: 8782786305436887393}
-  - component: {fileID: 5796488955631886458}
-  m_Layer: 9
-  m_Name: BombProjectile
+  - component: {fileID: 4803116257541072}
+  - component: {fileID: 114042488909478722}
+  - component: {fileID: 135331526833169102}
+  - component: {fileID: 54971733733209652}
+  m_Layer: 14
+  m_Name: PlayerFireballBullet
   m_TagString: Destructible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &543943508836746085
+--- !u!4 &4803116257541072
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5133856519456446191}
+  m_GameObject: {fileID: 1357379914901126}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.6198273, y: 7.062338, z: 3.4291897}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8782786305436887393
+--- !u!114 &114042488909478722
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5133856519456446191}
+  m_GameObject: {fileID: 1357379914901126}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a49e691db775021488f20b1a0ede250c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IgnoreTag: Player
-  Type: 0
-  DestroyType: 1
-  impactParticle: {fileID: 0}
-  projectileParticle: {fileID: 4705278617858607589, guid: 12930bc1b9d776249a8916a15ec6a1e8,
-    type: 3}
-  muzzleParticle: {fileID: 0}
+  Type: 1
+  DestroyType: 0
+  impactParticle: {fileID: 130848, guid: d16221e794fe16e4e8994a7f8c770561, type: 3}
+  projectileParticle: {fileID: 147436, guid: 3b671081e44be1c4aa4355e8ba6e8a5e, type: 3}
+  muzzleParticle: {fileID: 193574, guid: 5c2bdcf6f0badc34f9f192b0995e4a79, type: 3}
   trailParticles: []
-  TagToDamage: Enemy
-  Volume: 0.001
-  LowerVolume: 1
+  Volume: 0.1
+  LifeSpan: 5
+  LowerVolume: 0
   impactNormal: {x: 0, y: 0, z: 0}
---- !u!54 &5796488955631886458
+--- !u!135 &135331526833169102
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357379914901126}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &54971733733209652
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5133856519456446191}
+  m_GameObject: {fileID: 1357379914901126}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3

@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 114534957174208780}
   - component: {fileID: 54229512222096968}
   - component: {fileID: 135535568681853216}
-  m_Layer: 9
-  m_Name: FrostBullet
+  m_Layer: 15
+  m_Name: defaultTurretBullet
   m_TagString: Destructible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 1442389999443558}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -45,15 +45,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a49e691db775021488f20b1a0ede250c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IgnoreTag: Enemy
   Type: 0
   DestroyType: 0
-  impactParticle: {fileID: 153912, guid: 932046b7eaf3b554f8d74c81e2f00558, type: 3}
-  projectileParticle: {fileID: 160792, guid: 7e9a3591984cda1499dc675622a57b0b, type: 3}
-  muzzleParticle: {fileID: 157556, guid: f217d1d708cdaf14e8cfa730ff75126e, type: 3}
+  impactParticle: {fileID: 195742, guid: c83fb3ef04bb383408bb2064b89690b2, type: 3}
+  projectileParticle: {fileID: 144206, guid: eecfd95aa06159440b824635d22e0f24, type: 3}
+  muzzleParticle: {fileID: 152484, guid: 23fc589b73077394db72d954703e8d1c, type: 3}
   trailParticles: []
-  TagToDamage: Player
   Volume: 0.01
+  LifeSpan: 5
   LowerVolume: 1
   impactNormal: {x: 0, y: 0, z: 0}
 --- !u!54 &54229512222096968
