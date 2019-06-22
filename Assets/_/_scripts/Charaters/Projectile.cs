@@ -23,8 +23,8 @@ public class Projectile : MonoBehaviour {
   public GameObject[] trailParticles;
 
   public float Damage { get; set; }
-  public float Volume = .001f;
   public float LifeSpan = 5f;
+  public float Volume = .001f;
 
   public bool LowerVolume = true;
 
@@ -53,6 +53,7 @@ public class Projectile : MonoBehaviour {
   void Update() {
     // Guarantee the object is destroyed
     if (timestamp + LifeSpan <= Time.time) {
+      Debug.Log("Destroy in Projectile");
       Destroy(gameObject);
     }
   }

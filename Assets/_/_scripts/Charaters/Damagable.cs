@@ -11,7 +11,6 @@ public class Damagable : MonoBehaviour {
   }
 
   public void AdjustHealth(float adjustment, bool setInvulnerable = false, float invulnerableTime = 1f) {
-    Debug.Log("Hit for: " + adjustment);
     health.AdjustHealth(adjustment, setInvulnerable, invulnerableTime);
   }
 }

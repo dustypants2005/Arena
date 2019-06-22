@@ -17,17 +17,18 @@ public class Bomb : MonoBehaviour {
   [SerializeField] private float power = 5f;
   private float timestamp;
 
-  void Start() {
+  void Awake() {
     mat = radius.GetComponent<Renderer>().material;
     timestamp = Time.time + TimerDuration;
+    power = mat.GetFloat(fresnelPower);
   }
 
   void Update() {
     SignGlow();
     if (timestamp < Time.time) {
       SpawnFX();
+      Destroy(gameObject);
     }
-    power = mat.GetFloat(fresnelPower);
   }
 
   void SignGlow() {
@@ -37,7 +38,6 @@ public class Bomb : MonoBehaviour {
 
   void SpawnFX() {
     var fx = Instantiate(ExplosionFX, transform.position, transform.rotation);
-    Destroy(gameObject);
     Destroy(fx, fxDestroyTimer);
   }
 }

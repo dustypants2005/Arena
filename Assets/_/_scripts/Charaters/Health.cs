@@ -28,7 +28,6 @@ public class Health : MonoBehaviour {
   }
 
   public void AdjustHealth(float adjustment, bool setInvulnerable = false, float invulnerableTime = 1f) {
-    // Debug.Log("Hit for: " + adjustment);
     if (m_isInvulnerable || isImmortal) return; // if invulnerable, don't take damage
     CurrentHealth += adjustment;
     if (CurrentHealth > MaxHealth) { CurrentHealth = MaxHealth; }
