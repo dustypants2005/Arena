@@ -53,11 +53,10 @@ MonoBehaviour:
   FireRate: 0.4
   ImpactForce: 30
   ProjectileSpeed: 750
-  ProjectilLifespan: 5
-  Projectile: {fileID: 114042488909478722, guid: f4d179591646d9c43b83047afea24a05,
+  ProjectilLifespan: 6
+  Projectile: {fileID: 8782786305436887393, guid: a0c17be4b1e73724895e81b91cb8397e,
     type: 3}
   LowerVolume: 1
-  TagToDamage: Player
   ProjectileSpawnObject: {fileID: 1745688015537386, guid: 541e7f89085770547a5b8bae3fdf0815,
     type: 3}
   ProjectileSpawns: []
