@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cf866dd843dbfc44bb0af55f4ed23f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSingleShot: 1
   ProjectileCount: 100
   isHoming: 0
   homingDamping: 0
@@ -56,7 +57,6 @@ MonoBehaviour:
   Projectile: {fileID: 114534957174208780, guid: 3a300ef6e7e34f34e96f7b84178de6a3,
     type: 3}
   LowerVolume: 1
-  TagToDamage: Player
   ProjectileSpawnObject: {fileID: 1745688015537386, guid: 541e7f89085770547a5b8bae3fdf0815,
     type: 3}
   ProjectileSpawns: []

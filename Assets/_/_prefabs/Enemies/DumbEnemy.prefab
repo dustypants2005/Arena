@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4879667299311616413}
   - component: {fileID: 2079012987629642583}
   - component: {fileID: 1175750410958758586}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6430425550840923542}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,7 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7468046285191428704}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 6053498415796314807}
   - component: {fileID: 6496703890772268139}
   - component: {fileID: 4818987816928592210}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,7 +259,7 @@ GameObject:
   - component: {fileID: 4464059016494789392}
   - component: {fileID: 1037973055865942319}
   - component: {fileID: 1203185360437257728}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -347,7 +347,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 472668387011674557}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: mount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -380,7 +380,7 @@ GameObject:
   - component: {fileID: 1389476354566081838}
   - component: {fileID: 2524083554587616325}
   - component: {fileID: 8523856787342311244}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -471,7 +471,7 @@ GameObject:
   - component: {fileID: 4803652598094362815}
   - component: {fileID: 6780957481960732870}
   - component: {fileID: 1114611537133959704}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -564,12 +564,12 @@ GameObject:
   - component: {fileID: 6419739812138782176}
   - component: {fileID: 8719017243724076989}
   - component: {fileID: 5524120416738977879}
-  - component: {fileID: 6074137359549920508}
   - component: {fileID: 1170147821675300478}
   - component: {fileID: 8374456867989899081}
   - component: {fileID: 5092370545015561996}
   - component: {fileID: 1456561549954330919}
-  m_Layer: 0
+  - component: {fileID: 5821055457019142580}
+  m_Layer: 9
   m_Name: DumbEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -637,7 +637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isImmortal: 0
-  MaxHealth: 10
+  MaxHealth: 2
   Respawn: {fileID: 0}
   RespawnTime: 2
   m_transitionSpeed: 0.01
@@ -659,19 +659,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6074137359549920508
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9071312929818554622}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd34eeac3bcecd143bb970395d0df412, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: {fileID: 8719017243724076989}
 --- !u!135 &1170147821675300478
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -739,4 +726,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Items:
-  - {fileID: 7927934663941114003, guid: a0b2bd5b050fcf145a71df2175f94c6f, type: 3}
+  - {fileID: 1228761279538945481, guid: de376b4cd67d56c479edf8dcbb83275b, type: 3}
+--- !u!114 &5821055457019142580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9071312929818554622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac58a6c675aecdf4ab495fff1dd9ccef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 8719017243724076989}

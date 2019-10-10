@@ -14,7 +14,7 @@ GameObject:
   m_Layer: 0
   m_Name: FireGunPickup
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbeb3a6c295c3664681878283ab3b6d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Weapon: 1
-  ProjectileSpawn: 0
+  Weapon: {fileID: 8379655512318168562, guid: 31067df473cb1aa40aecdc8dfe09cf4d, type: 3}
+  PickupFX: {fileID: 0}
 --- !u!65 &65814951028758424
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -47,12 +47,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 0
   DestroyType: 0
-  impactParticle: {fileID: 195742, guid: c83fb3ef04bb383408bb2064b89690b2, type: 3}
-  projectileParticle: {fileID: 144206, guid: eecfd95aa06159440b824635d22e0f24, type: 3}
-  muzzleParticle: {fileID: 152484, guid: 23fc589b73077394db72d954703e8d1c, type: 3}
+  impactParticle: {fileID: 195742, guid: c5bd5061966247147a0e3ca028629f3b, type: 3}
+  projectileParticle: {fileID: 144206, guid: d8036925c92f7b44e86ae08ea7d0ff9b, type: 3}
+  muzzleParticle: {fileID: 152484, guid: cb65be87706cbee44b0ca47ce66533eb, type: 3}
   trailParticles: []
-  Volume: 0.01
   LifeSpan: 5
+  Volume: 0.01
   LowerVolume: 1
   impactNormal: {x: 0, y: 0, z: 0}
 --- !u!54 &54229512222096968

@@ -45,11 +45,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cf866dd843dbfc44bb0af55f4ed23f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isSingleShot: 1
+  isSingleShot: 0
   ProjectileCount: 1
   isHoming: 0
   homingDamping: 0
-  Damage: 50
+  Damage: 10
   Range: 100
   FireRate: 2
   ImpactForce: 30
@@ -57,8 +57,7 @@ MonoBehaviour:
   ProjectilLifespan: 5
   Projectile: {fileID: 114042488909478722, guid: 97c4c846dfadcc6488731102ba0965ca,
     type: 3}
-  LowerVolume: 0
-  TagToDamage: Enemy
+  LowerVolume: 1
   ProjectileSpawnObject: {fileID: 1745688015537386, guid: 541e7f89085770547a5b8bae3fdf0815,
     type: 3}
   ProjectileSpawns: []

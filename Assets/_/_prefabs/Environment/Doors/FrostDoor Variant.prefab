@@ -10,8 +10,14 @@ PrefabInstance:
     - target: {fileID: 4312916062221807627, guid: e1147f96026e35d4bb2f9dcb54920a86,
         type: 3}
       propertyPath: m_Name
-      value: FrostDoor
+      value: FrostDoor Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4312916062221807627, guid: e1147f96026e35d4bb2f9dcb54920a86,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 4312916062221807629, guid: e1147f96026e35d4bb2f9dcb54920a86,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -70,7 +76,7 @@ PrefabInstance:
     - target: {fileID: 4312916062221807628, guid: e1147f96026e35d4bb2f9dcb54920a86,
         type: 3}
       propertyPath: type
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2960790627563713070, guid: e1147f96026e35d4bb2f9dcb54920a86,
         type: 3}

@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &4816385394571506514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5382244130404466123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab8d1ddcbee7a4a4a832ba7f2d772c58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Items:
+  - {fileID: 1819693908386398, guid: 963380b330ada9044a0e95a00accd39a, type: 3}
+--- !u!1001 &7588460562867812140
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2593565583311866599, guid: ab390d3f92515334c9d3ce6912ac369c,
+        type: 3}
+      propertyPath: m_Name
+      value: HealthCrate
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593565583311866599, guid: ab390d3f92515334c9d3ce6912ac369c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 2590862562470531993, guid: ab390d3f92515334c9d3ce6912ac369c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -78.75605
+      objectReference: {fileID: 0}
+    - target: {fileID: 2590862562470531993, guid: ab390d3f92515334c9d3ce6912ac369c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2590862562470531993, guid: ab390d3f92515334c9d3ce6912ac369c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.564392
+      objectReference: {fileID: 0}
+    - target: {fileID: 2590862562470531993, guid: ab390d3f92515334c9d3ce6912ac369c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2590862562470531993, guid: ab390d3f92515334c9d3ce6912ac369c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2590862562470531993, guid: ab390d3f92515334c9d3ce6912ac369c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2590862562470531993, guid: ab390d3f92515334c9d3ce6912ac369c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2590862562470531993, guid: ab390d3f92515334c9d3ce6912ac369c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2590862562470531993, guid: ab390d3f92515334c9d3ce6912ac369c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2590862562470531993, guid: ab390d3f92515334c9d3ce6912ac369c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2590862562470531993, guid: ab390d3f92515334c9d3ce6912ac369c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2571052904124178171, guid: ab390d3f92515334c9d3ce6912ac369c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: cfd49aa16d5c92f44ac1f4c78ae2759b, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ab390d3f92515334c9d3ce6912ac369c, type: 3}
+--- !u!1 &5382244130404466123 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2593565583311866599, guid: ab390d3f92515334c9d3ce6912ac369c,
+    type: 3}
+  m_PrefabInstance: {fileID: 7588460562867812140}
+  m_PrefabAsset: {fileID: 0}

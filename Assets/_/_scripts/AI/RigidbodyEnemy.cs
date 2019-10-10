@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 [RequireComponent(typeof(Rigidbody))]
 public class RigidbodyEnemy : Enemy {
   /// <summary>
@@ -23,7 +22,6 @@ public class RigidbodyEnemy : Enemy {
   [SerializeField] private int selectedWaypoint = 0;
   [SerializeField] private bool canAttack = false;
 
-
   void Awake() {
     rb = GetComponent<Rigidbody>();
     rb.useGravity = false;
@@ -31,7 +29,6 @@ public class RigidbodyEnemy : Enemy {
     Scanner.detectionRadius = DetectionRadius;
     Scanner.maxHeightDifference = DetectionRadius;
     SetWaypoints();
-    InitWeapon();
   }
 
   void Start() {
@@ -42,18 +39,18 @@ public class RigidbodyEnemy : Enemy {
     if (Scanner != null && target == null) {
       target = Scanner.Detect(transform);
     } else {
-      if(Scanner == null) {
+      if (Scanner == null) {
         Debug.LogError("scanner is null");
       }
     }
-    if(target != null) {
+    if (target != null) {
       var playerHP = target.GetComponent<Health>().CurrentHealth;
-      if(playerHP <= 0) {
+      if (playerHP <= 0) {
         CurrentState = AIstates.Idle;
         target = null;
       }
     }
-    if((CurrentState != AIstates.Chase && CurrentState != AIstates.Attack) && target != null) {
+    if ((CurrentState != AIstates.Chase && CurrentState != AIstates.Attack) && target != null) {
       CurrentState = AIstates.Chase;
     }
     rb.velocity = Vector3.zero;
@@ -88,8 +85,8 @@ public class RigidbodyEnemy : Enemy {
     var distance = heading.magnitude;
     var direction = heading / distance;
     rb.AddForce(direction * chaseSpeed);
-    if(heading.sqrMagnitude < ChaseRadius * ChaseRadius
-      && canAttack) { // in attack range
+    if (heading.sqrMagnitude < ChaseRadius * ChaseRadius &&
+      canAttack) { // in attack range
       CurrentState = AIstates.Attack;
     }
   }
@@ -98,9 +95,9 @@ public class RigidbodyEnemy : Enemy {
     // rotate
     RotateToward(target.transform.position);
 
-    Weapon.Attack();
+    ShotCtrl.StartShotRoutine();
     var heading = target.transform.position - transform.position;
-    if( heading.sqrMagnitude > ChaseRadius * ChaseRadius) { // out of attack range
+    if (heading.sqrMagnitude > ChaseRadius * ChaseRadius) { // out of attack range
       CurrentState = AIstates.Chase;
     }
   }
@@ -117,13 +114,13 @@ public class RigidbodyEnemy : Enemy {
 
   void SetWaypoints() {
     Waypoints.Clear();
-    foreach(Transform waypoint in WaypointGroup) {
+    foreach (Transform waypoint in WaypointGroup) {
       Waypoints.Add(waypoint);
     }
   }
 
   void NextWaypoint() {
-    if(selectedWaypoint == Waypoints.Count - 1) {
+    if (selectedWaypoint == Waypoints.Count - 1) {
       selectedWaypoint = 0;
     } else {
       ++selectedWaypoint;

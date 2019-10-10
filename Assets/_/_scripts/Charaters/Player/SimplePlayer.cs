@@ -9,8 +9,6 @@ using UnityEngine;
 public class SimplePlayer : MonoBehaviour {
   protected static SimplePlayer s_Instance;
   public static SimplePlayer instance { get { return s_Instance; } }
-  public Weapon CurrentWeapon;
-  public Transform WeaponMount;
 
   public PlayerInfo Info;
   [HideInInspector]
@@ -24,7 +22,6 @@ public class SimplePlayer : MonoBehaviour {
   [SerializeField] private float yNormalLookSpeed = 5;
   [SerializeField] private float SlowLookSpeed = 2;
 
-
   [Header("Dash")]
   [SerializeField] private float dash = 50f;
   [SerializeField] private float dashCooldown = 3f;
@@ -35,12 +32,10 @@ public class SimplePlayer : MonoBehaviour {
 
   [Header("Jump")]
   [SerializeField] private GameObject jumpCloud;
-  [SerializeField] private float jumpSpeed = 10F;
-  [SerializeField] private bool canAirJump = true; // can we air jump
+  [SerializeField] private float jumpPower = 10F;
+  [SerializeField] private float walljumpPower = 1.5F;
   private bool isAirJump = true; // is air jump ready
-  private bool isWallJumping = false; // is air jump ready
-
-
+  private bool isWallJumping = false; // is air jump ready\
   [Header("WallJump")]
   [SerializeField] private GameObject wallCloud;
   [SerializeField] private float wallCloudLifeTime = 2f;
@@ -56,8 +51,6 @@ public class SimplePlayer : MonoBehaviour {
   public SimpleMouseLook mouseLook;
   public TriggerEvent e;
   [SerializeField] private Transform weaponMount;
-  [SerializeField] private Transform lookAtTarget;
-
 
   public Vector3 moveDirection = Vector3.zero;
   public Vector3 lastMoveDirection = Vector3.zero;
@@ -75,6 +68,9 @@ public class SimplePlayer : MonoBehaviour {
   private CharacterController controller;
   private bool isZoomed = false;
   private bool hasFired = false;
+  UbhShotCtrl shot;
+
+  SimplePlayerInput input = new SimplePlayerInput();
 
   private Animator anim;
 
@@ -87,7 +83,7 @@ public class SimplePlayer : MonoBehaviour {
     controller = GetComponent<CharacterController>();
     cam = camMount.GetComponentInChildren<Camera>();
     anim = GetComponentInChildren<Animator>();
-    wm = WeaponsManager.instance;
+    shot = GetComponent<UbhShotCtrl>();
     mouseLook.Init(transform, camMount.transform);
     layermask = 1 << 8;
     layermask = ~layermask;
@@ -97,63 +93,48 @@ public class SimplePlayer : MonoBehaviour {
   void Start() {
     UpdateInfo();
     cam.fieldOfView = fov;
-    wm.InitWeapons();
-    CurrentWeapon = wm.GetCurrentWeapon().GetComponent<Weapon>();
-    SetWeaponController();
+    WeaponsManager.instance.UpdateWeaponsList();
   }
 
   void Update() {
     if (isDisabled) return;
 
-    anim.SetFloat("Horizontal", Input.GetAxis("L_XAxis"));
-    anim.SetFloat("Vertical", Input.GetAxis("L_YAxis"));
+    anim.SetFloat("Horizontal", input.LS_XAxis);
+    anim.SetFloat("Vertical", input.LS_YAxis);
 
-    if (Input.GetButtonUp("RB")) {
-      CurrentWeapon = wm.NextWeapon().GetComponent<Weapon>();
-      CurrentWeapon.ResetFireTime();
+    if (input.R1) {
+      WeaponsManager.instance.NextWeapon();
     }
 
-    if (Input.GetButtonUp("LB")) {
-      CurrentWeapon = wm.PreviousWeapon().GetComponent<Weapon>();
-      CurrentWeapon.ResetFireTime();
+    if (input.L1) {
+      WeaponsManager.instance.PreviousWeapon();
     }
 
-    if (Input.GetButton("TriggersL") || Input.GetAxisRaw("TriggersL") > .1f) {
+    if (input.L2 >.1f) {
       cam.fieldOfView = zoomedFov;
       isZoomed = true;
     } else {
       cam.fieldOfView = fov;
       isZoomed = false;
     }
-    if (Input.GetButton("TriggersR") || Input.GetAxisRaw("TriggersR") > .1f) {
-      if (CurrentWeapon != null) {
-        if (CurrentWeapon.isSingleShot) {
-          if (!hasFired) {
-            CurrentWeapon.Attack();
-          }
-        } else {
-          CurrentWeapon.Attack();
-        }
-        hasFired = true;
-      } else { Debug.LogError("ERROR: CurrentWeapon is NULL!"); }
+    if (input.R2 >.1f) {
+      shot.StartShotRoutine();
     } else {
-      hasFired = false;
+      shot.StopShotRoutineAndPlayingShot();
     }
 
     // releasing jump or falling, use normal gravity
-    if (Input.GetButtonUp("A") || controller.velocity.y <= 0) {
+    if (input.A_Up || controller.velocity.y <= 0) {
       isJumping = false;
-      isWallJumping = false;
     }
 
-    if (Input.GetButtonUp("X") && e != null) {
+    if (input.X_Up && e != null) {
       e.Invoke();
     }
 
     if (!isWallJumping) {
       moveDirection -= lastMoveDirection;
-      moveDirection += new Vector3(Input.GetAxis("L_XAxis"), 0, Input.GetAxis("L_YAxis"));
-      //moveDirection += new Vector3(moveInput.x, 0, moveInput.y);
+      moveDirection += new Vector3(input.LS_XAxis, 0, input.LS_YAxis);
       moveDirection = transform.TransformDirection(moveDirection);
       moveDirection *= speed;
     } else {
@@ -173,32 +154,33 @@ public class SimplePlayer : MonoBehaviour {
       AddedverticalVelocity = 0;
       wallJumpDirection = Vector3.zero;
       isAirJump = true;
+      isWallJumping = false;
       verticalVelocity = -1;
-      if (Input.GetButtonDown("A")) {
-        verticalVelocity = jumpSpeed;
+      if (input.A_Down) {
+        verticalVelocity = jumpPower;
         isJumping = true;
         Instantiate(jumpCloud, transform.position, transform.rotation);
       }
     } else {
       if (!isJumping) {
         verticalVelocity -= gravity * Time.deltaTime;
-      } else {// light jump while we hold the jump button
+      } else { // light jump while we hold the jump button
         verticalVelocity -= gravity / 2 * Time.deltaTime;
       }
       moveDirection += wallJumpDirection; // add wall jump to move direction
     }
     // Air Jump
-    if (Info.CanDoubleJump && canAirJump && isAirJump && !isJumping) {
-      if (Input.GetButtonDown("A")) {
+    if (Info.CanDoubleJump && isAirJump && !isJumping) {
+      if (input.A_Down) {
         wallJumpDirection = Vector3.zero;
-        verticalVelocity = jumpSpeed;
+        verticalVelocity = jumpPower;
         isJumping = true;
         isAirJump = false;
         Instantiate(jumpCloud, transform.position, transform.rotation);
       }
     }
     // Dash
-    if (Info.CanDash && Input.GetButtonDown("B")) {
+    if (Info.CanDash && input.B_Down) {
       if (Time.time > nextTimeToDash && !isDashing) {
         nextTimeToDash = Time.time + dashCooldown;
         if (moveDirection.x != 0 || moveDirection.z != 0) {
@@ -216,37 +198,27 @@ public class SimplePlayer : MonoBehaviour {
     if (dashDirection != Vector3.zero) {
       moveDirection += dashDirection;
     }
-    //if(knockback != null){
-    //  isKnockback = true;
-    //  knockbackTime = knockbackDuration + Time.deltaTime;
-    //}
-    // if(isKnockback){
-    //   // TODO: need to find point of contact, push from point.
-    //   moveDirection +=  transform.InverseTransformDirection(knockback);
-    //   if(knockbackTime > Time.deltaTime ){
-    //     isKnockback = false;
-    //     knockback = Vector3.zero;
-    //   }
-    // }
 
     moveDirection.y = verticalVelocity;
     moveDirection.y += AddedverticalVelocity;
-    mouseLook.LookRotation(transform, camMount.transform);
     controller.Move(moveDirection * Time.deltaTime);
     lastMoveDirection = moveDirection;
   }
 
+  void FixedUpdate() {
+    mouseLook.LookRotation(transform, camMount.transform);
+  }
+
   private void OnControllerColliderHit(ControllerColliderHit hit) {
     if (Info.CanWallJump && !controller.isGrounded) {
-      if (hit.normal.y < .1f) { // TODO: bug; when ceiling hits head, we trigger wall jump for w/e reason, need to exclude ceililng from wall jump
-        isAirJump = true;
+      if (hit.normal.y < .1f) { // TODO: BUG: when ceiling hits head, we trigger wall jump for w/e reason, need to exclude ceililng from wall jump
         verticalVelocity -= gravity / 3 * Time.deltaTime;
+        isWallJumping = false;
         var cloud = Instantiate(wallCloud, hit.point, transform.rotation);
         Destroy(cloud, wallCloudLifeTime);
-
-        if (Input.GetButtonDown("A")) {
-          wallJumpDirection = hit.normal * jumpSpeed;
-          verticalVelocity = jumpSpeed;
+        if (input.A_Down) {
+          wallJumpDirection = hit.normal * jumpPower;
+          verticalVelocity = jumpPower * walljumpPower;
           isJumping = true;
           isWallJumping = true;
           Instantiate(jumpCloud, transform.position, transform.rotation);
@@ -255,15 +227,6 @@ public class SimplePlayer : MonoBehaviour {
     }
   }
 
-  void SetWeaponController() {
-    if (controller != null) {
-      CurrentWeapon.SetController(controller);
-      CurrentWeapon.ResetFireTime();
-    }
-    if (weaponMount != null) {
-      //TODO: if we need to setup weapon, do it here.
-    };
-  }
   void ResetDash() {
     nextTimeToDash = 0;
   }

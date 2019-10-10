@@ -1,16 +1,16 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(PlayerInput))]
+[RequireComponent(typeof(SimplePlayerInput))]
 [RequireComponent(typeof(PlayerMove))]
 public class PlayerController : MonoBehaviour {
-  private PlayerInput input;
+  private SimplePlayerInput input;
   private PlayerMove mover;
   private UnityEvent pressEvents = new UnityEvent();
   private UnityEvent releaseEvents = new UnityEvent();
 
   private void Awake() {
-    input = GetComponent<PlayerInput>();
+    input = GetComponent<SimplePlayerInput>();
     mover = GetComponent<PlayerMove>();
     foreach (var jump in GetComponents<Jump>()) {
       pressEvents.AddListener(jump.Press);

@@ -1,25 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor;
 using UnityEngine;
 
 [DisallowMultipleComponent]
 public class WeaponsManager : MonoBehaviour {
   public static WeaponsManager instance;
-  public static string FileName = "/Weaponinfo.dat";
   public int WeaponIndex = 0;
-
-  /// <summary>
-  /// List of Available Weapons the Player Can use
-  /// </summary>
-  public List<GameObject> WeaponLibrary = new List<GameObject>();
-  /// <summary>
-  /// List of Available Projectile Spawns the Player Can use
-  /// </summary>
-  public List<GameObject> ProjectileSpawnLibrary = new List<GameObject>();
-
-  public List<WeaponSave> WeaponSaves = new List<WeaponSave>();
-  [SerializeField] private string PlayerWeaponsPath = "PlayerGuns";
+  public List<UbhBaseShot> WeaponsList = new List<UbhBaseShot>();
 
   void Awake() {
     if (instance == null) {
@@ -30,133 +19,85 @@ public class WeaponsManager : MonoBehaviour {
         Destroy(gameObject);
       }
     }
-    /*
-      TODO: change from Resources to AssetDatabase.LoadAssetAtPath.
-      Reason: Resources needs a Resources folder to find path.
-      We can eleminate the folder by using Assetdatabase
-    */
-    WeaponLibrary = Resources.LoadAll(PlayerWeaponsPath, typeof(GameObject)).Cast<GameObject>().ToList();
-  }
-
-  public GameObject GetWeapon(int index) {
-    return WeaponLibrary[index];
-  }
-
-  public GameObject GetProjectileSpawn(int index) {
-    return ProjectileSpawnLibrary[index];
-  }
-
-  #region Save Controls
-
-  public void Save() {
-    SaveManager.Save(FileName, WeaponSaves);
-  }
-
-  public void Load() {
-    var loadinfo = SaveManager.instance.Load(FileName);
-    if (loadinfo == null) {
-      Debug.LogError("Weapon Load is null");
-      return;
-    }
-    WeaponSaves = (List<WeaponSave>) loadinfo;
-  }
-
-  public void Reset() {
-    WeaponSaves = new List<WeaponSave> { new WeaponSave { Weapon = 0, ProjectileSpawn = 0 } };
-    Save();
-  }
-
-  #endregion
-
-  #region Weapon Controls
-
-  /// <summary>
-  /// Initalize Player's weapons
-  /// </summary>
-  public void InitWeapons() {
-    Load();
-    if (WeaponSaves.Count == 0) {
-      WeaponSaves.Add(new WeaponSave { Weapon = 0, ProjectileSpawn = 0 });
-      Save();
-    }
-    foreach (var weapon in WeaponSaves) {
-      AddWeapon(weapon);
-    }
   }
 
   public GameObject NextWeapon() {
-    WeaponIndex = ++WeaponIndex % WeaponSaves.Count;
+    WeaponIndex = ++WeaponIndex % WeaponsList.Count;
     UpdateWeapons();
     return GetCurrentWeapon();
   }
 
   public GameObject PreviousWeapon() {
-    if (0 == WeaponIndex) WeaponIndex = WeaponSaves.Count;
+    if (0 == WeaponIndex) WeaponIndex = WeaponsList.Count;
     WeaponIndex--;
     UpdateWeapons();
     return GetCurrentWeapon();
   }
 
   public GameObject GetCurrentWeapon() {
-    var i = 0;
-    foreach (Transform w in SimplePlayer.instance.WeaponMount) {
-      if (i == WeaponIndex) {
-        return w.gameObject;
-      }
-      i++;
-    }
-    return null;
-  }
-
-  /// <summary>
-  /// Adding a new weapon to the weapon saves plus AddWeapon()
-  /// </summary>
-  /// <param name="Weapon"></param>
-  /// <param name="ProjectileSpawn"></param>
-  public void AddWeaponSave(int weapon, int ps) {
-    var w = new WeaponSave { Weapon = weapon, ProjectileSpawn = ps };
-    WeaponSaves.Add(w);
-    AddWeapon(w);
-    Save();
+    return WeaponsList[WeaponIndex].gameObject;
   }
 
   /// <summary>
   /// Adding JUST the game object to the player
   /// </summary>
-  /// <param name="weapon"></param>
-  public void AddWeapon(WeaponSave weapon) {
-    var w = Instantiate(WeaponLibrary[weapon.Weapon], SimplePlayer.instance.WeaponMount);
-    w.transform.localPosition = Vector3.zero;
-    UpdateWeapons();
+  /// <param name="shotOBJ"></param>
+  public void AddWeapon(GameObject shotOBJ) {
+    /**
+     * TODO: need to make sure we can not add the same weapon twice.
+     */
+    var s = shotOBJ.GetComponent<UbhBaseShot>();
+    if (s.NullCheck()) {
+      Debug.LogError("Can't Add Weapon Without UBHBaseShot!");
+      return;
+    }
+    shotOBJ.SetActive(false);
+    var shot = Instantiate(shotOBJ, SimplePlayer.instance.transform);
+    // WeaponIndex = GetWeapons().FindIndex(w => w == shot);
+    UpdateWeaponsList();
   }
 
   /// <summary>
-  /// Updating the game objects on the player to match the current weapon index.
+  /// Updating the game objects on the player to match the current weapon index. DOES NOT UPDATE LIST!
   /// </summary>
   public void UpdateWeapons() {
     var i = 0;
-    foreach (Transform w in SimplePlayer.instance.WeaponMount) {
-      w.gameObject.SetActive(i == WeaponIndex);
+    GetShotCtrl().StopShotRoutineAndPlayingShot();
+    var shots = GetWeapons();
+    foreach (var shot in shots) {
+      shot.gameObject.SetActive(i == WeaponIndex);
       i++;
     }
+    AssignShotCtrl();
   }
 
-  public void UpgradeProjectileSpawn() {
-    var wantedIndex = ++WeaponSaves[WeaponIndex].ProjectileSpawn;
-    if (wantedIndex > ProjectileSpawnLibrary.Count - 1) {
-      wantedIndex = ProjectileSpawnLibrary.Count - 1;
+  public void AssignShotCtrl() {
+    GetShotCtrl().m_shotList[0].m_shotObj = GetCurrentWeapon().GetComponent<UbhBaseShot>();
+  }
+
+  public void UpdateWeaponsList() {
+    WeaponsList.Clear();
+    foreach (Transform child in SimplePlayer.instance.transform) {
+      var baseshot = child.GetComponent<UbhBaseShot>();
+      if (baseshot != null) {
+        WeaponsList.Add(baseshot);
+      }
     }
-    // update the ref
-    WeaponSaves[WeaponIndex].ProjectileSpawn = wantedIndex;
-    // update the gameobject to load the projectile spawns
-    SimplePlayer.instance.CurrentWeapon.SetProjectileSpawn(ProjectileSpawnLibrary[WeaponSaves[WeaponIndex].ProjectileSpawn]);
-    Save();
+    AssignShotCtrl();
   }
-  #endregion
-}
 
-[Serializable]
-public class WeaponSave {
-  public int Weapon { get; set; }
-  public int ProjectileSpawn { get; set; }
+  public List<UbhBaseShot> GetWeapons() {
+    var weapons = new List<UbhBaseShot>();
+    foreach (Transform child in SimplePlayer.instance.transform) {
+      var baseshot = child.GetComponent<UbhBaseShot>();
+      if (baseshot != null) {
+        weapons.Add(baseshot);
+      }
+    }
+    return weapons;
+  }
+
+  public UbhShotCtrl GetShotCtrl() {
+    return SimplePlayer.instance.GetComponent<UbhShotCtrl>();
+  }
 }

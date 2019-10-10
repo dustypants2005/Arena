@@ -17,6 +17,32 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4347418107502002909, guid: b5e0b5e9963f68b4db0bbc7a170688e4,
         type: 3}
+    - target: {fileID: 114385495672790490, guid: 3edc8a808898d3340b5bb4256ea62456,
+        type: 3}
+      propertyPath: isSingleShot
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114385495672790490, guid: 3edc8a808898d3340b5bb4256ea62456,
+        type: 3}
+      propertyPath: ProjectileSpawnObject
+      value: 
+      objectReference: {fileID: 1745688015537386, guid: 541e7f89085770547a5b8bae3fdf0815,
+        type: 3}
+    - target: {fileID: 114385495672790490, guid: 3edc8a808898d3340b5bb4256ea62456,
+        type: 3}
+      propertyPath: ProjectileMount
+      value: 
+      objectReference: {fileID: 5527278217477329991}
+    - target: {fileID: 114385495672790490, guid: 3edc8a808898d3340b5bb4256ea62456,
+        type: 3}
+      propertyPath: ProjectilLifespan
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114385495672790490, guid: 3edc8a808898d3340b5bb4256ea62456,
+        type: 3}
+      propertyPath: FireRate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4736328469218184, guid: 3edc8a808898d3340b5bb4256ea62456, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -63,3 +89,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3edc8a808898d3340b5bb4256ea62456, type: 3}
+--- !u!4 &5527278217477329991 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4194066264096374, guid: 3edc8a808898d3340b5bb4256ea62456,
+    type: 3}
+  m_PrefabInstance: {fileID: 5528784518798404145}
+  m_PrefabAsset: {fileID: 0}

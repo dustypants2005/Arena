@@ -1,29 +1,29 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
+public enum BulletTypes { Straight, Wave } // TODO: need more bullet types
+
 [DisallowMultipleComponent]
 public class Weapon : MonoBehaviour {
-  public bool isSingleShot = true;
-  public int ProjectileCount = 1;
-  public bool isHoming = false;
-  public float homingDamping = 0f;
-  public float Damage = 10f;
-  public float Range = 100f;
-  public float FireRate = 15f;
-  public float ImpactForce = 30;
-  public float ProjectileSpeed = 1000;
-  public float ProjectilLifespan = 5f;
-  public Projectile Projectile;
-  public bool LowerVolume = true;
-  [Tooltip("GameObject with children transforms for spawning projectiles")]
-  public GameObject ProjectileSpawnObject;
-  public List<Transform> ProjectileSpawns = new List<Transform>();
+ public bool isSingleShot = true;
+ public int ProjectileCount = 1;
+ public bool isHoming = false;
+ public float homingDamping = 0f;
+ public float Damage = 10f;
+ public float Range = 100f;
+ public float FireRate = 15f;
+ public float ImpactForce = 30;
+ public float ProjectileSpeed = 1000;
+ public float ProjectilLifespan = 5f;
+ public Projectile Projectile;
+ public bool LowerVolume = true;
+ [Tooltip("GameObject with children transforms for spawning projectiles")]
+ public GameObject ProjectileSpawnObject;
+ public List<Transform> ProjectileSpawns = new List<Transform>();
 
-  public BulletTypes BulletType = BulletTypes.Straight;
-  public Vector3 BulletDirection = Vector3.zero;
-  public float BulletTypeStrength = 1;
-
-  public enum BulletTypes { Straight, Wave } // TODO: need more bullet types
+ public BulletTypes BulletType = BulletTypes.Straight;
+ public Vector3 BulletDirection = Vector3.zero;
+ public float BulletTypeStrength = 1;
 
  public Transform ProjectileMount;
   private float nextTimeToFire { get; set; }
@@ -79,10 +79,6 @@ public class Weapon : MonoBehaviour {
   public void SpawnProjectiles() {
     var i = 0;
     foreach (Transform spawn in ProjectileSpawns) {
-      // if(i > ProjectileCount) {
-      //   return;
-      // }
-
       var projectile = Instantiate(Projectile.gameObject, spawn.position, spawn.rotation) as GameObject;
       if (isHoming) {
         var homing = projectile.AddComponent<Homing>();
@@ -119,5 +115,4 @@ public class Weapon : MonoBehaviour {
       i++;
     }
   }
-
 }

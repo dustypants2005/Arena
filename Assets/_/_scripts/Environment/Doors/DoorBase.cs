@@ -5,6 +5,7 @@ public abstract class DoorBase : MonoBehaviour, IDoor {
   public AudioSource OpenAudio;
   public AudioSource CloseAudio;
   public ElementalType type = ElementalType.None;
+  bool isOpen = false;
   void Awake() {
     if (anim == null) {
       Debug.LogError("Anim is null!");
@@ -12,16 +13,22 @@ public abstract class DoorBase : MonoBehaviour, IDoor {
   }
 
   public virtual void Open() {
-    anim.SetBool("isOpen", true);
-    CloseAudio.Stop();
-    OpenAudio.Play();
+    if (!isOpen) {
+      isOpen = true;
+      anim.SetBool("isOpen", true);
+      CloseAudio.Stop();
+      OpenAudio.Play();
+    }
   }
 
   public virtual void Close() {
-    if (anim.GetBool("isOpen")) {
-      anim.SetBool("isOpen", false);
-      OpenAudio.Stop();
-      CloseAudio.Play();
+    if (isOpen) {
+      isOpen = false;
+      if (anim.GetBool("isOpen")) {
+        anim.SetBool("isOpen", false);
+        OpenAudio.Stop();
+        CloseAudio.Play();
+      }
     }
   }
 
@@ -32,9 +39,9 @@ public abstract class DoorBase : MonoBehaviour, IDoor {
   }
 
   void OnCollisionEnter(Collision other) {
-    var projectile = other.gameObject.GetComponentInParent<Projectile>();
+    var projectile = other.gameObject.GetComponentInParent<BulletCollision>();
     if (projectile != null) {
-      if (projectile.Type == type) Open();
+      if (projectile.Type == type || type == ElementalType.Any) Open();
     }
   }
 }

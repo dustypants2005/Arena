@@ -7,12 +7,12 @@ public class UnlockLevel : MonoBehaviour {
   public TriggerEvent Hide;
   [SerializeField] private TextMeshPro CostText;
 
-  private void OnEnable () {
+  void Start() {
     var coins = CoinManager.instance.CoinsCollected;
     if (coins >= Cost) {
-      Show.Invoke ();
+      Show.Invoke();
     } else {
-      Hide.Invoke ();
+      Hide.Invoke();
       if (CostText != null) {
         CostText.text = "$" + Cost;
       }

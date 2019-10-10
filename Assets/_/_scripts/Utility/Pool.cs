@@ -4,35 +4,35 @@ using UnityEngine;
 // Creact an object pool
 public abstract class Pool<T> : MonoBehaviour where T : Component {
   public static Pool<T> Instance { get; private set; }
-  private Queue<T> objs = new Queue<T> ();
+  private Queue<T> objs = new Queue<T>();
   [SerializeField] private T prefab;
 
-  private void Awake () {
+  private void Awake() {
     if (Instance == null) {
-      DontDestroyOnLoad (gameObject);
+      DontDestroyOnLoad(gameObject);
       Instance = this;
     } else {
       if (Instance != this) {
-        Destroy (gameObject);
+        Destroy(gameObject);
       }
     }
   }
 
-  public T Get () {
+  public T Get() {
     if (objs.Count == 0) {
-      AddObject ();
+      AddObject();
     }
-    return objs.Dequeue ();
+    return objs.Dequeue();
   }
 
-  public void ReturnToPool (T objToReturn) {
-    objToReturn.gameObject.SetActive (false);
-    objs.Enqueue (objToReturn);
+  public void ReturnToPool(T objToReturn) {
+    objToReturn.gameObject.SetActive(false);
+    objs.Enqueue(objToReturn);
   }
 
-  public void AddObject () {
-    var newobj = GameObject.Instantiate (prefab);
-    newobj.gameObject.SetActive (false);
-    objs.Enqueue (newobj);
+  public void AddObject() {
+    var newobj = GameObject.Instantiate(prefab);
+    newobj.gameObject.SetActive(false);
+    objs.Enqueue(newobj);
   }
 }

@@ -10,22 +10,28 @@ PrefabInstance:
     - target: {fileID: 4312916062221807627, guid: e1147f96026e35d4bb2f9dcb54920a86,
         type: 3}
       propertyPath: m_Name
-      value: FireDoor
+      value: FireDoor Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4312916062221807627, guid: e1147f96026e35d4bb2f9dcb54920a86,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 4312916062221807629, guid: e1147f96026e35d4bb2f9dcb54920a86,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -23.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4312916062221807629, guid: e1147f96026e35d4bb2f9dcb54920a86,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4312916062221807629, guid: e1147f96026e35d4bb2f9dcb54920a86,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -22
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4312916062221807629, guid: e1147f96026e35d4bb2f9dcb54920a86,
         type: 3}
@@ -70,7 +76,7 @@ PrefabInstance:
     - target: {fileID: 4312916062221807628, guid: e1147f96026e35d4bb2f9dcb54920a86,
         type: 3}
       propertyPath: type
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2960790627563713070, guid: e1147f96026e35d4bb2f9dcb54920a86,
         type: 3}

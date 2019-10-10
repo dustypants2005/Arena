@@ -45,14 +45,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a49e691db775021488f20b1a0ede250c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 2
+  Type: 3
   DestroyType: 0
   impactParticle: {fileID: 153912, guid: 932046b7eaf3b554f8d74c81e2f00558, type: 3}
   projectileParticle: {fileID: 160792, guid: 7e9a3591984cda1499dc675622a57b0b, type: 3}
   muzzleParticle: {fileID: 157556, guid: f217d1d708cdaf14e8cfa730ff75126e, type: 3}
   trailParticles: []
-  Volume: 0.1
   LifeSpan: 5
+  Volume: 0.1
   LowerVolume: 0
   impactNormal: {x: 0, y: 0, z: 0}
 --- !u!54 &54229512222096968

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 [DisallowMultipleComponent]
@@ -62,31 +63,36 @@ public class Health : MonoBehaviour {
             break;
           }
         default:
-          var d = GetComponent<Drop>();
-          if (d != null) {
-            d.Spawn();
+          {
+            var d = GetComponent<Drop>();
+            if (!d.NullCheck()) {
+              d.Spawn();
+            }
+            if (Respawn != null) {
+              StartCoroutine(Reset(false));
+            } else {
+              Destroy(gameObject);
+            }
+            break;
           }
-          if (Respawn != null) {
-            StartCoroutine(Reset(false));
-          } else {
-            Destroy(gameObject);
-          }
-          break;
       }
     }
   }
 
   protected IEnumerator Reset(bool isPlayer) {
     yield return new WaitForSeconds(RespawnTime);
-    transform.position = Respawn.position;
-    transform.Rotate(Respawn.eulerAngles);
-    CurrentHealth = MaxHealth;
-    isReseting = false;
-    AdjustHealthBar();
+    // TODO: load everything again
     if (isPlayer) {
-      SimplePlayer.instance.isDisabled = false;
-      var player = GetComponent<SimplePlayer>();
-      player.mouseLook.Rotate(Respawn.rotation);
+      SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+      // SimplePlayer.instance.isDisabled = false;
+      // var player = GetComponent<SimplePlayer>();
+      // player.mouseLook.Rotate(Respawn.rotation);
+    } else {
+      transform.position = Respawn.position;
+      transform.Rotate(Respawn.eulerAngles);
+      CurrentHealth = MaxHealth;
+      isReseting = false;
+      AdjustHealthBar();
     }
   }
 

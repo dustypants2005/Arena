@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 543943508836746085}
   - component: {fileID: 8782786305436887393}
   - component: {fileID: 5796488955631886458}
+  - component: {fileID: 3443780103989019358}
+  - component: {fileID: 1360196674312071520}
   m_Layer: 15
   m_Name: BombProjectile
-  m_TagString: Destructible
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5133856519456446191}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.6198273, y: 7.062338, z: 3.4291897}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -44,15 +46,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a49e691db775021488f20b1a0ede250c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 0
-  DestroyType: 1
+  Type: 2
+  destroyType: 0
   impactParticle: {fileID: 0}
   projectileParticle: {fileID: 4705278617858607589, guid: 12930bc1b9d776249a8916a15ec6a1e8,
     type: 3}
   muzzleParticle: {fileID: 0}
   trailParticles: []
-  Volume: 0.001
   LifeSpan: 10
+  Volume: 0.001
   LowerVolume: 1
   impactNormal: {x: 0, y: 0, z: 0}
 --- !u!54 &5796488955631886458
@@ -71,3 +73,39 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 3
+--- !u!114 &3443780103989019358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5133856519456446191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f80c1a83863e7641b2d46ae15d24faa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isImmortal: 0
+  MaxHealth: 10
+  Respawn: {fileID: 0}
+  RespawnTime: 2
+  m_transitionSpeed: 0.01
+  m_healthUI: {fileID: 0}
+  DeathEffect: {fileID: 5523724935891663556, guid: 02950de1c277b944d952eb46158094aa,
+    type: 3}
+  DeathEffectScale: 2
+  HitEffect: {fileID: 0}
+  _currentHealth: 0
+--- !u!114 &1360196674312071520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5133856519456446191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac58a6c675aecdf4ab495fff1dd9ccef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 3443780103989019358}

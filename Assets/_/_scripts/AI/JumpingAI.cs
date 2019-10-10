@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 [RequireComponent(typeof(Rigidbody))]
 public class JumpingAI : Enemy {
   private Rigidbody rb;
@@ -36,10 +35,14 @@ public class JumpingAI : Enemy {
 
   public override void Patrol() {
     // jump on interval
-    if(timer < Time.time && GroundCheck()) {
-      rb.AddForce(Vector3.up * jumpHeight); // jump
-      rb.AddForce(transform.forward * speed); // forward
-      timer = Time.time + jumpTimer; // reset timer
+    var gc = GroundCheck();
+    if (gc) {
+      rb.velocity = Vector3.zero;
+      if (timer < Time.time) {
+        rb.AddForce(Vector3.up * jumpHeight); // jump
+        rb.AddForce(transform.forward * speed); // forward
+        timer = Time.time + jumpTimer; // reset timer
+      }
     }
   }
 
@@ -47,7 +50,7 @@ public class JumpingAI : Enemy {
     RaycastHit hit;
     float distance = 1f;
     var dir = Vector3.down;
-    if(Physics.Raycast(transform.position, dir, out hit, distance)) {
+    if (Physics.Raycast(transform.position, dir, out hit, distance)) {
       return true;
     }
     return false;

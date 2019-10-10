@@ -8,9 +8,12 @@ public class DamageOnEnter : MonoBehaviour {
   [SerializeField] private float damage = 10f;
 
   void OnTriggerEnter(Collider other) {
-    var hp = other.GetComponent<Health>();
-    if (hp != null && other.tag == "Player") {
-      hp.AdjustHealth(-damage, isTempInvulnerable, invulnerableTime);
+    var damageable = other.GetComponent<Damageable>();
+    if (damageable != null) {
+      damageable.AdjustHealth(-damage, isTempInvulnerable, invulnerableTime);
+    }
+    if (other.CompareTag("Destructible")) {
+      Destroy(other.gameObject);
     }
   }
 }

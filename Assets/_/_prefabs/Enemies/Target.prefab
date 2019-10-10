@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 135369742518829636}
   - component: {fileID: 23330008925327962}
   - component: {fileID: 114064550419411026}
-  - component: {fileID: 114733989322272594}
+  - component: {fileID: 8936723469257693768}
   m_Layer: 9
   m_Name: Target
   m_TagString: Enemy
@@ -115,7 +115,7 @@ MonoBehaviour:
   DeathEffectScale: 2
   HitEffect: {fileID: 0}
   _currentHealth: 0
---- !u!114 &114733989322272594
+--- !u!114 &8936723469257693768
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,7 +124,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1207896133765240}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd34eeac3bcecd143bb970395d0df412, type: 3}
+  m_Script: {fileID: 11500000, guid: ac58a6c675aecdf4ab495fff1dd9ccef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 114064550419411026}

@@ -1,13 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.Entities;
 using UnityEngine;
-
-public enum ElementalType {
-  None,
-  Fire,
-  Frost
-
-}
 
 public enum DestroyType {
   Collision,
@@ -16,7 +10,7 @@ public enum DestroyType {
 
 public class Projectile : MonoBehaviour {
   public ElementalType Type = ElementalType.None;
-  public DestroyType DestroyType = DestroyType.Collision;
+  public DestroyType destroyType = DestroyType.Collision;
   public GameObject impactParticle;
   public GameObject projectileParticle;
   public GameObject muzzleParticle;
@@ -37,7 +31,7 @@ public class Projectile : MonoBehaviour {
   void Awake() {
     timestamp = Time.time;
     var audsrc = projectileParticle.GetComponent<AudioSource>();
-    if (audsrc != null && LowerVolume) {
+    if (audsrc.NullCheck() && LowerVolume) {
       audsrc.volume = Volume;
     }
     projectileParticle = Instantiate(projectileParticle, transform.position, transform.rotation) as GameObject;
@@ -61,10 +55,10 @@ public class Projectile : MonoBehaviour {
     if (!hasCollided) {
       hasCollided = true;
       // Impact
-      if (impactParticle != null) {
+      if (impactParticle.NullCheck()) {
         impactParticle = Instantiate(impactParticle, transform.position, Quaternion.FromToRotation(Vector3.up, impactNormal)) as GameObject;
         var audsrc = impactParticle.GetComponent<AudioSource>();
-        if (audsrc != null && LowerVolume) {
+        if (audsrc.NullCheck() && LowerVolume) {
           audsrc.volume = Volume;
         }
         Destroy(impactParticle, 5f);
@@ -74,9 +68,11 @@ public class Projectile : MonoBehaviour {
         Destroy(hit.gameObject);
       }
       // Assign Damage
-      var enemies = hit.gameObject.GetComponents<Damagable>();
-      foreach (var enemy in enemies) {
-        enemy.AdjustHealth(-Damage);
+      if (destroyType != DestroyType.Timer) {
+        var enemies = hit.gameObject.GetComponents<Damageable>();
+        foreach (var enemy in enemies) {
+          enemy.AdjustHealth(-Damage);
+        }
       }
       // Trail
       foreach (GameObject trail in trailParticles) {
@@ -95,8 +91,12 @@ public class Projectile : MonoBehaviour {
         Destroy(trail.gameObject, 2);
       }
       // Clean up
-      if (DestroyType == DestroyType.Collision) {
+      if (destroyType == DestroyType.Collision) {
         Destroy(gameObject);
+      } else {
+        var rb = GetComponent<Rigidbody>();
+        rb.velocity = Vector3.zero;
+        rb.constraints = RigidbodyConstraints.FreezeAll;
       }
     }
   }

@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ReturnHome : MonoBehaviour {
@@ -12,13 +12,14 @@ public class ReturnHome : MonoBehaviour {
   }
 
   void Update() {
-    if(Input.GetButtonDown("X")) {
+    if (Input.GetButtonDown("X")) {
       time = Time.time;
       return;
     }
-    if(Input.GetButton("X")) {
-      if(Time.time > time + WaitTime) {
+    if (Input.GetButton("X")) {
+      if (Time.time > time + WaitTime) {
         SceneManager.LoadScene(home);
+        UbhObjectPool.instance.ReleaseAllBullet();
       }
     }
   }

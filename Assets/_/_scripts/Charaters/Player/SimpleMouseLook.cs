@@ -15,19 +15,19 @@ public class SimpleMouseLook {
   public bool lockCursor = true;
   public float deadzone = 0.1f;
 
-
   private Quaternion m_CharacterTargetRot;
   private Quaternion m_CameraTargetRot;
   private bool m_cursorIsLocked = true;
+  Quaternion? parentRotation = null;
+  bool isParented = false;
 
   public void Init(Transform character, Transform camera) {
     m_CharacterTargetRot = character.localRotation;
     m_CameraTargetRot = camera.localRotation;
   }
 
-
   public void LookRotation(Transform character, Transform camera, float? x = null, float? y = null) {
-    if(!x.HasValue || !y.HasValue){
+    if (!x.HasValue || !y.HasValue) {
       x = Input.GetAxis("R_XAxis") > deadzone || Input.GetAxis("R_XAxis") < -deadzone ?
         Input.GetAxis("R_XAxis") : 0;
       y = Input.GetAxis("R_YAxis") > deadzone || Input.GetAxis("R_YAxis") < -deadzone ?
@@ -44,14 +44,26 @@ public class SimpleMouseLook {
     m_CharacterTargetRot *= Quaternion.Euler(0f, yRot, 0f);
     m_CameraTargetRot *= Quaternion.Euler(-xRot, 0f, 0f);
 
+    if (character.parent != null && !isParented) {
+      // got a parent
+      isParented = true;
+      parentRotation = character.parent.rotation;
+      m_CharacterTargetRot *= Quaternion.Inverse(parentRotation.Value);
+    } else if (character.parent == null && parentRotation != null) {
+      // removed parent
+      m_CharacterTargetRot *= parentRotation.Value;
+      parentRotation = null;
+      isParented = false;
+    }
+
     if (clampVerticalRotation)
       m_CameraTargetRot = ClampRotationAroundXAxis(m_CameraTargetRot);
 
     if (smooth) {
       character.localRotation = Quaternion.Slerp(character.localRotation, m_CharacterTargetRot,
-          smoothTime * Time.deltaTime);
+        smoothTime * Time.deltaTime);
       camera.localRotation = Quaternion.Slerp(camera.localRotation, m_CameraTargetRot,
-          smoothTime * Time.deltaTime);
+        smoothTime * Time.deltaTime);
     } else {
       character.localRotation = m_CharacterTargetRot;
       camera.localRotation = m_CameraTargetRot;
@@ -62,7 +74,7 @@ public class SimpleMouseLook {
 
   public void SetCursorLock(bool value) {
     lockCursor = value;
-    if (!lockCursor) {//we force unlock the cursor if the user disable the cursor locking helper
+    if (!lockCursor) { //we force unlock the cursor if the user disable the cursor locking helper
       Cursor.lockState = CursorLockMode.None;
       Cursor.visible = true;
     }

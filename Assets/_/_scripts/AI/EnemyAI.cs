@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
 public class EnemyAI : Enemy {
-  public GameObject ProjectileSpawnObject;
+  // public GameObject ProjectileSpawnObject;
   public enum PatrolCycle {
     Linear, // Partol in order from first to last then back to first
     Random, // Choose a random location excluding current target
@@ -37,29 +37,24 @@ public class EnemyAI : Enemy {
   [SerializeField] private int selectedWaypoint = 0;
   private List<Transform> Waypoints = new List<Transform>();
 
-
-    // Use this for initialization
-  void Start () {
+  // Use this for initialization
+  void Start() {
     agent = GetComponent<NavMeshAgent>();
     agent.autoBraking = true;
     agent.autoRepath = true;
     agent.stoppingDistance = defaultStopDistance;
     SetWaypoints();
     SetDestination();
-    InitWeapon();
-    if(ProjectileSpawnObject != null){
-      Weapon.ProjectileSpawnObject = ProjectileSpawnObject;
-    }
   }
 
   // Update is called once per frame
-  void Update () {
+  void Update() {
     if (Scanner != null) {
-      target = Scanner.Detect( transform);
+      target = Scanner.Detect(transform);
     } else {
       Debug.LogError("scanner is null");
     }
-    if(target != null && willChasePlayer){
+    if (target != null && willChasePlayer) {
       ChangeState(AIstates.Chase);
       agent.stoppingDistance = chaseStopDistance;
       ChaseEvent.Invoke(true);
@@ -70,31 +65,32 @@ public class EnemyAI : Enemy {
     }
     Switches();
   }
-  public override void Idle(){
-    if(cycle == PatrolCycle.Camera || cycle == PatrolCycle.None){
+  public override void Idle() {
+    if (cycle == PatrolCycle.Camera || cycle == PatrolCycle.None) {
       return;
     }
 
-    if(!isIdling){
-    isIdling = true;
-    var time = Random.Range(MinIdleDuration, MaxIdleDuration);
-    StartCoroutine(DelayNextWaypoint(time, AIstates.Patrol));
+    if (!isIdling) {
+      isIdling = true;
+      var time = Random.Range(MinIdleDuration, MaxIdleDuration);
+      StartCoroutine(DelayNextWaypoint(time, AIstates.Patrol));
     }
   }
 
-  public override void Patrol(){
+  public override void Patrol() {
     isIdling = false;
-    if(agent.remainingDistance <= agent.stoppingDistance){ //TODO: flawed, we need to set the stop distance based on the state. NOT walking around.
+    if (agent.remainingDistance <= agent.stoppingDistance) { //TODO: flawed, we need to set the stop distance based on the state. NOT walking around.
       ChangeState(AIstates.Idle);
     }
   }
 
-  public override void Chase(){
-    if(target == null) {
+  public override void Chase() {
+    if (target == null) {
       isIdling = false;
       agent.speed = walkSpeed;
       agent.stoppingDistance = defaultStopDistance;
       ChangeState(AIstates.Idle);
+      ShotCtrl.StopShotRoutineAndPlayingShot();
       ChaseEvent.Invoke(false);
     }
     // TODO: Fix the repel
@@ -106,16 +102,16 @@ public class EnemyAI : Enemy {
     //    repelForce += (transform.position - enemy.transform.position).normalized;
     //  }
     //}
-    if(target != null){
+    if (target != null) {
       agent.speed = runSpeed;
       // var dir = (transform.position - target.transform.position).normalized;
       // Debug.Log("Dir: "+ dir);
       // Debug.Log("RepelForce: "+ repelForce);
 
       // TODO:  we need to repel the enemies from one another so they don't stack on top of one another
-      if((transform.position - target.transform.position).sqrMagnitude > agent.stoppingDistance * agent.stoppingDistance) {
+      if ((transform.position - target.transform.position).sqrMagnitude > agent.stoppingDistance * agent.stoppingDistance) {
         agent.SetDestination(target.transform.position);
-      } else {// we are close enough to attack. Need to aim toward the player.
+      } else { // we are close enough to attack. Need to aim toward the player.
         var pos = target.transform.position - transform.position;
         pos.y = 0; // zero out if you want to keep turret horizontal.
         var rot = Quaternion.LookRotation(pos); // Enemy Rotation
@@ -125,48 +121,49 @@ public class EnemyAI : Enemy {
         var mountRot = Quaternion.LookRotation(mountPos); // Mount Rotation
         Mount.rotation = Quaternion.Slerp(Mount.rotation, mountRot, (Time.deltaTime * rotationSpeed) / rotationSpeedDamp);
 
-        Weapon.Attack();
+        ShotCtrl.StartShotRoutine();
       }
 
     }
   }
 
-  public override void Dead(){
+  public override void Dead() {
     //TODO: spawn death particles and remove this gameobject
   }
 
-  void ChangeState(AIstates newState ){
+  void ChangeState(AIstates newState) {
     CurrentState = newState;
   }
 
-  void NextWaypoint(){
-    switch(cycle){
-      case PatrolCycle.Linear:{
-        if(selectedWaypoint == Waypoints.Count - 1){
-          selectedWaypoint = 0;
-        } else {
-          ++selectedWaypoint;
+  void NextWaypoint() {
+    switch (cycle) {
+      case PatrolCycle.Linear:
+        {
+          if (selectedWaypoint == Waypoints.Count - 1) {
+            selectedWaypoint = 0;
+          } else {
+            ++selectedWaypoint;
+          }
+          break;
         }
-        break;
-      }
       default:
-      break;
+        break;
     }
     SetDestination();
   }
 
-  void SetDestination(){
+  void SetDestination() {
     agent.SetDestination(Waypoints[selectedWaypoint].position);
   }
 
-  IEnumerator DelayNextWaypoint(float time, AIstates newstate){
+  IEnumerator DelayNextWaypoint(float time, AIstates newstate) {
     yield return new WaitForSeconds(time);
     NextWaypoint();
     ChangeState(newstate);
   }
-  void SetWaypoints(){
+  void SetWaypoints() {
     Waypoints.Clear();
-    foreach(Transform waypoint in WaypointGroup){
+    foreach (Transform waypoint in WaypointGroup) {
       Waypoints.Add(waypoint);
     }
   }

@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &7888985760465634540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7696786152993048823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbec2eaf321e89740b13061243f88cb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  intervalTime: 5
+--- !u!1001 &7889981859506752256
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 553558512792683511, guid: 947940e72441ef242b2f089bbc32ff4b,
+        type: 3}
+      propertyPath: m_Name
+      value: PulsingImmortalLinearTurret
+      objectReference: {fileID: 0}
+    - target: {fileID: 550734327169917423, guid: 947940e72441ef242b2f089bbc32ff4b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 228
+      objectReference: {fileID: 0}
+    - target: {fileID: 550734327169917423, guid: 947940e72441ef242b2f089bbc32ff4b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 14.130747
+      objectReference: {fileID: 0}
+    - target: {fileID: 550734327169917423, guid: 947940e72441ef242b2f089bbc32ff4b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -35
+      objectReference: {fileID: 0}
+    - target: {fileID: 550734327169917423, guid: 947940e72441ef242b2f089bbc32ff4b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 550734327169917423, guid: 947940e72441ef242b2f089bbc32ff4b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 550734327169917423, guid: 947940e72441ef242b2f089bbc32ff4b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 550734327169917423, guid: 947940e72441ef242b2f089bbc32ff4b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 550734327169917423, guid: 947940e72441ef242b2f089bbc32ff4b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 550734327169917423, guid: 947940e72441ef242b2f089bbc32ff4b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 550734327169917423, guid: 947940e72441ef242b2f089bbc32ff4b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 550734327169917423, guid: 947940e72441ef242b2f089bbc32ff4b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399859981307875620, guid: 947940e72441ef242b2f089bbc32ff4b,
+        type: 3}
+      propertyPath: m_startOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399859981307875620, guid: 947940e72441ef242b2f089bbc32ff4b,
+        type: 3}
+      propertyPath: m_loop
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 947940e72441ef242b2f089bbc32ff4b, type: 3}
+--- !u!1 &7696786152993048823 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 553558512792683511, guid: 947940e72441ef242b2f089bbc32ff4b,
+    type: 3}
+  m_PrefabInstance: {fileID: 7889981859506752256}
+  m_PrefabAsset: {fileID: 0}
